@@ -19,11 +19,13 @@
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <a class="navbar-brand" href="#">
-                <img src="images/peeporip.gif" alt="PEEPORIP" width="50px">
+                <img src="images/tenor.gif" alt="NOICE" width="100px">
             </a>
             <?php if ($_SESSION) : ?>
                 <p class="navbar-nav ml-auto mr-4 mt-2 mt-lg-0"><?php echo $_SESSION['username']?></p>
+                <!--
                 <a href="update.php" class="mr-4">Update gan</a> 
+                -->
                 <a href="logout.php">Logout bang</a>
             <?php else: ?>
                 <ul class="navbar-nav ml-auto mr-4 mt-2 mt-lg-0">
@@ -41,17 +43,14 @@
         <table class="table">
             <tr>
                 <th>No</th>
-                <th>Nama</th>
+                <th>Username</th>
                 <th>Email</th>
-                <th>Action</th>
             </tr>
             <?php foreach($rows as $row) : ?>
                 <tr>
                     <td> <?= ++$i ?>  </td>
                     <td> <?=  $row['username'] ?>  </td>
                     <td> <?=  $row['email'] ?>  </td>
-                    <td> <a href="profile.php?id=<?=$row['id']?>" class="btn btn-primary"> Details </a> </td>
-                    <!-- <td> <img src="uploads/<?=$row['image']?>" alt=""></td> -->
                 </tr>
             <?php endforeach;?>
         </table>

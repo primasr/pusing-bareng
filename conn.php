@@ -3,12 +3,12 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $db = "tutor-web";
+    $db = "pusing-bareng";
 
     $conn = mysqli_connect($servername,$username,$password,$db);
 
     if(!$conn){
-        die("error bang");
+        die("Tidak bisa connect");
     }
 
 ?>

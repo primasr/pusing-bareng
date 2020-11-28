@@ -2,7 +2,7 @@
     session_start();
     
     include 'conn.php';
-
+        
     if($_SESSION){
         header('location: index.php');
     } else{

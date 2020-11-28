@@ -12,7 +12,6 @@
 
         $id = $_SESSION['id'];
         $bio = $_POST['bio'];
-        $desc = $_POST['desc'];
         $targetDir = "uploads/";
         $fileName = $_FILES['gambar']['name'];
         $targetFilePath = $targetDir . $fileName;
@@ -22,8 +21,8 @@
         if(in_array($fileType,$allowedTypes)){
             if(move_uploaded_file($_FILES['gambar']['tmp_name'],$targetFilePath)){
 
-                $sql = "UPDATE users SET `bio` = '$bio' , `description` = '$desc' , `image` = '$fileName' WHERE id = $id";
-                // $sql = "INSERT INTO users (`email`, `username`, `password`,`bio`,`description`)";
+                $sql = "UPDATE users SET `bio` = '$bio' , `image` = '$fileName' WHERE id = $id ";
+                // $sql = "INSERT INTO users (`email`, `username`, `password`,`bio`)";
                 if(mysqli_query($conn,$sql)){
                     echo "File Upload Success";
                 }else{
@@ -43,7 +42,7 @@
     $sql = "SELECT * FROM users WHERE `id`= $id";
 
     $result = mysqli_query($conn,$sql);
-    $row = $result->fetch_assoc();
+    $row = mysqli_fetch_assoc($result);
     // var_dump($row);
     
     mysqli_close($conn);
@@ -59,11 +58,6 @@
                 <label for="exampleInputEmail1">Bio</label>
                 <input type="text" class="form-control" name="bio" value="<?= $row['bio'] ?>">
                 <small id="emailHelp" class="form-text text-muted">Jangan lebay bang</small>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Description</label>
-                <input type="text" class="form-control" name="desc" value="<?= $row['description'] ?>">
-                <small id="emailHelp" class="form-text text-muted">Deskripsikan hidup anda dalam 1 paragraf :)</small>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlFile1">Upload foto syantik</label>

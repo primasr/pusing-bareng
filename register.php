@@ -15,10 +15,9 @@
             $username = $_POST['username'];
             $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
             $bio = $_POST['bio'];
-            $desc = $_POST['desc'];
             
-            $sql = "INSERT INTO users (`email`, `username`, `password`,`bio`,`description`)
-            VALUES ('$email', '$username', '$password','$bio','$desc')";
+            $sql = "INSERT INTO users (`email`, `username`, `password`, `bio`)
+            VALUES ('$email', '$username', '$password', '$bio' )";
     
             if (mysqli_query($conn, $sql)) {
                 echo "New record created successfully";
@@ -29,6 +28,7 @@
         mysqli_close($conn);
 
     }
+        
     
     $pageTitle = 'Daftar | Instagram KA WE :)';
     include 'header.php';
@@ -39,20 +39,12 @@
     <form action="register.php" method="POST">
         <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Emailnya mungkin gan">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email">
             <small class="form-text text-muted">Lets fucking gooo!!</small>
         </div>
         <div class="form-group">
             <label>Username</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username bang jago">
-        </div>
-        <div class="form-group">
-            <label>Bio</label>
-            <input type="text" class="form-control" id="bio" name="bio" placeholder="Masukkan Bio bang jago">
-        </div>
-        <div class="form-group">
-            <label>Description</label>
-            <input type="text" class="form-control" id="username" name="desc" placeholder="Masukkan Deskripsi singkat bang jago">
+            <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username">
         </div>
         <div class="form-group">
             <label>Password</label>
@@ -62,6 +54,10 @@
             <label>Confirm Password</label>
             <input type="password" class="form-control" id="confirm_password" name="confirm_password" onkeyup=' check();' >
             <span id="message"></span>
+        </div>
+        <div class="form-group">
+            <label>Bio</label>
+            <input type="text" class="form-control" id="bio" name="bio" placeholder="Max. 30 Karakter">
         </div>
         <button type="submit" name="submit" id="submit" class="btn btn-primary">Submit</button>
     </form>
