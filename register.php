@@ -30,7 +30,10 @@
     }
         
     
-    $pageTitle = 'Daftar | Instagram KA WE :)';
+    //$pageTitle = 'Daftar | Instagram KA WE :)';
+    $pageTitle = 'Ini Register';
+    echo ("<title> $pageTitle </title>");
+
     include 'header.php';
 ?>
 
@@ -75,4 +78,8 @@
             }
         }
     </script>
-<?php include 'footer.php' ?>
+
+<?php 
+    include 'header 2.php';
+    include 'footer.php'; 
+?>

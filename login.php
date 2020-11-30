@@ -41,9 +41,11 @@
 
     }
 
-    $pageTitle = 'Login | Instagram KA WE :)';
+    //$pageTitle = 'Login | Instagram KA WE :)';
+    $pageTitle = 'Ini Login';
+    echo ("<title> $pageTitle </title>");
+
     include 'header.php';
-    
 ?>
     
     <div class="jumbotron">
@@ -66,4 +68,7 @@
         </div>
     </div>
 
-<?php include 'footer.php' ?>
+<?php
+    include 'header 2.php';
+    include 'footer.php';
+?>
