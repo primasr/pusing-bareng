@@ -13,13 +13,13 @@
         $id = $_SESSION['id'];
         $bio = $_POST['bio'];
         $targetDir = "uploads/";
-        $fileName = $_FILES['gambar']['name'];
+        $fileName = $_FILES['photo']['name'];
         $targetFilePath = $targetDir . $fileName;
         $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 
         $allowedTypes = array('jpg','png','jpeg','gif');
         if(in_array($fileType,$allowedTypes)){
-            if(move_uploaded_file($_FILES['gambar']['tmp_name'],$targetFilePath)){
+            if(move_uploaded_file($_FILES['photo']['tmp_name'],$targetFilePath)){
 
                 $sql = "UPDATE users SET `bio` = '$bio' , `image` = '$fileName' WHERE id = $id ";
                 // $sql = "INSERT INTO users (`email`, `username`, `password`,`bio`)";
@@ -47,7 +47,8 @@
     
     mysqli_close($conn);
     
-    $pageTitle = 'Update Profil | Instagram KA WE :)';
+    $pageTitle = 'Update Profil | Pusing Bareng';
+    echo ("<title> $pageTitle </title>");
     include 'header.php';
 ?>
    
@@ -68,4 +69,7 @@
         </div>
     </div>
 
-<?php include 'footer.php' ?>
+<?php
+include 'header 2.php'; 
+include 'footer.php' 
+?>
