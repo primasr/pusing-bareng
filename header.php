@@ -62,17 +62,18 @@
                                 <?php echo $_SESSION['username']?>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Pengen isi BIO nanti</a>
+                                <p class="dropdown-item" href="#">
+                                    Bio: <br>
+                                    <!--
+                                    <?php echo $row['bio'] ?>           
+                                    -->
+                                </p>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="update.php">Update Slur</a>
                                 <a class="dropdown-item" href="logout.php">Logout Slur</a>
                             </div>
                         </li>
-                        <!--
-                        <p class="nav-link"><?php echo $_SESSION['username']?></p>
-                        <a class="nav-link" href="update.php">Update Slur <span class="sr-only">(current)</span></a>
-                        <a class="nav-link" href="logout.php">Logout Slur <span class="sr-only">(current)</span></a>
-                        -->
+
                     <?php else: ?>
                         <ul class="navbar-nav ml-auto mr-4 mt-2 mt-lg-0">
                             <li class="nav-item active">
@@ -83,25 +84,8 @@
                             </li>
                         </ul>
                     <?php endif; ?>
-                    <!--
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    -->
+
+
                 </ul>
             </div>
         </nav>

@@ -29,8 +29,6 @@
 
     }
         
-    
-    //$pageTitle = 'Daftar | Instagram KA WE :)';
     $pageTitle = 'Ini Register';
     echo ("<title> $pageTitle </title>");
 
@@ -43,7 +41,7 @@
         <div class="form-group">
             <label for="email">Email address</label>
             <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email">
-            <small class="form-text text-muted">Lets fucking gooo!!</small>
+            <small class="form-text text-muted">Lets gooo!!</small>
         </div>
         <div class="form-group">
             <label>Username</label>
