@@ -13,6 +13,8 @@
 
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
+        <!-- <link href="css/blog-home.css" rel="stylesheet"> -->
+        <!-- <link href="css/blog-post.css" rel="stylesheet"> -->
 
     <!-- <title> Ini Homepage </title> -->
 
@@ -25,15 +27,15 @@
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div 
-                class="sidebar-heading">Start Bootstrap 
+                class="sidebar-heading">Pusing Bareng 
             </div>
             <div class="list-group list-group-flush">
-                <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
-                <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+                <a href="tlx-toki-homepage.php" class="list-group-item list-group-item-action bg-light">TLX TOKI</a>
+                <a href="hackerrank-homepage.php" class="list-group-item list-group-item-action bg-light">HackerRank</a>
+                <a href="cses-homepage.php" class="list-group-item list-group-item-action bg-light">CSES</a>
+                <a href="spoj-homepage.php" class="list-group-item list-group-item-action bg-light">SPOJ</a>
+                <a href="vjudge-homepage.php" class="list-group-item list-group-item-action bg-light">Virtual Judge</a>
+                <a href="other-homepage.php" class="list-group-item list-group-item-action bg-light">Other</a>
             </div>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -42,7 +44,7 @@
         <div id="page-content-wrapper">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-            <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+            <button class="btn btn-primary" id="menu-toggle">Coding Platform</button>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
