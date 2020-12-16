@@ -26,8 +26,9 @@
 
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
-            <div 
-                class="sidebar-heading">Pusing Bareng 
+            <div class="sidebar-heading">
+                <img src="images/LOGO PWEB-KU.png" alt="Logo Pweb-ku" width="42" height="42" style="vertical-align:middle">
+                Pusing Bareng 
             </div>
             <div class="list-group list-group-flush">
                 <a href="tlx-toki-homepage.php" class="list-group-item list-group-item-action bg-light">TLX TOKI</a>
