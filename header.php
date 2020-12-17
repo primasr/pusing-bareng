@@ -12,9 +12,9 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet">
     <link href="css/simple-sidebar.css" rel="stylesheet">
-        <!-- <link href="css/blog-home.css" rel="stylesheet"> -->
-        <!-- <link href="css/blog-post.css" rel="stylesheet"> -->
+    
 
     <!-- <title> Ini Homepage </title> -->
 
@@ -22,7 +22,7 @@
 
 <body>
 
-    <div class="d-flex" id="wrapper">
+        <div class="d-flex" id="wrapper">
 
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
