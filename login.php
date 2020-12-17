@@ -50,21 +50,21 @@
     
     <div class="jumbotron">
         <div class="container">
-        <h2>Dah daftar bang? Login skuy</h2>
-        <form action="login.php<?php if(isset($_GET['redirectProfile'])){echo "?redirectProfile=".$_GET['redirectProfile'];}?>" method="POST">
-        
-        <div class="form-group">
-            <label>Username</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username bang jago">
-        </div>
-        
-        <div class="form-group">
-            <label>Password</label>
-            <input type="password" class="form-control" id="password" name="password">
-        </div>
-        
-        <button type="submit" name="submit" id="submit" class="btn btn-primary">Submit</button>
-    </form>
+            <h2>Dah daftar bang? Login skuy</h2>
+            <form action="login.php<?php if(isset($_GET['redirectProfile'])){echo "?redirectProfile=".$_GET['redirectProfile'];}?>" method="POST">
+            
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username bang jago" required data-validation-required-message="Please enter your username.">
+            </div>
+            
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" id="password" name="password" required data-validation-required-message="Please enter your password.">
+            </div>
+            
+            <button type="submit" name="submit" id="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
     </div>
 

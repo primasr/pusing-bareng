@@ -37,28 +37,28 @@
 
     <div class="jumbotron">
         <h2>Hi User Baru, Daftar Yuk!</h2>
-    <form action="register.php" method="POST">
+        <form action="register.php" method="POST">
         <div class="form-group">
             <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email" required data-validation-required-message="Please enter your email.">
             <small class="form-text text-muted">Lets gooo!!</small>
         </div>
         <div class="form-group">
             <label>Username</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username">
+            <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username" required data-validation-required-message="Please enter your username.">
         </div>
         <div class="form-group">
             <label>Password</label>
-            <input type="password" class="form-control" id="password" name="password" onkeyup='check();' >
+            <input type="password" class="form-control" id="password" name="password" onkeyup='check();' required data-validation-required-message="Please enter your password.">
         </div>
         <div class="form-group">
             <label>Confirm Password</label>
-            <input type="password" class="form-control" id="confirm_password" name="confirm_password" onkeyup=' check();' >
+            <input type="password" class="form-control" id="confirm_password" name="confirm_password" onkeyup=' check();' required data-validation-required-message="Please enter your password.">
             <span id="message"></span>
         </div>
         <div class="form-group">
             <label>Bio</label>
-            <input type="text" class="form-control" id="bio" name="bio" placeholder="Max. 30 Karakter">
+            <input type="text" class="form-control" id="bio" name="bio" placeholder="Max. 30 Karakter" required data-validation-required-message="Please enter your message.">
         </div>
         <button type="submit" name="submit" id="submit" class="btn btn-primary">Submit</button>
     </form>
