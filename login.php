@@ -47,7 +47,19 @@
 
     include 'header.php';
 ?>
-    
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="my-4">Page Heading
+    <small>Secondary Text</small>
+    </h1>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="index.php">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Login</li>
+    </ol>
+
     <div class="jumbotron">
         <div class="container">
             <h2>Dah daftar bang? Login skuy</h2>

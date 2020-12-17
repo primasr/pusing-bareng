@@ -35,6 +35,18 @@
     include 'header.php';
 ?>
 
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="my-4">Page Heading
+        <small>Secondary Text</small>
+        </h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.php">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Register</li>
+        </ol>
+
     <div class="jumbotron">
         <h2>Hi User Baru, Daftar Yuk!</h2>
         <form action="register.php" method="POST">
