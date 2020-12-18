@@ -70,19 +70,6 @@
                                 <?php echo $_SESSION['username']?>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <p class="dropdown-item" href="#">
-                                    Bio: <br>
-                                
-                                    <?php 
-                                        if (isset($_GET['bio']))
-                                        {
-                                          $bio = $_GET['bio'];
-                                          echo $bio;
-                                        }
-
-                                    ?>           
-                                    
-                                </p>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="update.php">Update Slur</a>
                                 <a class="dropdown-item" href="logout.php">Logout Slur</a>

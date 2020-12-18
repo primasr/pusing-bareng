@@ -29,7 +29,7 @@
                     if($profileId != NULL){
                         header('location: profile.php?id='.$profileId);
                     } else{
-                        header('Location: index.php');
+                        header('Location: index.php?id='.$profileId);
                     }
                 }
             } else{
