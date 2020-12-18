@@ -48,37 +48,45 @@
     include 'header.php';
 ?>
 
-    <!-- Page Heading/Breadcrumbs -->
-    <h1 class="my-4">Page Heading
-    <small>Secondary Text</small>
-    </h1>
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Login
+        <small>Subheading</small>
+        </h1>
 
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-            <a href="index.php">Home</a>
-        </li>
-        <li class="breadcrumb-item active">Login</li>
-    </ol>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.php">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Login</li>
+        </ol>
 
-    <div class="jumbotron">
-        <div class="container">
-            <h2>Dah daftar bang? Login skuy</h2>
-            <form action="login.php<?php if(isset($_GET['redirectProfile'])){echo "?redirectProfile=".$_GET['redirectProfile'];}?>" method="POST">
-            
-            <div class="form-group">
-                <label>Username</label>
-                <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username bang jago" required data-validation-required-message="Please enter your username.">
+        <!-- Contact Form -->
+        <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+        <div class="row">
+            <div class="col-lg-8 mb-4">
+                <form action="login.php<?php if(isset($_GET['redirectProfile'])){echo "?redirectProfile=".$_GET['redirectProfile'];}?>" method="POST">
+                
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username bang jago" required data-validation-required-message="Please enter your username.">
+                </div>
+                
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required data-validation-required-message="Please enter your password.">
+                </div>
+                
+                <button type="submit" name="submit" id="submit" class="btn btn-primary">Submit</button>
+                </form>
             </div>
-            
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" class="form-control" id="password" name="password" required data-validation-required-message="Please enter your password.">
-            </div>
-            
-            <button type="submit" name="submit" id="submit" class="btn btn-primary">Submit</button>
-            </form>
+
         </div>
+        <!-- /.row -->
+
     </div>
+    <!-- /.container -->
 
 <?php
     include 'header 2.php';

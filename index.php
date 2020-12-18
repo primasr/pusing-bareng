@@ -2,23 +2,26 @@
     session_start();
     include 'conn.php';
 
-    
+    /*
     $sql = "SELECT * FROM users";
 
     $rows = mysqli_query($conn, $sql);
     $i = 0;
     mysqli_close($conn);
-    
-    /*
-    $id = $_SESSION['id'];
-    $sql = "SELECT * FROM users WHERE `id`= $id";
-
-    $result = mysqli_query($conn,$sql);
-    $row = mysqli_fetch_assoc($result);
-
-    mysqli_close($conn);
     */
+    if (isset($_GET['id']))
+    {
+      $id = $_GET['id'];
+      $sql = "SELECT * FROM users WHERE `id`= $id";
+      // " ... WHERE PartNumber = '" . mysqli_escape_string($conn,$partid) . "';"
+  
+      $result = mysqli_query($conn,$sql);
+      $row = mysqli_fetch_assoc($result);
+  
+      mysqli_close($conn);
+    }
 
+    
     $pageTitle = 'Ini Homepage';
     echo ("<title> $pageTitle </title>");
 

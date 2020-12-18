@@ -2,56 +2,25 @@
     session_start();
     include 'conn.php';
 
-    if($_SESSION){
-        header('location: index.php');
-    } else{
-        $sql = "SELECT * FROM users";
-
-        $rows = mysqli_query($conn, $sql);
-        $i = 0;
-        if(isset($_POST['submit'])){
-
-        
-            // Check for empty fields
-            if(empty($_POST['name'])   ||
-            empty($_POST['email'])     ||
-            empty($_POST['phone'])     ||
-            empty($_POST['message'])   ||
-            !filter_var($_POST['email'],FILTER_VALIDATE_EMAIL))
-            {
-            echo "No arguments Provided!";
-            return false;
-            }
-            
-            $name = strip_tags(htmlspecialchars($_POST['name']));
-            $email_address = strip_tags(htmlspecialchars($_POST['email']));
-            $phone = strip_tags(htmlspecialchars($_POST['phone']));
-            $message = strip_tags(htmlspecialchars($_POST['message']));
-            
-            // Create the email and send the message
-            $to = "akuntumbalku42069@gmail.com"; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-            $email_subject = "Website Contact Form:  $name";
-            $email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-            $headers = "From: noreply@yourdomain.com\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
-            $headers .= "Reply-To: $email_address"; 
-        
-            mail($to,$email_subject,$email_body,$headers);
-            return true;  
-        }
-        mysqli_close($conn);
-
-    }
-    
     /*
-    $id = $_SESSION['id'];
-    $sql = "SELECT * FROM users WHERE `id`= $id";
+    $sql = "SELECT * FROM users";
 
-    $result = mysqli_query($conn,$sql);
-    $row = mysqli_fetch_assoc($result);
-
+    $rows = mysqli_query($conn, $sql);
+    $i = 0;
     mysqli_close($conn);
     */
+    if (isset($_GET['id']))
+    {
+      $id = $_GET['id'];
+      $sql = "SELECT * FROM users WHERE `id`= $id";
+      // " ... WHERE PartNumber = '" . mysqli_escape_string($conn,$partid) . "';"
+  
+      $result = mysqli_query($conn,$sql);
+      $row = mysqli_fetch_assoc($result);
 
+      mysqli_close($conn);
+    }
+    
     $pageTitle = 'Ini Homepage';
     echo ("<title> $pageTitle </title>");
 
