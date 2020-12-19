@@ -87,25 +87,29 @@
           <h2>Please Comment Below</h2>
 
           <div class="comment-form-container" >
-            <form id="frm-comment">
-              <div class="input-row">
+            <form id="frm-comment" name="form1" onsubmit="required()">
+              <div class="control-group form-group">   
+                <label>Name:</label>            
                 <input type="hidden" name="comment_id" id="commentId"
-                  placeholder="Name"/> <input class="input-field" type="text"
-                  name="name" id="name" placeholder="Name"/>
+                  placeholder="Name" required/>
+                <input class="input-field" type="text"
+                  name="name" id="name" required/>             
               </div>
 
-              <div class="input-row">
+              <div class="control-group form-group">
+                <label>Message:</label> 
                 <p class="emoji-picker-container">
                   <textarea class="input-field" data-emojiable="true"
                     data-emoji-input="unicode" type="text" name="comment"
-                    id="comment" placeholder="Add a Message">  </textarea>
+                    id="comment" required></textarea>
                 </p>
               </div>
 
               <div>
-                <input type="button" class="btn-submit" id="submitButton"
-                  value="Add a Comment" />
+                <input type="button" class="btn-submit" id="submitButton" value="Add a Comment" />
                 <div id="comment-message">Comment Added Successfully!</div>
+                <div id="login-message">Must login to Comment!</div>
+                <div id="fill-message">Please fill the blank!</div>
               </div>
 
 
@@ -121,24 +125,70 @@
                 $("#name").focus();
             }
 
+            function required()
+            {
+              var empt = document.forms["form1"]["name"].value;
+              var empt2 = document.forms["form1"]["comment"].value;
+              if (empt == "" || empt == null,  empt2 == "" || empt2 == null)
+              {
+              alert("Please Fill All Required Field");
+              return false;
+              }
+              else 
+              {
+              //alert('Code has accepted : you can try another');
+              return true; 
+              }
+            }
+
+            <?php if ($_SESSION) : ?>
             $("#submitButton").click(function () {
                 $("#comment-message").css('display', 'none');
                 var str = $("#frm-comment").serialize();
 
-                $.ajax({
+                if (required() == false)
+                {
+                  $("#alert-message").css('display', 'inline-block');
+                }
+                else
+                {
+                  $.ajax({
                     url: "comments/comment-add.php",
                     data: str,
                     type: 'post',
                     success: function (response)
                     {
+
                         $("#comment-message").css('display', 'inline-block');
                         $("#name").val("");
                         $("#comment").val("");
                         $("#commentId").val("");
                         listComment();
+
                     }
-                });
+                  });
+                }
+
+ 
             });
+
+            <?php else: ?>
+              $("#submitButton").click(function () {
+                $("#login-message").css('display', 'none');
+                var str = $("#frm-comment").serialize();
+
+                  $.ajax({
+                    url: "comments/comment-add.php",
+                    data: str,
+                    type: 'post',
+                    success: function (response)
+                    {
+                        $("#login-message").css('display', 'inline-block');
+                    }
+                  });
+
+            });
+            <?php endif; ?>
 
             $(document).ready(function () {
                 listComment();

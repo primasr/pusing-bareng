@@ -77,6 +77,19 @@ span.posted-by {
 	color: #189a18;
 	display: none;
 }
+
+#login-message {
+	margin-left: 30px;
+	color: #D30000;
+	display: none;
+}
+
+#fill-message {
+	margin-left: 30px;
+	color: #D30000;
+	display: none;
+}
+
 .icon-smile:before {
     content: " ";
     width: 16px;
