@@ -28,7 +28,6 @@
     <script src="comments/vendor/emoji-picker/lib/js/util.js"></script>
     <script src="comments/vendor/emoji-picker/lib/js/jquery.emojiarea.js"></script>
     <script src="comments/vendor/emoji-picker/lib/js/emoji-picker.js"></script>
-    
 
     <!-- <title> Ini Homepage </title> -->
 
@@ -45,7 +44,7 @@
                 Pusing Bareng 
             </div>
             <div class="list-group list-group-flush">
-                <a href="toki-homepage.php" class="list-group-item list-group-item-action bg-light">TLX TOKI</a>
+                <a href="tlx-toki-homepage.php" class="list-group-item list-group-item-action bg-light">TLX TOKI</a>
                 <a href="hackerrank-homepage.php" class="list-group-item list-group-item-action bg-light">HackerRank</a>
                 <a href="cses-homepage.php" class="list-group-item list-group-item-action bg-light">CSES</a>
                 <a href="spoj-homepage.php" class="list-group-item list-group-item-action bg-light">SPOJ</a>
