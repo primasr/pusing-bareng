@@ -45,7 +45,7 @@
                 Pusing Bareng 
             </div>
             <div class="list-group list-group-flush">
-                <a href="toki-homepage.php" class="list-group-item list-group-item-action bg-light">TLX TOKI</a>
+                <a href="toki-homepage-1.php" class="list-group-item list-group-item-action bg-light">TLX TOKI</a>
                 <a href="hackerrank-homepage.php" class="list-group-item list-group-item-action bg-light">HackerRank</a>
                 <a href="cses-homepage.php" class="list-group-item list-group-item-action bg-light">CSES</a>
                 <a href="spoj-homepage.php" class="list-group-item list-group-item-action bg-light">SPOJ</a>

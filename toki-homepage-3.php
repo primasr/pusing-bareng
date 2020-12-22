@@ -34,7 +34,7 @@
       <div class="col-md-8">
 
         <h1 class="my-4">TLX TOKI
-          <small>TLX TOKI</small>
+          <small><small><small><i>Page 3</i></small></small></small>
         </h1>
 
         <ol class="breadcrumb">
@@ -89,10 +89,19 @@
         <!-- Pagination -->
         <ul class="pagination justify-content-center mb-4">
           <li class="page-item">
-            <a class="page-link" href="#">&larr; Older</a>
+            <a class="page-link" href="toki-homepage-1.php">&larr; First</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="toki-homepage-1.php">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="toki-homepage-2.php">2</a>
           </li>
           <li class="page-item disabled">
-            <a class="page-link" href="#">Newer &rarr;</a>
+            <a class="page-link" href="#">3</a>
+          </li>
+          <li class="page-item disabled">
+            <a class="page-link" href="#">Last &rarr;</a>
           </li>
         </ul>
 
@@ -102,7 +111,7 @@
       <div class="col-md-4">
 
         <!-- Search Widget -->
-        <div class="card my-4">
+        <!-- <div class="card my-4">
           <h5 class="card-header">Search</h5>
           <div class="card-body">
             <div class="input-group">
@@ -112,17 +121,18 @@
               </span>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <!-- Categories Widget -->
         <div class="card my-4">
-          <h5 class="card-header">Categories</h5>
+          <h5 class="card-header">Other Topics on <i>TLX TOKI</i></h5>
           <div class="card-body">
             <div class="row">
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">Web Design</a>
+              <div class="col-lg-12">
+                <ol class="mb-0">
+                  <!-- Tambahan line-heiht soalnya dia ngambil lebih dari 1 baris -->
+                  <li style="line-height:130%">
+                    <a href="#">Web Design yapari ndande monaiya, imakar aitykutyo</a>
                   </li>
                   <li>
                     <a href="#">HTML</a>
@@ -130,10 +140,6 @@
                   <li>
                     <a href="#">Freebies</a>
                   </li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
                   <li>
                     <a href="#">JavaScript</a>
                   </li>
@@ -143,7 +149,7 @@
                   <li>
                     <a href="#">Tutorials</a>
                   </li>
-                </ul>
+                </ol>
               </div>
             </div>
           </div>
@@ -151,9 +157,11 @@
 
         <!-- Side Widget -->
         <div class="card my-4">
-          <h5 class="card-header">Side Widget</h5>
+          <h5 class="card-header">About <i>TLX TOKI</i></h5>
           <div class="card-body">
-            You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+          Platform Pemrograman Kompetitif. Platform # 1 Indonesia untuk 
+          mengasah keterampilan pemrograman kompetitif Anda, dipersembahkan oleh Ikatan Alumni TOKI
+          (Tim Olimpiade Komputer Indonesia)
           </div>
         </div>
 

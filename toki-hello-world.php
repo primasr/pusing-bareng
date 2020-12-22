@@ -93,7 +93,7 @@
                 <input type="hidden" name="comment_id" id="commentId"
                   placeholder="Name" required/>
                 <input class="input-field" type="text"
-                  name="name" id="name" required/>             
+                  name="name" id="name" value = "<?php echo $_SESSION['username']?>" required/>             
               </div>
 
               <div class="control-group form-group">
@@ -101,7 +101,7 @@
                 <p class="emoji-picker-container">
                   <textarea class="input-field" data-emojiable="true"
                     data-emoji-input="unicode" type="text" name="comment"
-                    id="comment" required></textarea>
+                    id="comment" onfocus="this.value=''" required></textarea>
                 </p>
               </div>
 
@@ -119,7 +119,7 @@
         </div>
 
 	      <script>
-           
+
             function postReply(commentId) {
                 $('#commentId').val(commentId);
                 $("#name").focus();
@@ -164,12 +164,10 @@
                         $("#comment").val("");
                         $("#commentId").val("");
                         listComment();
-
+                        
                     }
                   });
                 }
-
- 
             });
 
             <?php else: ?>
