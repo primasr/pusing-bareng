@@ -15,21 +15,45 @@
             $username = $_POST['username'];
             $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
             $bio = $_POST['bio'];
-            
-            $sql = "INSERT INTO users (`email`, `username`, `password`, `bio`)
-            VALUES ('$email', '$username', '$password', '$bio' )";
+
+            $target_dir = "uploads/";
+            $image = $_FILES["image"]["name"];
+
+            $target_file = $target_dir.basename($image);
+            $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+            $allowedTypes = array('jpg','png','jpeg','gif');
+
+            function myAlert($pesan) {
+                echo "<script type='text/javascript'>alert('$pesan');</script>";
+            }
+
+            if(in_array($imageFileType,$allowedTypes)){
+                if(move_uploaded_file($_FILES["image"]["tmp_name"],$target_file)){
     
-            if (mysqli_query($conn, $sql)) {
-                echo "New record created successfully";
-            } else {
-                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                    $sql = "INSERT INTO users (`email`, `username`, `password`, `bio`, `gambar`)
+                    VALUES ('$email', '$username', '$password', '$bio' , '$image')";
+                    if (mysqli_query($conn, $sql)) {
+                        myAlert("New record created successfully");
+                        //echo "New record created successfully";
+                        //header('location: login.php');
+                    } else {
+                        //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                        myAlert("Error: " . $sql . "<br>" . mysqli_error($conn));
+                    }
+                }else{
+                    //echo "Sorry, there was an error uploading your file.";
+                    myAlert("Sorry, there was an error uploading your file.");
+                }
+            }else{
+                //echo 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.';
+                myAlert("Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.");
             }
         }
         mysqli_close($conn);
 
     }
         
-    $pageTitle = 'Ini Register';
+    $pageTitle = 'PB | Register';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -53,7 +77,7 @@
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
         <div class="row">
             <div class="col-lg-8 mb-4">
-                <form action="register.php" method="POST">
+                <form action="register.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="email">Email address</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email" required data-validation-required-message="Please enter your email.">
@@ -75,6 +99,10 @@
                 <div class="form-group">
                     <label>Bio</label>
                     <input type="text" class="form-control" id="bio" name="bio" placeholder="Max. 30 Karakter" required data-validation-required-message="Please enter your message.">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Upload foto syantik</label>
+                    <input type="file" class="form-control-file" name="image">
                 </div>
                 <button type="submit" name="submit" id="submit" class="btn btn-primary">Submit</button>
                 </form>

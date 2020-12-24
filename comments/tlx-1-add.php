@@ -8,11 +8,8 @@ $date = date('Y-m-d H:i:s');
 
 if ($comment && $commentSenderName)
 {
-    $query = "INSERT INTO tbl_comment(parent_comment_id,comment,comment_sender_name,date) VALUES (?,?,?,?)";
+    $query = "INSERT INTO comment_tlx_1(parent_comment_id,comment,comment_sender_name,date) VALUES (?,?,?,?)";
 }
-
-
-
 
 $sql_stmt = $conn->prepare($query);
 

@@ -34,7 +34,7 @@
       <div class="col-md-8">
 
         <h1 class="my-4">TLX TOKI
-          <small><small><small><i>Page 3</i></small></small></small>
+          <small><small><small><i>Page 2</i></small></small></small>
         </h1>
 
         <ol class="breadcrumb">
@@ -89,19 +89,19 @@
         <!-- Pagination -->
         <ul class="pagination justify-content-center mb-4">
           <li class="page-item">
-            <a class="page-link" href="toki-homepage-1.php">&larr; First</a>
+            <a class="page-link" href="tlx-homepage-1.php">&larr; First</a>
           </li>
           <li class="page-item">
-            <a class="page-link" href="toki-homepage-1.php">1</a>
+            <a class="page-link" href="tlx-homepage-1.php">1</a>
+          </li>
+          <li class="page-item disabled">
+            <a class="page-link" href="#">2</a>
           </li>
           <li class="page-item">
-            <a class="page-link" href="toki-homepage-2.php">2</a>
+            <a class="page-link" href="tlx-homepage-3.php">3</a>
           </li>
-          <li class="page-item disabled">
-            <a class="page-link" href="#">3</a>
-          </li>
-          <li class="page-item disabled">
-            <a class="page-link" href="#">Last &rarr;</a>
+          <li class="page-item">
+            <a class="page-link" href="tlx-homepage-3.php">Last &rarr;</a>
           </li>
         </ul>
 

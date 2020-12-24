@@ -19,7 +19,7 @@
     mysqli_close($conn);
     */
 
-    $pageTitle = 'Ini CSES';
+    $pageTitle = 'PB | Hello World!';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -51,7 +51,7 @@
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="toki-homepage.php">TLX TOKI</a>
+                <a href="tlx-homepage-1.php">TLX TOKI</a>
             </li>
             <li class="breadcrumb-item active">Hello World!</li>
         </ol>
@@ -89,11 +89,17 @@
           <div class="comment-form-container" >
             <form id="frm-comment" name="form1" onsubmit="required()">
               <div class="control-group form-group">   
-                <label>Name:</label>            
+                <label>Username:</label>            
                 <input type="hidden" name="comment_id" id="commentId"
                   placeholder="Name" required/>
-                <input class="input-field" type="text"
-                  name="name" id="name" value = "<?php echo $_SESSION['username']?>" required/>             
+                  <?php if ($_SESSION) : ?>
+                    <input class="input-field" type="text"
+                      name="name" id="name" value = "<?php echo $_SESSION['username']?>" required/>
+                  <?php else: ?>
+                    <input class="input-field" type="text"
+                      name="name" id="name" required/>
+                  <?php endif; ?>
+
               </div>
 
               <div class="control-group form-group">
@@ -153,7 +159,7 @@
                 else
                 {
                   $.ajax({
-                    url: "comments/comment-add.php",
+                    url: "comments/tlx-1-add.php",
                     data: str,
                     type: 'post',
                     success: function (response)
@@ -172,18 +178,8 @@
 
             <?php else: ?>
               $("#submitButton").click(function () {
-                $("#login-message").css('display', 'none');
-                var str = $("#frm-comment").serialize();
 
-                  $.ajax({
-                    url: "comments/comment-add.php",
-                    data: str,
-                    type: 'post',
-                    success: function (response)
-                    {
-                        $("#login-message").css('display', 'inline-block');
-                    }
-                  });
+                $("#login-message").css('display', 'inline-block');
 
             });
             <?php endif; ?>
@@ -205,7 +201,7 @@
 
 
             function listComment() {
-                $.post("comments/comment-list.php",
+                $.post("comments/tlx-1-list.php",
                         function (data) {
                             var data = JSON.parse(data);
 
@@ -271,28 +267,16 @@
       <!-- Sidebar Widgets Column -->
       <div class="col-md-4">
 
-        <!-- Search Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Search</h5>
-          <div class="card-body">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search for...">
-              <span class="input-group-append">
-                <button class="btn btn-secondary" type="button">Go!</button>
-              </span>
-            </div>
-          </div>
-        </div>
-
         <!-- Categories Widget -->
         <div class="card my-4">
-          <h5 class="card-header">Categories</h5>
+          <h5 class="card-header">Other Topics on <i>TLX TOKI</i></h5>
           <div class="card-body">
             <div class="row">
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">Web Design</a>
+              <div class="col-lg-12">
+                <ol class="mb-0">
+                  <!-- Tambahan line-heiht soalnya dia ngambil lebih dari 1 baris -->
+                  <li style="line-height:130%">
+                    <a href="#">Web Design yapari ndande monaiya, imakar aitykutyo</a>
                   </li>
                   <li>
                     <a href="#">HTML</a>
@@ -300,10 +284,6 @@
                   <li>
                     <a href="#">Freebies</a>
                   </li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
                   <li>
                     <a href="#">JavaScript</a>
                   </li>
@@ -313,7 +293,7 @@
                   <li>
                     <a href="#">Tutorials</a>
                   </li>
-                </ul>
+                </ol>
               </div>
             </div>
           </div>
@@ -321,9 +301,11 @@
 
         <!-- Side Widget -->
         <div class="card my-4">
-          <h5 class="card-header">Side Widget</h5>
+          <h5 class="card-header">About <i>TLX TOKI</i></h5>
           <div class="card-body">
-            You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+          Platform Pemrograman Kompetitif. Platform # 1 Indonesia untuk 
+          mengasah keterampilan pemrograman kompetitif Anda, dipersembahkan oleh Ikatan Alumni TOKI
+          (Tim Olimpiade Komputer Indonesia)
           </div>
         </div>
 

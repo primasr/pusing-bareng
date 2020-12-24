@@ -28,9 +28,8 @@
     <script src="comments/vendor/emoji-picker/lib/js/util.js"></script>
     <script src="comments/vendor/emoji-picker/lib/js/jquery.emojiarea.js"></script>
     <script src="comments/vendor/emoji-picker/lib/js/emoji-picker.js"></script>
-    
 
-    <!-- <title> Ini Homepage </title> -->
+    <!-- <title> Pusing Bareng </title> -->
 
 </head>
 
@@ -45,7 +44,7 @@
                 Pusing Bareng 
             </div>
             <div class="list-group list-group-flush">
-                <a href="toki-homepage-1.php" class="list-group-item list-group-item-action bg-light">TLX TOKI</a>
+                <a href="tlx-homepage-1.php" class="list-group-item list-group-item-action bg-light">TLX TOKI</a>
                 <a href="hackerrank-homepage.php" class="list-group-item list-group-item-action bg-light">HackerRank</a>
                 <a href="cses-homepage.php" class="list-group-item list-group-item-action bg-light">CSES</a>
                 <a href="spoj-homepage.php" class="list-group-item list-group-item-action bg-light">SPOJ</a>
@@ -84,7 +83,9 @@
                                 <?php echo $_SESSION['username']?>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <div class="dropdown-divider"></div>
+                                <!-- <p class="dropdown-item"><?php echo $_GET['bio']?></p> -->
+                                <!-- <div class="dropdown-divider"></div> -->
+                                <a class="dropdown-item" href="profile.php">Profile Slur</a>
                                 <a class="dropdown-item" href="update.php">Update Slur</a>
                                 <a class="dropdown-item" href="logout.php">Logout Slur</a>
                             </div>

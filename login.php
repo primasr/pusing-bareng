@@ -16,6 +16,10 @@
             $username = $_POST['username'];
             $hash = password_hash($_POST['password'], PASSWORD_BCRYPT);
             $password = password_verify($_POST['password'], $hash);
+
+            function myAlert($pesan) {
+                echo "<script type='text/javascript'>alert('$pesan');</script>";
+            }
     
             $sql = "SELECT * FROM users WHERE `username`='$username'";
             $result = mysqli_query($conn,$sql);
@@ -29,11 +33,14 @@
                     if($profileId != NULL){
                         header('location: profile.php?id='.$profileId);
                     } else{
-                        header('Location: index.php');
+                        header('location: index.php');
                     }
+                } else
+                {
+                    myAlert("Username or Password incorrect");
                 }
             } else{
-                echo "No Dataset";
+                myAlert("Username Not Found in database :(");
             }
         
         }
@@ -42,7 +49,7 @@
     }
 
     //$pageTitle = 'Login | Instagram KA WE :)';
-    $pageTitle = 'Ini Login';
+    $pageTitle = 'PB | Login';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';

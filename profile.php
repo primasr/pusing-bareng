@@ -1,7 +1,8 @@
 <?php
     session_start();
 
-    $id = $_GET['id'];
+    $id = $_SESSION['id'];
+    //$id = $_GET['id'];
     if(!($_SESSION)){
         header('location: login.php?redirectProfile='.$id);
     }
@@ -12,46 +13,65 @@
     $rows = mysqli_query($conn,$sql);
     $i = 0;
     mysqli_close($conn);
-    $data = mysqli_fetch_assoc($rows);
+    $data = $rows->fetch_assoc();
 
-    $pageTitle = 'Profil @'.$data['username'].' | Instagram KA WE :)';
+    //$result = mysqli_query($conn,$sql);
+    //$row = $result->fetch_assoc();
+
+    // $pageTitle = 'Profil @'.$data['username'].' | Instagram KA WE :)';
+    $pageTitle = 'PB | Profile';
+    echo ("<title> $pageTitle </title>");
     include 'header.php';
 ?>
+<!-- Page Content -->
+    <div class="container">
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Profile
+        <small><small><small>Profile</small></small></small>
+        </h1>
 
-    <div class="row no-gutters">
-        <div class="col-xl-12 img-cover">
-            <img src="uploads/<?php echo $data['image']?>" alt="Foto profil <?php echo $data['username'] ?>" class="cover-img">
-            <div class="overlay-black"></div>
-            <img class="profile-img img-responsive img img-thumbnail" src="uploads/<?php echo $data['image'] ?>" alt="Foto profil <?php echo  $data['username'] ?>">
-            <h2>@<?php echo $data['username'] ?></h2>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.php">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Profile</li>
+        </ol>
+
+        <!-- Content Row -->
+        <div class="row">
+            <div class="row no-gutters">
+                <div class="col-xl-12 img-cover">
+                    <!-- <img src="uploads/<?php echo $data['gambar']?>" alt="Foto profil <?php echo $data['username'] ?>" class="cover-img">
+                    <div class="overlay-black"></div> -->
+                    <img class="profile-img img-responsive img img-thumbnail" width="300" height="300" src="uploads/<?php echo $data['gambar'] ?>" alt="Foto profil <?php echo  $data['username'] ?>">
+                    <!-- <h2>@<?php echo $data['username'] ?></h2> -->
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-xl-6 img-cover">
+                    <ul>
+                        <li>
+                            <h4>Username</h4>
+                            <a>@<?php echo $data['username'] ?></a>
+                        </li><br />
+                        <li>
+                            <h4>Bio</h4>
+                            <a><?php echo $data['bio']; ?></a>
+                        </li><br />
+                        <li>
+                            <h4>Contact</h4>
+                            <a><?php echo $data['email']; ?></a>
+                        </li><br />
+                    </ul>
+                </div>
+            </div>
         </div>
+        <!-- /.row -->
+
     </div>
-    <div class="row no-gutters" style="margin-top: 60px;">
-        <div class="col-xl-3">
-            <ul>
-                <li><h4>Explore</h4></li>
-                <li><h4>Settings</h4></li>
-            </ul>
-        </div>
-        <div class="col-xl-6 img-cover">
-            <ul>
-                <li>
-                    <h4>Bio</h4>
-                    <a><?php echo $data['bio']; ?></a>
-                </li><br />
-                <li>
-                    <h4>Desc</h4>
-                    <a><?php echo $data['description']; ?></a>
-                </li><br />
-                <li>
-                    <h4>Contact</h4>
-                    <a><?php echo $data['email']; ?></a>
-                </li><br />
-            </ul>
-        </div>
-        <div class="col-xl-3"></div>
-    </div>
+    <!-- /.container -->
 
 <?php
+    include 'header 2.php';
     include 'footer.php'
 ?>    
