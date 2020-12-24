@@ -19,10 +19,11 @@
     //$row = $result->fetch_assoc();
 
     // $pageTitle = 'Profil @'.$data['username'].' | Instagram KA WE :)';
-    $pageTitle = 'PB | Profile';
+    $pageTitle = 'Profile';
     echo ("<title> $pageTitle </title>");
     include 'header.php';
 ?>
+
 <!-- Page Content -->
     <div class="container">
         <!-- Page Heading/Breadcrumbs -->
@@ -37,34 +38,18 @@
             <li class="breadcrumb-item active">Profile</li>
         </ol>
 
-        <!-- Content Row -->
-        <div class="row">
-            <div class="row no-gutters">
-                <div class="col-xl-12 img-cover">
-                    <!-- <img src="uploads/<?php echo $data['gambar']?>" alt="Foto profil <?php echo $data['username'] ?>" class="cover-img">
-                    <div class="overlay-black"></div> -->
-                    <img class="profile-img img-responsive img img-thumbnail" width="300" height="300" src="uploads/<?php echo $data['gambar'] ?>" alt="Foto profil <?php echo  $data['username'] ?>">
-                    <!-- <h2>@<?php echo $data['username'] ?></h2> -->
-                </div>
+        <!-- Team Members -->
+        <div class="row justify-content-center">
+        <div class="col-lg-4 mb-4">
+            <div class="card h-100 text-center">
+            <img class="card-img-top" src="uploads/<?php echo $data['gambar'] ?>" alt="">
+            <div class="card-body">
+                <h4 class="card-title"><?php echo $data['username'] ?></h4>
+                <h6 class="card-subtitle mb-2 text-muted"><?php echo $data['email']; ?></h6>
+                <p class="card-text"><?php echo $data['bio']; ?></p>
             </div>
-            <div class="row no-gutters">
-                <div class="col-xl-6 img-cover">
-                    <ul>
-                        <li>
-                            <h4>Username</h4>
-                            <a>@<?php echo $data['username'] ?></a>
-                        </li><br />
-                        <li>
-                            <h4>Bio</h4>
-                            <a><?php echo $data['bio']; ?></a>
-                        </li><br />
-                        <li>
-                            <h4>Contact</h4>
-                            <a><?php echo $data['email']; ?></a>
-                        </li><br />
-                    </ul>
-                </div>
             </div>
+        </div>
         </div>
         <!-- /.row -->
 

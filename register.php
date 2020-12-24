@@ -53,7 +53,7 @@
 
     }
         
-    $pageTitle = 'PB | Register';
+    $pageTitle = 'Register';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -75,8 +75,8 @@
 
         <!-- Contact Form -->
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-        <div class="row">
-            <div class="col-lg-8 mb-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 mb-4">
                 <form action="register.php" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="email">Email address</label>

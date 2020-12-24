@@ -49,7 +49,7 @@
     }
 
     //$pageTitle = 'Login | Instagram KA WE :)';
-    $pageTitle = 'PB | Login';
+    $pageTitle = 'Login';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -71,8 +71,8 @@
 
         <!-- Contact Form -->
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-        <div class="row">
-            <div class="col-lg-8 mb-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 mb-4">
                 <form action="login.php<?php if(isset($_GET['redirectProfile'])){echo "?redirectProfile=".$_GET['redirectProfile'];}?>" method="POST">
                 
                 <div class="form-group">

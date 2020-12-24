@@ -19,7 +19,7 @@
     mysqli_close($conn);
     */
 
-    $pageTitle = 'Ini Homepage';
+    $pageTitle = 'TLX Page 2';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';

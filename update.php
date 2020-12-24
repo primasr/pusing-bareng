@@ -79,8 +79,8 @@
 
         <!-- Contact Form -->
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-        <div class="row">
-            <div class="col-lg-8 mb-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 mb-4">
                 <form action="update.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Bio</label>

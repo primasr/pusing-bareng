@@ -8,6 +8,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link rel="icon" type="image/png"  href="images/logo 2.png">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" /> -->
+
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -48,7 +51,7 @@
                 <a href="hackerrank-homepage.php" class="list-group-item list-group-item-action bg-light">HackerRank</a>
                 <a href="cses-homepage.php" class="list-group-item list-group-item-action bg-light">CSES</a>
                 <a href="spoj-homepage.php" class="list-group-item list-group-item-action bg-light">SPOJ</a>
-                <a href="vjudge-homepage.php" class="list-group-item list-group-item-action bg-light">Virtual Judge</a>
+                <a href="olymp-homepage.php" class="list-group-item list-group-item-action bg-light">e-Olymp</a>
                 <a href="other-homepage.php" class="list-group-item list-group-item-action bg-light">Other</a>
             </div>
         </div>
