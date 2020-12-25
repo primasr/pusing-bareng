@@ -25,6 +25,44 @@
     include 'header.php';
 ?>
 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('images/kaca-pembesar.png');
+  background-position: 10px 10px;
+  background-size: 23px 23px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 14px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+
   <!-- Page Content -->
   <div class="container">
 
@@ -46,11 +84,11 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Card image cap">
+          <img class="card-img-top" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!">
           <div class="card-body">
             <h2 class="card-title">Hello World</h2>
             <p class="card-text">Program Pertama: Menuliskan Hello World!</p>
-            <a href="toki-hello-world.php" class="btn btn-primary">Read More &rarr;</a>
+            <a href="tlx-hello-world.php" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on January 1, 2020 by
@@ -60,11 +98,11 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top" src="https://2.bp.blogspot.com/-hE4VsLS1KIY/WwFbWe1t44I/AAAAAAAAB_U/XEdBkQ8UYYsS-i14LrFnqAkIrcpOnEEEACLcBGAs/s400/for1.PNG" alt="Caesar Chipper">
           <div class="card-body">
-            <h2 class="card-title">Post Title</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title">Caesar Chipper</h2>
+            <p class="card-text">Membuat program Caesar Chipper</p>
+            <a href="tlx-caesar-chipper.php" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on January 1, 2020 by
@@ -107,65 +145,9 @@
 
       </div>
 
-      <!-- Sidebar Widgets Column -->
-      <div class="col-md-4">
-
-        <!-- Search Widget -->
-        <!-- <div class="card my-4">
-          <h5 class="card-header">Search</h5>
-          <div class="card-body">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search for...">
-              <span class="input-group-append">
-                <button class="btn btn-secondary" type="button">Go!</button>
-              </span>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- Categories Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Other Topics on <i>TLX TOKI</i></h5>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-12">
-                <ol class="mb-0">
-                  <!-- Tambahan line-heiht soalnya dia ngambil lebih dari 1 baris -->
-                  <li style="line-height:130%">
-                    <a href="#">Web Design yapari ndande monaiya, imakar aitykutyo</a>
-                  </li>
-                  <li>
-                    <a href="#">HTML</a>
-                  </li>
-                  <li>
-                    <a href="#">Freebies</a>
-                  </li>
-                  <li>
-                    <a href="#">JavaScript</a>
-                  </li>
-                  <li>
-                    <a href="#">CSS</a>
-                  </li>
-                  <li>
-                    <a href="#">Tutorials</a>
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Side Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">About <i>TLX TOKI</i></h5>
-          <div class="card-body">
-          Platform Pemrograman Kompetitif. Platform # 1 Indonesia untuk 
-          mengasah keterampilan pemrograman kompetitif Anda, dipersembahkan oleh Ikatan Alumni TOKI
-          (Tim Olimpiade Komputer Indonesia)
-          </div>
-        </div>
-
-      </div>
+      <?php
+          include 'sidewidget.php';
+      ?>
 
     </div>
     <!-- /.row -->

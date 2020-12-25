@@ -1,11 +1,21 @@
-<?php
+<?php 
 include("conn.php");
+$username = "";
+$email = "";
+if (isset($_POST['register'])) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-$sql = "SELECT email FROM users WHERE email = " .$_POST['email'];
-$select = mysqli_query($con, $sql);
-$row = mysqli_fetch_assoc($select);
+    $sql_u = "SELECT * FROM users WHERE username='$username'";
+    $sql_e = "SELECT * FROM users WHERE email='$email'";
+    $res_u = mysqli_query($db, $sql_u);
+    $res_e = mysqli_query($db, $sql_e);
 
-if (mysqli_num_rows > 0) {
-    echo "exist";
-}else echo 'notexist';
+    if (mysqli_num_rows($res_u) > 0) {
+        $name_error = "Sorry... username already taken"; 	
+    }else if(mysqli_num_rows($res_e) > 0){
+        $email_error = "Sorry... email already taken"; 	
+    }
+}
 ?>

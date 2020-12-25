@@ -23,8 +23,8 @@
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
+    include 'sidewidget-1.php';
 ?>
-
   <!-- Page Content -->
   <div class="container">
 
@@ -107,65 +107,9 @@
 
       </div>
 
-      <!-- Sidebar Widgets Column -->
-      <div class="col-md-4">
-
-        <!-- Search Widget -->
-        <!-- <div class="card my-4">
-          <h5 class="card-header">Search</h5>
-          <div class="card-body">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search for...">
-              <span class="input-group-append">
-                <button class="btn btn-secondary" type="button">Go!</button>
-              </span>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- Categories Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Other Topics on <i>TLX TOKI</i></h5>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-12">
-                <ol class="mb-0">
-                  <!-- Tambahan line-heiht soalnya dia ngambil lebih dari 1 baris -->
-                  <li style="line-height:130%">
-                    <a href="#">Web Design yapari ndande monaiya, imakar aitykutyo</a>
-                  </li>
-                  <li>
-                    <a href="#">HTML</a>
-                  </li>
-                  <li>
-                    <a href="#">Freebies</a>
-                  </li>
-                  <li>
-                    <a href="#">JavaScript</a>
-                  </li>
-                  <li>
-                    <a href="#">CSS</a>
-                  </li>
-                  <li>
-                    <a href="#">Tutorials</a>
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Side Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">About <i>TLX TOKI</i></h5>
-          <div class="card-body">
-          Platform Pemrograman Kompetitif. Platform # 1 Indonesia untuk 
-          mengasah keterampilan pemrograman kompetitif Anda, dipersembahkan oleh Ikatan Alumni TOKI
-          (Tim Olimpiade Komputer Indonesia)
-          </div>
-        </div>
-
-      </div>
+      <?php
+          include 'sidewidget-2.php';
+      ?>
 
     </div>
     <!-- /.row -->

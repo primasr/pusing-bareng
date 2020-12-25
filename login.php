@@ -37,7 +37,7 @@
                     }
                 } else
                 {
-                    myAlert("Username or Password incorrect");
+                    myAlert("Password incorrect");
                 }
             } else{
                 myAlert("Username Not Found in database :(");

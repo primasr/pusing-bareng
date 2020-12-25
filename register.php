@@ -13,41 +13,63 @@
     
             $email = $_POST['email'];
             $username = $_POST['username'];
-            $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-            $bio = $_POST['bio'];
 
-            $target_dir = "uploads/";
-            $image = $_FILES["image"]["name"];
-
-            $target_file = $target_dir.basename($image);
-            $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-            $allowedTypes = array('jpg','png','jpeg','gif');
+            $sql_u = "SELECT * FROM users WHERE username='$username'";
+            $sql_e = "SELECT * FROM users WHERE email='$email'";
+            $res_u = mysqli_query($conn, $sql_u);
+            $res_e = mysqli_query($conn, $sql_e);
 
             function myAlert($pesan) {
                 echo "<script type='text/javascript'>alert('$pesan');</script>";
             }
-
-            if(in_array($imageFileType,$allowedTypes)){
-                if(move_uploaded_file($_FILES["image"]["tmp_name"],$target_file)){
+        
+            if (mysqli_num_rows($res_u) > 0 && mysqli_num_rows($res_e) > 0) {
+                $name_error = "Email and Username already taken";
+                myAlert($name_error);
+                // $name_error = 1; 	
+            }else if(mysqli_num_rows($res_e) > 0){
+                $email_error = "Email already taken"; 	
+                myAlert($email_error);
+                // $email_error = 1;
+            } else if (mysqli_num_rows($res_u) > 0){
+                $email_error = "Username already taken"; 	
+                myAlert($email_error);
+                // $email_error = 1;
+            } else
+            {
+                $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+                $bio = $_POST['bio'];
     
-                    $sql = "INSERT INTO users (`email`, `username`, `password`, `bio`, `gambar`)
-                    VALUES ('$email', '$username', '$password', '$bio' , '$image')";
-                    if (mysqli_query($conn, $sql)) {
-                        myAlert("New record created successfully");
-                        //echo "New record created successfully";
-                        //header('location: login.php');
-                    } else {
-                        //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-                        myAlert("Error: " . $sql . "<br>" . mysqli_error($conn));
+                $target_dir = "uploads/";
+                $image = $_FILES["image"]["name"];
+    
+                $target_file = $target_dir.basename($image);
+                $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+                $allowedTypes = array('jpg','png','jpeg','gif');
+    
+                if(in_array($imageFileType,$allowedTypes)){
+                    if(move_uploaded_file($_FILES["image"]["tmp_name"],$target_file)){
+        
+                        $sql = "INSERT INTO users (`email`, `username`, `password`, `bio`, `gambar`)
+                        VALUES ('$email', '$username', '$password', '$bio' , '$image')";
+                        if (mysqli_query($conn, $sql)) {
+                            myAlert("New record created successfully");
+                            //echo "New record created successfully";
+                            //header('location: login.php');
+                        } else {
+                            //echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                            myAlert("Error: " . $sql . "<br>" . mysqli_error($conn));
+                        }
+                    }else{
+                        //echo "Sorry, there was an error uploading your file.";
+                        myAlert("Sorry, there was an error uploading your file.");
                     }
                 }else{
-                    //echo "Sorry, there was an error uploading your file.";
-                    myAlert("Sorry, there was an error uploading your file.");
+                    //echo 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.';
+                    myAlert("Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.");
                 }
-            }else{
-                //echo 'Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.';
-                myAlert("Sorry, only JPG, JPEG, PNG, & GIF files are allowed to upload.");
             }
+
         }
         mysqli_close($conn);
 
@@ -77,7 +99,7 @@
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
         <div class="row justify-content-center">
             <div class="col-lg-6 mb-4">
-                <form action="register.php" method="POST" enctype="multipart/form-data">
+                <form action="register.php" method="POST" enctype="multipart/form-data" name="form1" onsubmit="required()" >
                 <div class="form-group">
                     <label for="email">Email address</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email" required data-validation-required-message="Please enter your email.">
@@ -102,7 +124,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlFile1">Upload foto syantik</label>
-                    <input type="file" class="form-control-file" name="image">
+                    <input type="file" class="form-control-file" name="image" id="image" required data-validation-required-message="Please insert your Profile Pictures.">
                 </div>
                 <button type="submit" name="submit" id="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -125,6 +147,21 @@
           document.getElementById('message').innerHTML = 'Password is not the same!';
             }
         }
+
+        function required()
+            {
+              var empt = document.forms["form1"]["image"].value;
+              if (empt == "" || empt == null)
+              {
+              alert("Please insert your Profile Pictures.");
+              return false;
+              }
+              else 
+              {
+              //alert('Code has accepted : you can try another');
+              return true; 
+              }
+            }
     </script>
 
 <?php 

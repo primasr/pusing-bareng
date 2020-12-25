@@ -19,7 +19,7 @@
     mysqli_close($conn);
     */
 
-    $pageTitle = 'Homepage';
+    $pageTitle = 'Pusing Bareng';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -84,7 +84,9 @@
             <h4 class="card-title">
               <a href="tlx-homepage-1.php">TLX TOKI</a>
             </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+            <p class="card-text">Platform Pemrograman Kompetitif. Platform # 1 Indonesia untuk 
+            mengasah keterampilan pemrograman kompetitif Anda, dipersembahkan oleh Ikatan Alumni TOKI
+            (Tim Olimpiade Komputer Indonesia)</p>
           </div>
         </div>
       </div>

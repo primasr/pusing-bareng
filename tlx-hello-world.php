@@ -23,7 +23,11 @@
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
+    include 'sidewidget-1.php';
 ?>
+
+  <link href="style.css" rel="stylesheet">
+
   <!-- Page Content -->
   <div class="container">
 
@@ -59,27 +63,53 @@
         <hr>
 
         <!-- Preview Image -->
-        <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+        <!-- <img class="img-fluid rounded" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!"> -->
 
         <hr>
 
         <!-- Post Content -->
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
+        <h2 class="justify">Hello, World!</h2>
+        <table style="width:30%">
+            <tr>
+                <td style="width:60%">Time limit</td>
+                <td style="width:40%">1 s</td>
+            </tr>
+            <tr>
+                <td style="width:60%">Memory limit</td>
+                <td style="width:40%">64 MB</td>
+            </tr>
+        </table>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+        <!-- <img class="img-fluid rounded padding" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!"> -->
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
+        <br>
+        <br>
 
-        <blockquote class="blockquote">
+        <h5>Deskripsi</h5>
+        <p class="justify">Pak Dengklek senang sekali mengetahui bahwa Anda sedang mempelajari dasar-dasar pemrograman. Ia lalu memberitahu Anda bahwa langkah pertama yang biasanya dilakukan untuk mempelajari suatu bahasa pemrograman adalah dengan mencetak sebuah kalimat "Hello, World!" dengan bahasa tersebut.
+
+          Pak Dengklek meminta Anda melakukan hal tersebut. Buatlah program yang dimaksud.</p>
+
+        <h5>Format Masukan</h5>
+        <div class="gray-block">
+          <p>Tidak ada masukan untuk program Anda.</p>
+        </div>
+
+
+        <h5>Format Keluaran</h5>
+        <p>Sebuah baris berisi sebuah kalimat <span class="block">Hello, World!.</span></p>
+
+        <h5>Contoh Keluaran</h5>
+        <pre>Hello, World!.</pre>
+
+        <!-- <blockquote class="blockquote">
           <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
           <footer class="blockquote-footer">Someone famous in
             <cite title="Source Title">Source Title</cite>
           </footer>
-        </blockquote>
+        </blockquote> -->
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
+        <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p> -->
 
         <hr>
     
@@ -123,6 +153,8 @@
           </div><div id="output"></div>
           
         </div>
+
+        <hr>
 
 	      <script>
 
@@ -264,52 +296,9 @@
 
       </div>
 
-      <!-- Sidebar Widgets Column -->
-      <div class="col-md-4">
-
-        <!-- Categories Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Other Topics on <i>TLX TOKI</i></h5>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-12">
-                <ol class="mb-0">
-                  <!-- Tambahan line-heiht soalnya dia ngambil lebih dari 1 baris -->
-                  <li style="line-height:130%">
-                    <a href="#">Web Design yapari ndande monaiya, imakar aitykutyo</a>
-                  </li>
-                  <li>
-                    <a href="#">HTML</a>
-                  </li>
-                  <li>
-                    <a href="#">Freebies</a>
-                  </li>
-                  <li>
-                    <a href="#">JavaScript</a>
-                  </li>
-                  <li>
-                    <a href="#">CSS</a>
-                  </li>
-                  <li>
-                    <a href="#">Tutorials</a>
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Side Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">About <i>TLX TOKI</i></h5>
-          <div class="card-body">
-          Platform Pemrograman Kompetitif. Platform # 1 Indonesia untuk 
-          mengasah keterampilan pemrograman kompetitif Anda, dipersembahkan oleh Ikatan Alumni TOKI
-          (Tim Olimpiade Komputer Indonesia)
-          </div>
-        </div>
-
-      </div>
+      <?php
+          include 'sidewidget-2.php';
+      ?>
 
     </div>
     <!-- /.row -->
