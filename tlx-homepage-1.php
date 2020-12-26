@@ -25,6 +25,7 @@
     include 'header.php';
     include 'sidewidget-1.php';
 ?>
+  <link href="style.css" rel="stylesheet">
   <!-- Page Content -->
   <div class="container">
 

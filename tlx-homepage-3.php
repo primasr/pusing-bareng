@@ -23,45 +23,10 @@
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
+    include 'sidewidget-1.php';
 ?>
 
-<style>
-* {
-  box-sizing: border-box;
-}
-
-#myInput {
-  background-image: url('images/kaca-pembesar.png');
-  background-position: 10px 10px;
-  background-size: 23px 23px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 14px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
-
-#myTable {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 14px;
-}
-
-#myTable th, #myTable td {
-  text-align: left;
-  padding: 12px;
-}
-
-#myTable tr {
-  border-bottom: 1px solid #ddd;
-}
-
-#myTable tr.header, #myTable tr:hover {
-  background-color: #f1f1f1;
-}
-</style>
+  <link href="style.css" rel="stylesheet">
 
   <!-- Page Content -->
   <div class="container">
@@ -84,7 +49,7 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!">
+          <img class="card-img-top" src="http://placehold.it/750x300" alt="Hello World!">
           <div class="card-body">
             <h2 class="card-title">Hello World</h2>
             <p class="card-text">Program Pertama: Menuliskan Hello World!</p>
@@ -98,7 +63,7 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="https://2.bp.blogspot.com/-hE4VsLS1KIY/WwFbWe1t44I/AAAAAAAAB_U/XEdBkQ8UYYsS-i14LrFnqAkIrcpOnEEEACLcBGAs/s400/for1.PNG" alt="Caesar Chipper">
+          <img class="card-img-top" src="http://placehold.it/750x300" alt="Caesar Chipper">
           <div class="card-body">
             <h2 class="card-title">Caesar Chipper</h2>
             <p class="card-text">Membuat program Caesar Chipper</p>
@@ -146,7 +111,7 @@
       </div>
 
       <?php
-          include 'sidewidget.php';
+          include 'sidewidget-2.php';
       ?>
 
     </div>

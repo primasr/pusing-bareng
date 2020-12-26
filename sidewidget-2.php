@@ -5,44 +5,50 @@
     <div class="card my-4">
           <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for topics.." title="Type in a name">
 
+        <button class="accordion_3">Show Topics</button>
+        <div class="panel_3">
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p> -->
+        
           <table id="myTable">
               <tr class="header">
                   <th style="width:70%;">Topics</th>
                   <th style="width:30%;">Platform</th>
               </tr>
               <tr>
-                  <td>Alfreds Futterkiste</td>
-                  <td>Germany</td>
+                  <td><a href="tlx-hello-world.php">Hello World!</a></td>
+                  <td>TLX TOKI</td>
               </tr>
               <tr>
-                  <td>Berglunds snabbkop</td>
-                  <td>Sweden</td>
+                  <td>Caesar Chipper</td>
+                  <td>TLX TOKI</td>
               </tr>
               <tr>
-                  <td>Island Trading</td>
-                  <td>UK</td>
+                  <td>Rotasi Matriks</td>
+                  <td>TLX TOKI</td>
               </tr>
               <tr>
-                  <td>Koniglich Essen</td>
-                  <td>Germany</td>
+                  <td>Faktorial Ganjil-Genap</td>
+                  <td>TLX TOKI</td>
               </tr>
               <tr>
-                  <td>Laughing Bacchus Winecellars ahah anjay maba tslur</td>
-                  <td>Canada</td>
+                  <td>Weird Algorithm</td>
+                  <td>CSES</td>
               </tr>
               <tr>
-                  <td>Magazzini Alimentari Riuniti</td>
-                  <td>Italy</td>
+                  <td>Increasing Array</td>
+                  <td>CSES</td>
               </tr>
               <tr>
-                  <td>North/South</td>
-                  <td>UK</td>
+                  <td>MudMud Libur</td>
+                  <td>HackerRank</td>
               </tr>
               <tr>
-                  <td>Paris specialites</td>
-                  <td>France</td>
+                  <td>Tugas dari Bos</td>
+                  <td>HackerRank</td>
               </tr>
           </table>
+
+        </div>
 
           <script>
           function myFunction() {
@@ -62,6 +68,21 @@
                 }
               }       
             }
+          }
+
+          var acc = document.getElementsByClassName("accordion_3");
+          var i;
+
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+              this.classList.toggle("active_3");
+              var panel = this.nextElementSibling;
+              if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+              } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+              } 
+            });
           }
           </script>
 

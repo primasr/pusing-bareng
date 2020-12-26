@@ -37,18 +37,18 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">Post Title</h1>
+        <h1 class="mt-4">Hello World!</h1>
 
         <!-- Author -->
         <p class="lead">
           by
-          <a href="#">Start Bootstrap</a>
+          <a href="#">Admin</a>
         </p>
 
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on January 1, 2019 at 12:00 PM</p>
+        <p>Posted on December 26, 2020 at 8:00 PM</p>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
@@ -110,6 +110,43 @@
         </blockquote> -->
 
         <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p> -->
+
+        <hr>
+
+        <button class="accordion_2">Solution 1</button>
+        <div class="panel_2 code-font">
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+         -->
+          <br>
+          <p>#include &lt;bits/stdc++.h&gt;</p>
+          <p>using namespace std;</p>
+          <p>int main()</p>
+          <p>{</p>
+          <p>cout &lt;&lt; &quot;Hello, World!.&quot; &lt;&lt; endl;</p>
+          <p>}</p>
+        </div>
+
+        <button class="accordion_2">Solution 2</button>
+        <div class="panel_2">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <script>
+          var acc = document.getElementsByClassName("accordion_2");
+          var i;
+
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+              this.classList.toggle("active_2");
+              var panel = this.nextElementSibling;
+              if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+              } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+              } 
+            });
+          }
+        </script>
 
         <hr>
     
@@ -299,6 +336,7 @@
       <?php
           include 'sidewidget-2.php';
       ?>
+
 
     </div>
     <!-- /.row -->

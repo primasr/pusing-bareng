@@ -79,7 +79,7 @@
     <div class="row">
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="tlx-homepage-1.php"><img class="card-img-top" src="images/tlx.png" alt=""></a>
+          <a href="tlx-homepage-1.php"><img class="card-img-top" src="images/tlx.png" alt="TLX TOKI"></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="tlx-homepage-1.php">TLX TOKI</a>
