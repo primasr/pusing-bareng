@@ -49,43 +49,43 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Hello World!">
+          <img class="card-img-top img-shadow" height="300" width="750" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ySjneyKrLW1fI3F3ECtSCtXmlxpR5R61CA&usqp=CAU" alt="Hello World!">
           <div class="card-body">
-            <h2 class="card-title">Hello World</h2>
-            <p class="card-text">Program Pertama: Menuliskan Hello World!</p>
-            <a href="tlx-hello-world.php" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title">Ukuran Kejauhan</h2>
+            <p class="card-text">Soal IDEAFUSE 2014 - Final CP — Problem G</p>
+            <a href="tlx-ukuran-kejauhan.php" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
+            Posted on January 4, 2021 by
+            <a href="#">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Caesar Chipper">
+          <img class="card-img-top img-shadow" height="300" width="750" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ySjneyKrLW1fI3F3ECtSCtXmlxpR5R61CA&usqp=CAU" alt="Caesar Chipper">
           <div class="card-body">
-            <h2 class="card-title">Caesar Chipper</h2>
-            <p class="card-text">Membuat program Caesar Chipper</p>
-            <a href="tlx-caesar-chipper.php" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title">Candy Businessman</h2>
+            <p class="card-text">Soal IDEAFUSE 2014 - Final ICPC Sumatra Provincial — Problem A</p>
+            <a href="tlx-candy-businessman.php" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
+            Posted on January 4, 2021 by
+            <a href="#">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top img-shadow" height="300" width="750" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ySjneyKrLW1fI3F3ECtSCtXmlxpR5R61CA&usqp=CAU" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">Post Title</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title">Hard Word</h2>
+            <p class="card-text">Soal IDEAFUSE 2014 - Final ICPC Sumatra Provincial — Problem D</p>
+            <a href="tlx-hard-word.php" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
+            Posted on January 4, 2021 by
+            <a href="#">Admin</a>
           </div>
         </div>
 

@@ -117,18 +117,15 @@
         <div class="panel_2 code-font">
           <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
          -->
-          <br>
+          <p><br></p>
           <p>#include &lt;bits/stdc++.h&gt;</p>
+          <p><br></p>
           <p>using namespace std;</p>
-          <p>int main()</p>
+          <p><br></p>
+          <p>int main ()</p>
           <p>{</p>
-          <p>cout &lt;&lt; &quot;Hello, World!.&quot; &lt;&lt; endl;</p>
+          <p>cout &lt;&lt; &quot;Hello World!.&quot; &lt;&lt; endl;</p>
           <p>}</p>
-        </div>
-
-        <button class="accordion_2">Solution 2</button>
-        <div class="panel_2">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
 
         <script>

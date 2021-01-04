@@ -8,18 +8,8 @@
     $rows = mysqli_query($conn, $sql);
     $i = 0;
     mysqli_close($conn);
-    
-    /*
-    $id = $_SESSION['id'];
-    $sql = "SELECT * FROM users WHERE `id`= $id";
 
-    $result = mysqli_query($conn,$sql);
-    $row = mysqli_fetch_assoc($result);
-
-    mysqli_close($conn);
-    */
-
-    $pageTitle = 'Caesar Chipper';
+    $pageTitle = 'Counting Rooms';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -37,38 +27,35 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">Caesar Chipper</h1>
+        <h1 class="mt-4">Counting Rooms</h1>
 
         <!-- Author -->
         <p class="lead">
-          by
-          <a href="#">Admin</a>
+          from
+          <a href="https://cses.fi/problemset/task/1192" target="_blank"><i>here</i></a>
         </p>
 
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on January 3, 2021 at 4:00 PM</p>
+        <p>Posted on January 4, 2021 at 11:30 PM</p>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="tlx-homepage-1.php">TLX TOKI</a>
+                <a href="cses-homepage.php">CSES</a>
             </li>
-            <li class="breadcrumb-item active">Caesar Chipper</li>
+            <li class="breadcrumb-item active">Counting Rooms</li>
         </ol>
 
         <hr>
 
-        <!-- Preview Image -->
-        <!-- <img class="img-fluid rounded" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!"> -->
-
         <hr>
 
         <!-- Post Content -->
-        <h2 class="justify">Caesar Chipper</h2>
+        <h2 class="justify">Counting Rooms</h2>
         <table style="width:30%">
             <tr>
                 <td style="width:60%">Time limit</td>
@@ -76,135 +63,91 @@
             </tr>
             <tr>
                 <td style="width:60%">Memory limit</td>
-                <td style="width:40%">64 MB</td>
+                <td style="width:40%">512 MB</td>
             </tr>
         </table>
-
-        <!-- <img class="img-fluid rounded padding" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!"> -->
-
         <br>
         <br>
 
         <h5>Deskripsi</h5>
-        <p class="justify">Caesar cipher adalah salah satu teknik enkripsi yang paling sederhana dan juga dikenal luas.</p>
-        <p class="justify">Cara kerja enkripsi ini adalah sebagai berikut. Anda diberikan sebuah konstanta K. 
-          Lalu, misalkan kita ingin mengenkripsi suatu string S, yang hanya berisi karakter alfabet 'a' - 'z'. 
-          Yang harus Anda lakukan adalah mengganti setiap karakter dari S dengan karakter pada pada 
-          posisi K di depannya dalam urutan alfabet. Contohnya, jika K = 3, maka 'a' akan diganti 
-          dengan 'd', 'b' dengan 'e', dan seterusnya. Untuk mudahnya, urutan alfabet dapat dianggap siklis, 
-          yakni karakter setelah 'z' adalah 'a'. Sebagai contoh, 'y' akan diganti dengan 'b'.</p>
-        <p class="justify">Anda diberikan string S oleh Pak Dengklek. Lakukanlah enkripsi Caesar cipher pada string tersebut!</p>
+        <p class="justify">You are given a map of a building, and your task is to count the number of its rooms. 
+        The size of the map is <b>n x m</b> squares, and each square is either floor or wall. 
+        You can walk left, right, up, and down through the floor squares.</p>
 
         <h5>Format Masukan</h5>
         <div class="gray-block">
-          <p>Baris pertama berisi sebuah string S. Baris kedua berisi sebuah bilangan bulat K.</p>
+          <p class="justify">The first input line has two integers <b>n</b> and <b>m</b>: the height and width of the map.</p>
+          <p class="justify">Then there are n lines of m characters describing the map. Each character is either <span class="block">.</span> (floor) or <span class="block">#</span> (wall).</p>
         </div>
 
-
         <h5>Format Keluaran</h5>
-        <p>Sebuah baris berisi sebuah string S yang telah dienkripsi.</p>
+        <p class="justify">Print one integer: the number of rooms.</p>
 
-        <h5>Contoh Masukan</h5>
-        <pre>caesar<br>2</pre>
+        <h5>Contoh Masukan 1</h5>
+        <pre>5 8<br>########<br>#..#...#<br>####.#.#<br>#..#...#<br>########</pre>
 
-        <h5>Contoh Keluaran</h5>
-        <pre>ecguct</pre>
+        <h5>Contoh Keluaran 1</h5>
+        <pre>3</pre>
 
         <h5>Batasan</h5>
         <ul class="a">
-          <li>String S terdiri atas karakter-karakter <span class="block">a</span> - <span class="block">z</span>.</li>
-          <li>String S terdiri atas 1 sampai dengan 100 karakter, inklusif.</li>
-          <li>1 ≤ K ≤ 25</li>
+          <li>1 <= n,m <= 1000</li>
         </ul>
-
-        <!-- <blockquote class="blockquote">
-          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-          <footer class="blockquote-footer">Someone famous in
-            <cite title="Source Title">Source Title</cite>
-          </footer>
-        </blockquote> -->
-
-        <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p> -->
 
         <hr>
 
-        <button class="accordion_2">Solution with C</button>
+        <button class="accordion_2">Solution</button>
         <div class="panel_2 code-font">
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-         -->
-          <p><br></p>
-          <p>#include &lt;stdio.h&gt;</p>
-          <p>#include &lt;string.h&gt;</p>
-          <p><br></p>
-          <p>int main()</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; char kata[100];</p>
-          <p>&nbsp; &nbsp; int n,i,panjang,temp;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; scanf(&quot;%s&quot;,kata);</p>
-          <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;n);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; panjang = strlen(kata);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; for (i = 0; i &lt; panjang; i++)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; temp = kata[i];</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; temp += n;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; if (temp &gt; &apos;z&apos;)</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; temp = temp - 26;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%c&quot;,temp);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; }</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; printf(&quot;\n&quot;);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; return 0;</p>
-          <p>}</p>
-          <p><br></p>
-        </div>
-
-        <button class="accordion_2">Solution with C++</button>
-        <div class="panel_2 code-font">
-          <p><br></p>
-          <p>#include &lt;string&gt;</p>
-          <p>#include &lt;iostream&gt;</p>
-          <p><br></p>
-          <p>using namespace std;</p>
-          <p><br></p>
-          <p>string encrypt(string text, int shift)</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; string result = &quot;&quot;;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; // traverse text</p>
-          <p>&nbsp; &nbsp; for (int i=0;i&lt;text.length();i++)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; // memodifikasi per-karakter</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; // Encrypt Huruf Kecil</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; result += char(int(text[i]-&apos;a&apos;+shift)%26 + &apos;a&apos;);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; }</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; // Return hasil berupa string</p>
-          <p>&nbsp; &nbsp; return result;</p>
-          <p>}</p>
-          <p><br></p>
-          <p>int main ()</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; string s;</p>
-          <p>&nbsp; &nbsp; int shift;</p>
-          <p>&nbsp; &nbsp;&nbsp;</p>
-          <p>&nbsp; &nbsp; cin &gt;&gt; s;</p>
-          <p>&nbsp; &nbsp; cin &gt;&gt; shift;</p>
-          <p>&nbsp; &nbsp;&nbsp;</p>
-          <p>&nbsp; &nbsp; cout &lt;&lt; encrypt(s,shift) &lt;&lt; endl;</p>
-          <p>&nbsp; &nbsp; return 0;</p>
-          <p>}</p>
+            <p><br></p>
+            <p>#include &lt;bits/stdc++.h&gt;</p>
+            <p><br></p>
+            <p>using namespace std;</p>
+            <p><br></p>
+            <p>const int mxN = 1e3;</p>
+            <p>int n,m;</p>
+            <p>string s[mxN];</p>
+            <p><br></p>
+            <p>bool e(int i, int j)</p>
+            <p>{</p>
+            <p>&nbsp; &nbsp; return i&gt;=0 &amp;&amp; i &lt; n &amp;&amp; j &gt;= 0 &amp;&amp; j &lt; m &amp;&amp; s[i][j]==&apos;.&apos;;</p>
+            <p>}</p>
+            <p><br></p>
+            <p>void dfs(int i, int j)</p>
+            <p>{</p>
+            <p>&nbsp; &nbsp; s[i][j]=&apos;#&apos;;</p>
+            <p>&nbsp; &nbsp; if (e(i-1,j))</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; dfs(i-1,j);</p>
+            <p>&nbsp; &nbsp; if (e(i+1,j))</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; dfs(i+1,j);</p>
+            <p>&nbsp; &nbsp; if (e(i,j-1))</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; dfs(i,j-1);</p>
+            <p>&nbsp; &nbsp; if (e(i,j+1))</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; dfs(i,j+1);</p>
+            <p>}</p>
+            <p><br></p>
+            <p>int main ()</p>
+            <p>{</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; cin &gt;&gt; n &gt;&gt; m;</p>
+            <p>&nbsp; &nbsp; for (int i = 0 ; i &lt; n; i++)</p>
+            <p>&nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; cin &gt;&gt; s[i];</p>
+            <p>&nbsp; &nbsp; }</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; int ans = 0;</p>
+            <p>&nbsp; &nbsp; for(int i = 0; i &lt; n; i++)</p>
+            <p>&nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; for (int j = 0 ; j &lt; m; j++)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (e(i,j))</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dfs(i,j), ++ans;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p>&nbsp; &nbsp; }</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; cout &lt;&lt; ans;</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; return 0;</p>
+            <p>}</p>
         </div>
 
         <script>
@@ -304,7 +247,7 @@
                 else
                 {
                   $.ajax({
-                    url: "comments/tlx-2-add.php",
+                    url: "comments/cses-1-add.php",
                     data: str,
                     type: 'post',
                     success: function (response)
@@ -346,7 +289,7 @@
 
 
             function listComment() {
-                $.post("comments/tlx-2-list.php",
+                $.post("comments/cses-1-list.php",
                         function (data) {
                             var data = JSON.parse(data);
 

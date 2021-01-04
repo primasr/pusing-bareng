@@ -8,18 +8,8 @@
     $rows = mysqli_query($conn, $sql);
     $i = 0;
     mysqli_close($conn);
-    
-    /*
-    $id = $_SESSION['id'];
-    $sql = "SELECT * FROM users WHERE `id`= $id";
 
-    $result = mysqli_query($conn,$sql);
-    $row = mysqli_fetch_assoc($result);
-
-    mysqli_close($conn);
-    */
-
-    $pageTitle = 'Caesar Chipper';
+    $pageTitle = 'Hard Word';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -37,7 +27,7 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">Caesar Chipper</h1>
+        <h1 class="mt-4">Hard Word</h1>
 
         <!-- Author -->
         <p class="lead">
@@ -48,7 +38,7 @@
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on January 3, 2021 at 4:00 PM</p>
+        <p>Posted on January 4, 2021 at 8:00 PM</p>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
@@ -57,18 +47,15 @@
             <li class="breadcrumb-item">
                 <a href="tlx-homepage-1.php">TLX TOKI</a>
             </li>
-            <li class="breadcrumb-item active">Caesar Chipper</li>
+            <li class="breadcrumb-item active">Hard Word</li>
         </ol>
 
         <hr>
 
-        <!-- Preview Image -->
-        <!-- <img class="img-fluid rounded" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!"> -->
-
         <hr>
 
         <!-- Post Content -->
-        <h2 class="justify">Caesar Chipper</h2>
+        <h2 class="justify">Hard Word</h2>
         <table style="width:30%">
             <tr>
                 <td style="width:60%">Time limit</td>
@@ -76,133 +63,128 @@
             </tr>
             <tr>
                 <td style="width:60%">Memory limit</td>
-                <td style="width:40%">64 MB</td>
+                <td style="width:40%">16 MB</td>
             </tr>
         </table>
-
-        <!-- <img class="img-fluid rounded padding" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!"> -->
 
         <br>
         <br>
 
         <h5>Deskripsi</h5>
-        <p class="justify">Caesar cipher adalah salah satu teknik enkripsi yang paling sederhana dan juga dikenal luas.</p>
-        <p class="justify">Cara kerja enkripsi ini adalah sebagai berikut. Anda diberikan sebuah konstanta K. 
-          Lalu, misalkan kita ingin mengenkripsi suatu string S, yang hanya berisi karakter alfabet 'a' - 'z'. 
-          Yang harus Anda lakukan adalah mengganti setiap karakter dari S dengan karakter pada pada 
-          posisi K di depannya dalam urutan alfabet. Contohnya, jika K = 3, maka 'a' akan diganti 
-          dengan 'd', 'b' dengan 'e', dan seterusnya. Untuk mudahnya, urutan alfabet dapat dianggap siklis, 
-          yakni karakter setelah 'z' adalah 'a'. Sebagai contoh, 'y' akan diganti dengan 'b'.</p>
-        <p class="justify">Anda diberikan string S oleh Pak Dengklek. Lakukanlah enkripsi Caesar cipher pada string tersebut!</p>
+        <p class="justify">For some people, some words in Indonesian are harder to read, e.g., 
+        UNTAIAN, MAKLUMAT, PEMROGRAMAN, etc; compared to other words such as MAKAN, BELAJAR, MAIN, 
+        which are easier to read and pronounce.</p>
+
+        <p class="justify">In this problem, we define the hardness of a word as 
+        the number of 2-consecutive consonants plus the number of 3-consecutive vowels in the word.</p>
+
+        <p class="justify">Example,</p>
+
+        <ul class="a">
+          <li>UNTAIAN has a hardness equals to 2 (NT, AIA).</li>
+          <li>MAKLUMAT has a hardness equals to 1 (KL).</li>
+          <li>PEMROGRAMAN has a hardness equals to 2 (MR, GR).</li>
+          <li>MAKAN has a hardness equals to 0.</li>
+          <li>TIDUR has a hardness equals to 0.</li>
+          <li>MAIN has a hardness equals to 0.</li>
+          <li>AIUEOXYZ has a hardness equals to 5 (AIU, IUE, UEO, XY, YZ).</li>
+          <li>LIAUSVIA has a hardness equals to 2 (IAU, SV).</li>
+        </ul>      
+
+        <p class="justify">Given a word, you have to determine its hardness value (or output EASY if its hardness equals to 0).</p>  
 
         <h5>Format Masukan</h5>
         <div class="gray-block">
-          <p>Baris pertama berisi sebuah string S. Baris kedua berisi sebuah bilangan bulat K.</p>
+          <p class="justify">Input starts with a single integer T (1 ≤ T ≤ 100) in a line denoting the number of cases. 
+          Each case contains a string S in one line denoting the word. 
+          S consists of only uppercase letters (A-Z) which length between 1 and 50, inclusive.</p>
         </div>
 
-
         <h5>Format Keluaran</h5>
-        <p>Sebuah baris berisi sebuah string S yang telah dienkripsi.</p>
+        <p class="justify">For each case, output in a single line "<span class="block">Case #X: A</span>" (without quotes), 
+        where <span class="block">X</span> is the case number, starting from 1, and <span class="block">A</span> is the hardness of the word. 
+        If the hardness equals to 0, then output "EASY" (without quotes) for <span class="block">A</span>.</p>
 
         <h5>Contoh Masukan</h5>
-        <pre>caesar<br>2</pre>
+        <pre>8<br>UNTAIAN<br>MAKLUMAT<br>PEMROGRAMAN<br>MAKAN<br>TIDUR<br>MAIN<br>AIUEOXYZ<br>LIAUSVIA</pre>
 
         <h5>Contoh Keluaran</h5>
-        <pre>ecguct</pre>
-
-        <h5>Batasan</h5>
-        <ul class="a">
-          <li>String S terdiri atas karakter-karakter <span class="block">a</span> - <span class="block">z</span>.</li>
-          <li>String S terdiri atas 1 sampai dengan 100 karakter, inklusif.</li>
-          <li>1 ≤ K ≤ 25</li>
-        </ul>
-
-        <!-- <blockquote class="blockquote">
-          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-          <footer class="blockquote-footer">Someone famous in
-            <cite title="Source Title">Source Title</cite>
-          </footer>
-        </blockquote> -->
-
-        <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p> -->
+        <pre>Case #1: 2<br>Case #2: 1<br>Case #3: 2<br>Case #4: EASY<br>Case #5: EASY<br>Case #6: EASY<br>Case #7: 5<br>Case #8: 2</pre>
 
         <hr>
 
-        <button class="accordion_2">Solution with C</button>
+        <button class="accordion_2">Solution</button>
         <div class="panel_2 code-font">
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-         -->
           <p><br></p>
           <p>#include &lt;stdio.h&gt;</p>
           <p>#include &lt;string.h&gt;</p>
           <p><br></p>
-          <p>int main()</p>
+          <p>int main ()</p>
           <p>{</p>
-          <p>&nbsp; &nbsp; char kata[100];</p>
-          <p>&nbsp; &nbsp; int n,i,panjang,temp;</p>
+          <p>&nbsp; &nbsp; int sulit,panjang,i,j;</p>
+          <p>&nbsp; &nbsp; char kata[51];</p>
+          <p>&nbsp; &nbsp; int temp;</p>
+          <p>&nbsp; &nbsp; int t,testcase;</p>
+          <p><br></p>
+          <p>scanf(&quot;%d&quot;,&amp;testcase);</p>
+          <p><br></p>
+          <p>for (t = 1; t &lt;= testcase; t++)</p>
+          <p>{</p>
           <p><br></p>
           <p>&nbsp; &nbsp; scanf(&quot;%s&quot;,kata);</p>
-          <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;n);</p>
+          <p><br></p>
+          <p>&nbsp; &nbsp; sulit = 0;</p>
           <p><br></p>
           <p>&nbsp; &nbsp; panjang = strlen(kata);</p>
           <p><br></p>
-          <p>&nbsp; &nbsp; for (i = 0; i &lt; panjang; i++)</p>
+          <p><br></p>
+          <p>&nbsp; &nbsp; for (i = 0; i &lt; panjang-1; i++)</p>
           <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; temp = kata[i];</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; temp += n;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; if (temp &gt; &apos;z&apos;)</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; //temp = (int)kata[i];</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; //printf(&quot;%c\n&quot;,kata[i]);</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; if (kata[i] == &apos;A&apos; || kata[i] == &apos;I&apos; || kata[i] == &apos;U&apos;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; || kata[i] == &apos;E&apos; || kata[i] == &apos;O&apos;)</p>
           <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; temp = temp - 26;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (i == panjang-1)</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if ((kata[i+1] == &apos;A&apos; || kata[i+1] == &apos;I&apos; || kata[i+1] == &apos;U&apos;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; || kata[i+1] == &apos;E&apos; || kata[i+1] == &apos;O&apos;) &amp;&amp;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (kata[i+2] == &apos;A&apos; || kata[i+2] == &apos;I&apos; || kata[i+2] == &apos;U&apos;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; || kata[i+2] == &apos;E&apos; || kata[i+2] == &apos;O&apos;))</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sulit++;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; } else</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (kata[i+1] == &apos;A&apos; || kata[i+1] == &apos;I&apos; || kata[i+1] == &apos;U&apos;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; || kata[i+1] == &apos;E&apos; || kata[i+1] == &apos;O&apos;)</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; continue;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; sulit++;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
           <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
           <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%c&quot;,temp);</p>
-          <p><br></p>
           <p>&nbsp; &nbsp; }</p>
           <p><br></p>
-          <p>&nbsp; &nbsp; printf(&quot;\n&quot;);</p>
           <p><br></p>
-          <p>&nbsp; &nbsp; return 0;</p>
-          <p>}</p>
-          <p><br></p>
-        </div>
-
-        <button class="accordion_2">Solution with C++</button>
-        <div class="panel_2 code-font">
-          <p><br></p>
-          <p>#include &lt;string&gt;</p>
-          <p>#include &lt;iostream&gt;</p>
-          <p><br></p>
-          <p>using namespace std;</p>
-          <p><br></p>
-          <p>string encrypt(string text, int shift)</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; string result = &quot;&quot;;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; // traverse text</p>
-          <p>&nbsp; &nbsp; for (int i=0;i&lt;text.length();i++)</p>
+          <p>&nbsp; &nbsp; if (sulit == 0)</p>
           <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; // memodifikasi per-karakter</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; // Encrypt Huruf Kecil</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; result += char(int(text[i]-&apos;a&apos;+shift)%26 + &apos;a&apos;);</p>
-          <p><br></p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;Case #%d: EASY\n&quot;,t);</p>
+          <p>&nbsp; &nbsp; } else</p>
+          <p>&nbsp; &nbsp; {</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;Case #%d: %d\n&quot;,t,sulit);</p>
           <p>&nbsp; &nbsp; }</p>
           <p><br></p>
-          <p>&nbsp; &nbsp; // Return hasil berupa string</p>
-          <p>&nbsp; &nbsp; return result;</p>
+          <p><br></p>
           <p>}</p>
           <p><br></p>
-          <p>int main ()</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; string s;</p>
-          <p>&nbsp; &nbsp; int shift;</p>
-          <p>&nbsp; &nbsp;&nbsp;</p>
-          <p>&nbsp; &nbsp; cin &gt;&gt; s;</p>
-          <p>&nbsp; &nbsp; cin &gt;&gt; shift;</p>
-          <p>&nbsp; &nbsp;&nbsp;</p>
-          <p>&nbsp; &nbsp; cout &lt;&lt; encrypt(s,shift) &lt;&lt; endl;</p>
+          <p><br></p>
           <p>&nbsp; &nbsp; return 0;</p>
           <p>}</p>
         </div>
@@ -304,7 +286,7 @@
                 else
                 {
                   $.ajax({
-                    url: "comments/tlx-2-add.php",
+                    url: "comments/tlx-9-add.php",
                     data: str,
                     type: 'post',
                     success: function (response)
@@ -346,7 +328,7 @@
 
 
             function listComment() {
-                $.post("comments/tlx-2-list.php",
+                $.post("comments/tlx-9-list.php",
                         function (data) {
                             var data = JSON.parse(data);
 

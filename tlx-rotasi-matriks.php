@@ -19,7 +19,7 @@
     mysqli_close($conn);
     */
 
-    $pageTitle = 'Caesar Chipper';
+    $pageTitle = 'Rotasi Matriks';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -37,7 +37,7 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">Caesar Chipper</h1>
+        <h1 class="mt-4">Rotasi Matriks</h1>
 
         <!-- Author -->
         <p class="lead">
@@ -48,7 +48,7 @@
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on January 3, 2021 at 4:00 PM</p>
+        <p>Posted on January 3, 2021 at 4:30 PM</p>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
@@ -57,7 +57,7 @@
             <li class="breadcrumb-item">
                 <a href="tlx-homepage-1.php">TLX TOKI</a>
             </li>
-            <li class="breadcrumb-item active">Caesar Chipper</li>
+            <li class="breadcrumb-item active">Rotasi Matriks</li>
         </ol>
 
         <hr>
@@ -68,7 +68,7 @@
         <hr>
 
         <!-- Post Content -->
-        <h2 class="justify">Caesar Chipper</h2>
+        <h2 class="justify">Rotasi Matriks</h2>
         <table style="width:30%">
             <tr>
                 <td style="width:60%">Time limit</td>
@@ -86,35 +86,30 @@
         <br>
 
         <h5>Deskripsi</h5>
-        <p class="justify">Caesar cipher adalah salah satu teknik enkripsi yang paling sederhana dan juga dikenal luas.</p>
-        <p class="justify">Cara kerja enkripsi ini adalah sebagai berikut. Anda diberikan sebuah konstanta K. 
-          Lalu, misalkan kita ingin mengenkripsi suatu string S, yang hanya berisi karakter alfabet 'a' - 'z'. 
-          Yang harus Anda lakukan adalah mengganti setiap karakter dari S dengan karakter pada pada 
-          posisi K di depannya dalam urutan alfabet. Contohnya, jika K = 3, maka 'a' akan diganti 
-          dengan 'd', 'b' dengan 'e', dan seterusnya. Untuk mudahnya, urutan alfabet dapat dianggap siklis, 
-          yakni karakter setelah 'z' adalah 'a'. Sebagai contoh, 'y' akan diganti dengan 'b'.</p>
-        <p class="justify">Anda diberikan string S oleh Pak Dengklek. Lakukanlah enkripsi Caesar cipher pada string tersebut!</p>
+        <p class="justify">Pak Dengklek memberikan Anda sebuah matriks berukuran N × M. 
+          Cetak kembali matriks tersebut setelah diputar 90 derajat searah jarum jam.</p>
 
         <h5>Format Masukan</h5>
         <div class="gray-block">
-          <p>Baris pertama berisi sebuah string S. Baris kedua berisi sebuah bilangan bulat K.</p>
+          <p class="justify">Baris pertama berisi dua buah bilangan bulat N dan M. 
+            N baris berikutnya masing-masing berisi M buah bilangan bulat, 
+            yang menyatakan elemen-elemen matriks tersebut.</p>
         </div>
 
 
         <h5>Format Keluaran</h5>
-        <p>Sebuah baris berisi sebuah string S yang telah dienkripsi.</p>
+        <p class="justify">Sebuah matris berukuran M × N dengan format seperti masukan yang merupakan matriks yang sudah diputar.</p>
 
         <h5>Contoh Masukan</h5>
-        <pre>caesar<br>2</pre>
+        <pre>4 3<br>34 87 15<br>66 71 52<br>47 47 48<br>45 75 35</pre>
 
         <h5>Contoh Keluaran</h5>
-        <pre>ecguct</pre>
+        <pre>45 47 66 34<br>75 47 71 87<br>35 48 52 15</pre>
 
         <h5>Batasan</h5>
         <ul class="a">
-          <li>String S terdiri atas karakter-karakter <span class="block">a</span> - <span class="block">z</span>.</li>
-          <li>String S terdiri atas 1 sampai dengan 100 karakter, inklusif.</li>
-          <li>1 ≤ K ≤ 25</li>
+          <li>1 ≤ N, M ≤ 100</li>
+          <li>1 ≤ (setiap elemen matriks) ≤ 100</li>
         </ul>
 
         <!-- <blockquote class="blockquote">
@@ -128,83 +123,41 @@
 
         <hr>
 
-        <button class="accordion_2">Solution with C</button>
+        <button class="accordion_2">Solution</button>
         <div class="panel_2 code-font">
           <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
          -->
-          <p><br></p>
-          <p>#include &lt;stdio.h&gt;</p>
-          <p>#include &lt;string.h&gt;</p>
-          <p><br></p>
-          <p>int main()</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; char kata[100];</p>
-          <p>&nbsp; &nbsp; int n,i,panjang,temp;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; scanf(&quot;%s&quot;,kata);</p>
-          <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;n);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; panjang = strlen(kata);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; for (i = 0; i &lt; panjang; i++)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; temp = kata[i];</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; temp += n;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; if (temp &gt; &apos;z&apos;)</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; temp = temp - 26;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%c&quot;,temp);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; }</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; printf(&quot;\n&quot;);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; return 0;</p>
-          <p>}</p>
-          <p><br></p>
-        </div>
-
-        <button class="accordion_2">Solution with C++</button>
-        <div class="panel_2 code-font">
-          <p><br></p>
-          <p>#include &lt;string&gt;</p>
-          <p>#include &lt;iostream&gt;</p>
-          <p><br></p>
-          <p>using namespace std;</p>
-          <p><br></p>
-          <p>string encrypt(string text, int shift)</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; string result = &quot;&quot;;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; // traverse text</p>
-          <p>&nbsp; &nbsp; for (int i=0;i&lt;text.length();i++)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; // memodifikasi per-karakter</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; // Encrypt Huruf Kecil</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; result += char(int(text[i]-&apos;a&apos;+shift)%26 + &apos;a&apos;);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; }</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; // Return hasil berupa string</p>
-          <p>&nbsp; &nbsp; return result;</p>
-          <p>}</p>
-          <p><br></p>
-          <p>int main ()</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; string s;</p>
-          <p>&nbsp; &nbsp; int shift;</p>
-          <p>&nbsp; &nbsp;&nbsp;</p>
-          <p>&nbsp; &nbsp; cin &gt;&gt; s;</p>
-          <p>&nbsp; &nbsp; cin &gt;&gt; shift;</p>
-          <p>&nbsp; &nbsp;&nbsp;</p>
-          <p>&nbsp; &nbsp; cout &lt;&lt; encrypt(s,shift) &lt;&lt; endl;</p>
-          <p>&nbsp; &nbsp; return 0;</p>
-          <p>}</p>
+            <p><br></p>
+            <p>#include &lt;bits/stdc++.h&gt;</p>
+            <p><br></p>
+            <p>using namespace std;</p>
+            <p><br></p>
+            <p>int main ()</p>
+            <p>{</p>
+            <p>&nbsp; &nbsp; int m,n;</p>
+            <p>&nbsp; &nbsp; int matriks[101][101];</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; cin &gt;&gt; m &gt;&gt; n;</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; for (int i = 0; i &lt; m; i++)</p>
+            <p>&nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; for (int j = 0; j &lt; n; j++)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cin &gt;&gt; matriks[i][j];</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p>&nbsp; &nbsp; }</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; for (int i = 0; i &lt; n; i++)</p>
+            <p>&nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; for (int j = m-1; j &gt;= 0; j--)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if ( j != 0) cout &lt;&lt; matriks[j][i] &lt;&lt; &quot; &quot;;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else cout &lt;&lt; matriks[j][i] &lt;&lt; endl;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p>&nbsp; &nbsp; }</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; return 0;</p>
+            <p>}</p>
         </div>
 
         <script>
@@ -304,7 +257,7 @@
                 else
                 {
                   $.ajax({
-                    url: "comments/tlx-2-add.php",
+                    url: "comments/tlx-3-add.php",
                     data: str,
                     type: 'post',
                     success: function (response)
@@ -346,7 +299,7 @@
 
 
             function listComment() {
-                $.post("comments/tlx-2-list.php",
+                $.post("comments/tlx-3-list.php",
                         function (data) {
                             var data = JSON.parse(data);
 

@@ -47,43 +47,43 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!">
+          <img class="card-img-top img-shadow" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!">
           <div class="card-body">
             <h2 class="card-title">Hello World</h2>
             <p class="card-text">Program Pertama: Menuliskan Hello World!</p>
             <a href="tlx-hello-world.php" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
+            Posted on December 26, 2020 by
+            <a href="#">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="https://2.bp.blogspot.com/-hE4VsLS1KIY/WwFbWe1t44I/AAAAAAAAB_U/XEdBkQ8UYYsS-i14LrFnqAkIrcpOnEEEACLcBGAs/s400/for1.PNG" alt="Caesar Chipper">
+          <img class="card-img-top img-shadow" src="https://2.bp.blogspot.com/-hE4VsLS1KIY/WwFbWe1t44I/AAAAAAAAB_U/XEdBkQ8UYYsS-i14LrFnqAkIrcpOnEEEACLcBGAs/s400/for1.PNG" alt="Caesar Chipper">
           <div class="card-body">
             <h2 class="card-title">Caesar Chipper</h2>
             <p class="card-text">Membuat program Caesar Chipper</p>
             <a href="tlx-caesar-chipper.php" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
+            Posted on January 3, 2021 by
+            <a href="#">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top img-shadow" src="https://theoryofprogramming.azurewebsites.net/wp-content/uploads/2017/12/rotate-1.jpg" alt="Card image cap" height="300" width="750">
           <div class="card-body">
-            <h2 class="card-title">Post Title</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title">Rotasi Matriks</h2>
+            <p class="card-text">Membuat program me-rotasi sebuah matriks</p>
+            <a href="tlx-rotasi-matriks.php" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
+            Posted on January 3, 2021 by
+            <a href="#">Admin</a>
           </div>
         </div>
 

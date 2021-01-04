@@ -8,18 +8,8 @@
     $rows = mysqli_query($conn, $sql);
     $i = 0;
     mysqli_close($conn);
-    
-    /*
-    $id = $_SESSION['id'];
-    $sql = "SELECT * FROM users WHERE `id`= $id";
 
-    $result = mysqli_query($conn,$sql);
-    $row = mysqli_fetch_assoc($result);
-
-    mysqli_close($conn);
-    */
-
-    $pageTitle = 'Caesar Chipper';
+    $pageTitle = 'Outdoor Study';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -37,174 +27,199 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">Caesar Chipper</h1>
+        <h1 class="mt-4">Outdoor Study</h1>
 
         <!-- Author -->
         <p class="lead">
-          by
-          <a href="#">Admin</a>
+          from
+          <a href="https://www.hackerrank.com/contests/modul1-strukturdata/challenges/outdoor-study/problem" target="_blank"><i>here</i></a>
         </p>
 
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on January 3, 2021 at 4:00 PM</p>
+        <p>Posted on January 4, 2021 at 10:30 PM</p>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="tlx-homepage-1.php">TLX TOKI</a>
+                <a href="hackerrank-homepage.php">HackerRank</a>
             </li>
-            <li class="breadcrumb-item active">Caesar Chipper</li>
+            <li class="breadcrumb-item active">Outdoor Study</li>
         </ol>
 
         <hr>
 
-        <!-- Preview Image -->
-        <!-- <img class="img-fluid rounded" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!"> -->
-
         <hr>
 
         <!-- Post Content -->
-        <h2 class="justify">Caesar Chipper</h2>
-        <table style="width:30%">
-            <tr>
-                <td style="width:60%">Time limit</td>
-                <td style="width:40%">1 s</td>
-            </tr>
-            <tr>
-                <td style="width:60%">Memory limit</td>
-                <td style="width:40%">64 MB</td>
-            </tr>
-        </table>
-
-        <!-- <img class="img-fluid rounded padding" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!"> -->
+        <h2 class="justify">Outdoor Study</h2>
 
         <br>
         <br>
 
         <h5>Deskripsi</h5>
-        <p class="justify">Caesar cipher adalah salah satu teknik enkripsi yang paling sederhana dan juga dikenal luas.</p>
-        <p class="justify">Cara kerja enkripsi ini adalah sebagai berikut. Anda diberikan sebuah konstanta K. 
-          Lalu, misalkan kita ingin mengenkripsi suatu string S, yang hanya berisi karakter alfabet 'a' - 'z'. 
-          Yang harus Anda lakukan adalah mengganti setiap karakter dari S dengan karakter pada pada 
-          posisi K di depannya dalam urutan alfabet. Contohnya, jika K = 3, maka 'a' akan diganti 
-          dengan 'd', 'b' dengan 'e', dan seterusnya. Untuk mudahnya, urutan alfabet dapat dianggap siklis, 
-          yakni karakter setelah 'z' adalah 'a'. Sebagai contoh, 'y' akan diganti dengan 'b'.</p>
-        <p class="justify">Anda diberikan string S oleh Pak Dengklek. Lakukanlah enkripsi Caesar cipher pada string tersebut!</p>
+        <p class="justify">Setiap tahun, guru memutuskan memesan bis untuk transportasi Outdoor Study. 
+        Pada waktu mereka akan pergi, bis diparkirkan di pinggir jalan. 
+        Jalan di samping sekolah sangat sempit sehingga tidak ada dua bis yang bisa saling berpapasan. 
+        Jadi, bis yang terakhir masuk ke pinggir jalan harus keluar dari pinggir jalan terlebih dahulu. 
+        Karena jalan satu arah, bis tidak dapat kembali dan masuk kembali ke pinggir jalan atau jalan tengah.</p>
+
+        <p class="justify">Anda diberi urutan bis yang harus diurutkan agar dapat dinaiki sesuai kelas muridnya. 
+        Tulis program yang memutuskan apakah bis dapat dibawa ke dalam urutan yang diinginkan guru.</p>
 
         <h5>Format Masukan</h5>
         <div class="gray-block">
-          <p>Baris pertama berisi sebuah string S. Baris kedua berisi sebuah bilangan bulat K.</p>
+          <p class="justify">Ada beberapa test case. Baris pertama dari setiap case berisi satu bilangan n bis. 
+          Baris kedua berisi bilangan 1 sampai n dalam urutan sembarang. 
+          Baris kedua berisi bilangan 1 sampai n dalam urutan sembarang. 
+          Semua bilangan dipisahkan oleh satu spasi. 
+          Bilangan-bilangan ini menunjukkan urutan bis tiba di jalan. 
+          Tidak lebih dari 1000 bis dalam jalan ini. input diakhiri dengan bilangan 0.</p>
         </div>
 
-
         <h5>Format Keluaran</h5>
-        <p>Sebuah baris berisi sebuah string S yang telah dienkripsi.</p>
+        <p class="justify">Untuk setiap case, program anda harus mengeluarkan baris berisi satu kata "yes" 
+        jika bis dapat diurutkan dengan bantuan sisi jalan, dan satu kata "no" dalam kasus sebaliknya.</p>
 
         <h5>Contoh Masukan</h5>
-        <pre>caesar<br>2</pre>
+        <pre>5<br>5 1 2 4 3<br>0</pre>
 
         <h5>Contoh Keluaran</h5>
-        <pre>ecguct</pre>
+        <pre>yes</pre>
 
         <h5>Batasan</h5>
         <ul class="a">
-          <li>String S terdiri atas karakter-karakter <span class="block">a</span> - <span class="block">z</span>.</li>
-          <li>String S terdiri atas 1 sampai dengan 100 karakter, inklusif.</li>
-          <li>1 ≤ K ≤ 25</li>
+          <li>N<=1000</li>
         </ul>
-
-        <!-- <blockquote class="blockquote">
-          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-          <footer class="blockquote-footer">Someone famous in
-            <cite title="Source Title">Source Title</cite>
-          </footer>
-        </blockquote> -->
-
-        <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p> -->
 
         <hr>
 
-        <button class="accordion_2">Solution with C</button>
+        <button class="accordion_2">Solution</button>
         <div class="panel_2 code-font">
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-         -->
           <p><br></p>
+          <p>#include &lt;stdlib.h&gt;</p>
+          <p>#include &lt;stdbool.h&gt;</p>
           <p>#include &lt;stdio.h&gt;</p>
-          <p>#include &lt;string.h&gt;</p>
           <p><br></p>
-          <p>int main()</p>
+          <p>/* Struktur Node */</p>
+          <p><br></p>
+          <p>typedef struct stackNode_t {</p>
+          <p>&nbsp; &nbsp; int data;</p>
+          <p>&nbsp; &nbsp; struct stackNode_t *next;</p>
+          <p>} StackNode;</p>
+          <p><br></p>
+          <p>/* Struktur ADT Stack */</p>
+          <p><br></p>
+          <p>typedef struct stack_t {</p>
+          <p>&nbsp; &nbsp; StackNode *_top;</p>
+          <p>&nbsp; &nbsp; unsigned _size;</p>
+          <p>} Stack;</p>
+          <p><br></p>
+          <p>/* Function prototype */</p>
+          <p><br></p>
+          <p>void stack_init(Stack *stack);</p>
+          <p>bool stack_isEmpty(Stack *stack);</p>
+          <p>void stack_push(Stack *stack, int value);</p>
+          <p>void stack_pop(Stack *stack);</p>
+          <p>int stack_top(Stack *stack);</p>
+          <p>unsigned stack_size(Stack *stack);</p>
+          <p><br></p>
+          <p>int main(int argc, char const *argv[])</p>
           <p>{</p>
-          <p>&nbsp; &nbsp; char kata[100];</p>
-          <p>&nbsp; &nbsp; int n,i,panjang,temp;</p>
           <p><br></p>
-          <p>&nbsp; &nbsp; scanf(&quot;%s&quot;,kata);</p>
+          <p>&nbsp; &nbsp; int n;</p>
           <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;n);</p>
           <p><br></p>
-          <p>&nbsp; &nbsp; panjang = strlen(kata);</p>
+          <p>&nbsp; &nbsp; int larik[n];</p>
+          <p>&nbsp; &nbsp; for(int i = 0; i &lt; n; i++){</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;larik[i]);</p>
+          <p>&nbsp; &nbsp; }</p>
           <p><br></p>
-          <p>&nbsp; &nbsp; for (i = 0; i &lt; panjang; i++)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; temp = kata[i];</p>
+          <p>&nbsp; &nbsp; int x;</p>
+          <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;x);</p>
           <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; temp += n;</p>
+          <p>&nbsp; &nbsp; Stack myStack;</p>
           <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; if (temp &gt; &apos;z&apos;)</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; temp = temp - 26;</p>
+          <p>&nbsp; &nbsp; stack_init(&amp;myStack);</p>
+          <p><br></p>
+          <p>&nbsp; &nbsp; int a = 1;</p>
+          <p>&nbsp; &nbsp; int cek = 1;</p>
+          <p>&nbsp; &nbsp; for(int i = 0; i &lt; n; i++){</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //printf(&quot;ini a: %d | ini larik[i]: %d | ini top: %d\n&quot;, a, larik[i],stack_top(&amp;myStack));</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; while(!stack_isEmpty(&amp;myStack) &amp;&amp; stack_top(&amp;myStack) == a){</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; //printf(&quot;masuk/n&quot;);</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a++;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; stack_pop(&amp;myStack);</p>
           <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%c&quot;,temp);</p>
-          <p><br></p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; if(larik[i] == a){</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; a++;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; } else if(!stack_isEmpty(&amp;myStack) &amp;&amp; larik[i] &gt; stack_top(&amp;myStack)){</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cek = 0;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; break;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; } else {</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; stack_push(&amp;myStack,larik[i]);</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
           <p>&nbsp; &nbsp; }</p>
           <p><br></p>
-          <p>&nbsp; &nbsp; printf(&quot;\n&quot;);</p>
+          <p>&nbsp; &nbsp; if(cek == 1){</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;yes\n&quot;);</p>
+          <p>&nbsp; &nbsp; } else {</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;no\n&quot;);</p>
+          <p>&nbsp; &nbsp; }</p>
           <p><br></p>
           <p>&nbsp; &nbsp; return 0;</p>
           <p>}</p>
           <p><br></p>
-        </div>
-
-        <button class="accordion_2">Solution with C++</button>
-        <div class="panel_2 code-font">
+          <p>/* Function definition below */</p>
           <p><br></p>
-          <p>#include &lt;string&gt;</p>
-          <p>#include &lt;iostream&gt;</p>
-          <p><br></p>
-          <p>using namespace std;</p>
-          <p><br></p>
-          <p>string encrypt(string text, int shift)</p>
+          <p>void stack_init(Stack *stack)</p>
           <p>{</p>
-          <p>&nbsp; &nbsp; string result = &quot;&quot;;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; // traverse text</p>
-          <p>&nbsp; &nbsp; for (int i=0;i&lt;text.length();i++)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; // memodifikasi per-karakter</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; // Encrypt Huruf Kecil</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; result += char(int(text[i]-&apos;a&apos;+shift)%26 + &apos;a&apos;);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; }</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; // Return hasil berupa string</p>
-          <p>&nbsp; &nbsp; return result;</p>
+          <p>&nbsp; &nbsp; stack-&gt;_size = 0;</p>
+          <p>&nbsp; &nbsp; stack-&gt;_top = NULL;</p>
           <p>}</p>
           <p><br></p>
-          <p>int main ()</p>
+          <p>bool stack_isEmpty(Stack *stack) {</p>
+          <p>&nbsp; &nbsp; return (stack-&gt;_top == NULL);</p>
+          <p>}</p>
+          <p><br></p>
+          <p>void stack_push(Stack *stack, int value)</p>
           <p>{</p>
-          <p>&nbsp; &nbsp; string s;</p>
-          <p>&nbsp; &nbsp; int shift;</p>
-          <p>&nbsp; &nbsp;&nbsp;</p>
-          <p>&nbsp; &nbsp; cin &gt;&gt; s;</p>
-          <p>&nbsp; &nbsp; cin &gt;&gt; shift;</p>
-          <p>&nbsp; &nbsp;&nbsp;</p>
-          <p>&nbsp; &nbsp; cout &lt;&lt; encrypt(s,shift) &lt;&lt; endl;</p>
+          <p>&nbsp; &nbsp; StackNode *newNode = (StackNode*) malloc(sizeof(StackNode));</p>
+          <p>&nbsp; &nbsp; if (newNode) {</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; stack-&gt;_size++;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; newNode-&gt;data = value;</p>
+          <p><br></p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; if (stack_isEmpty(stack)) newNode-&gt;next = NULL;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; else newNode-&gt;next = stack-&gt;_top;</p>
+          <p><br></p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; stack-&gt;_top = newNode;</p>
+          <p>&nbsp; &nbsp; }</p>
+          <p>}</p>
+          <p><br></p>
+          <p>void stack_pop(Stack *stack)</p>
+          <p>{</p>
+          <p>&nbsp; &nbsp; if (!stack_isEmpty(stack)) {</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; StackNode *temp = stack-&gt;_top;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; stack-&gt;_top = stack-&gt;_top-&gt;next;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; free(temp);</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; stack-&gt;_size--;</p>
+          <p>&nbsp; &nbsp; }</p>
+          <p>}</p>
+          <p><br></p>
+          <p>int stack_top(Stack *stack)</p>
+          <p>{</p>
+          <p>&nbsp; &nbsp; if (!stack_isEmpty(stack))</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; return stack-&gt;_top-&gt;data;</p>
           <p>&nbsp; &nbsp; return 0;</p>
           <p>}</p>
+          <p><br></p>
+          <p>unsigned stack_size(Stack *stack) {</p>
+          <p>&nbsp; &nbsp; return stack-&gt;_size;</p>
+          <p>}</p>
+          <p><br></p>
         </div>
 
         <script>
@@ -304,7 +319,7 @@
                 else
                 {
                   $.ajax({
-                    url: "comments/tlx-2-add.php",
+                    url: "comments/hr-1-add.php",
                     data: str,
                     type: 'post',
                     success: function (response)
@@ -346,7 +361,7 @@
 
 
             function listComment() {
-                $.post("comments/tlx-2-list.php",
+                $.post("comments/hr-1-list.php",
                         function (data) {
                             var data = JSON.parse(data);
 

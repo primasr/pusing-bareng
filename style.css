@@ -50,6 +50,10 @@ ul{
     list-style-type: none;
 }
 
+ul.a {
+  list-style-type: disc;
+}
+
 pre {
     font-size: 13px;
     padding: 9px;
@@ -95,7 +99,19 @@ text-align: left;
 
 .code-font{
     font-family: "Hack", "Consolas";
-    font-size: 13px;
+    font-size: 12px;
+    line-height: 50%;
+}
+
+.img-shadow {
+  /* filter: drop-shadow(0 0 0.25rem crimson); */
+  filter: drop-shadow(0 0 0.25rem black);
+}
+
+.img-size {
+  height: 300px;
+  width: 500px;
+  padding-top: 20px;
 }
 
 /* Untuk di halaman utama web */

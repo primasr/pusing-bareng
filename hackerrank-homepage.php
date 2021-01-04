@@ -19,12 +19,13 @@
     mysqli_close($conn);
     */
 
-    $pageTitle = 'Ini Homepage';
+    $pageTitle = 'Hackerrank Page 1';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
+    include 'sidewidget-1.php';
 ?>
-
+  <link href="style.css" rel="stylesheet">
   <!-- Page Content -->
   <div class="container">
 
@@ -33,124 +34,77 @@
       <!-- Blog Entries Column -->
       <div class="col-md-8">
 
-        <h1 class="my-4">Page Heading
-          <small>Secondary Text</small>
+        <h1 class="my-4">Hackerrank
+          <small><small><small><i>Page 1</i></small></small></small>
         </h1>
 
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.php">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Hackerank</li>
+        </ol>
+
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top img-shadow" height="300" width="750" src="https://s3.amazonaws.com/hr-assets/0/1603195175-368d7f2732-1.gif" alt="Outdoor Study">
           <div class="card-body">
-            <h2 class="card-title">Post Title</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title">Outdoor Study</h2>
+            <p class="card-text">Setiap tahun, guru memutuskan memesan bis untuk transportasi Outdoor Study. Pada waktu mereka akan pergi, ....</p>
+            <a href="hackerrank-outdoor-study.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
+            Posted on January 4, 2021 by
+            <a href="#">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top img-shadow" height="300" width="750" src="https://s3.amazonaws.com/hr-assets/0/1603430849-51fcf16587-2058Converted.png" alt="MudMud">
           <div class="card-body">
-            <h2 class="card-title">Post Title</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title">MudMud dan Kakaknya</h2>
+            <p class="card-text">MudMud sangat menyayangi kakaknya. Suatu ketika MudMud ulang tahun dan diberi hadiah ...</p>
+            <a href="hackerrank-mudmud.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
+            Posted on January 4, 2021 by
+            <a href="#">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top img-shadow" height="300" width="750" src="https://media.suara.com/pictures/970x544/2018/01/30/82737-tempat-parkir.jpg" alt="Parkiran Aya">
           <div class="card-body">
-            <h2 class="card-title">Post Title</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title">Parkiran Aya</h2>
+            <p class="card-text">Terdapat sebuah sistem parkiran yang dapat memberi tahu pengunjung apakah mereka dapat memarkirkan ...</p>
+            <a href="hackerrank-parkiran-aya.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
+            Posted on January 4, 2021 by
+            <a href="#">Admin</a>
           </div>
         </div>
 
         <!-- Pagination -->
         <ul class="pagination justify-content-center mb-4">
-          <li class="page-item">
-            <a class="page-link" href="#">&larr; Older</a>
+          <li class="page-item disabled">
+            <a class="page-link" href="#">&larr; First</a>
           </li>
           <li class="page-item disabled">
-            <a class="page-link" href="#">Newer &rarr;</a>
+            <a class="page-link" href="#">1</a>
+          </li>
+          <li class="page-item disabled">
+            <a class="page-link" href="#">Last &rarr;</a>
           </li>
         </ul>
 
       </div>
 
-      <!-- Sidebar Widgets Column -->
-      <div class="col-md-4">
-
-        <!-- Search Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Search</h5>
-          <div class="card-body">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search for...">
-              <span class="input-group-append">
-                <button class="btn btn-secondary" type="button">Go!</button>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Categories Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Categories</h5>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">Web Design</a>
-                  </li>
-                  <li>
-                    <a href="#">HTML</a>
-                  </li>
-                  <li>
-                    <a href="#">Freebies</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">JavaScript</a>
-                  </li>
-                  <li>
-                    <a href="#">CSS</a>
-                  </li>
-                  <li>
-                    <a href="#">Tutorials</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Side Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Side Widget</h5>
-          <div class="card-body">
-            You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
-          </div>
-        </div>
-
-      </div>
+      <?php
+          include 'sidewidget-2.php';
+      ?>
 
     </div>
     <!-- /.row -->

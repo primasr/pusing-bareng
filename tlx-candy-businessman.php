@@ -8,18 +8,8 @@
     $rows = mysqli_query($conn, $sql);
     $i = 0;
     mysqli_close($conn);
-    
-    /*
-    $id = $_SESSION['id'];
-    $sql = "SELECT * FROM users WHERE `id`= $id";
 
-    $result = mysqli_query($conn,$sql);
-    $row = mysqli_fetch_assoc($result);
-
-    mysqli_close($conn);
-    */
-
-    $pageTitle = 'Caesar Chipper';
+    $pageTitle = 'Candy Businessman';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -37,7 +27,7 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">Caesar Chipper</h1>
+        <h1 class="mt-4">Candy Businessman</h1>
 
         <!-- Author -->
         <p class="lead">
@@ -48,7 +38,7 @@
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on January 3, 2021 at 4:00 PM</p>
+        <p>Posted on January 4, 2021 at 8:00 PM</p>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
@@ -57,18 +47,15 @@
             <li class="breadcrumb-item">
                 <a href="tlx-homepage-1.php">TLX TOKI</a>
             </li>
-            <li class="breadcrumb-item active">Caesar Chipper</li>
+            <li class="breadcrumb-item active">Candy Businessman</li>
         </ol>
 
         <hr>
 
-        <!-- Preview Image -->
-        <!-- <img class="img-fluid rounded" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!"> -->
-
         <hr>
 
         <!-- Post Content -->
-        <h2 class="justify">Caesar Chipper</h2>
+        <h2 class="justify">Candy Businessman</h2>
         <table style="width:30%">
             <tr>
                 <td style="width:60%">Time limit</td>
@@ -76,134 +63,109 @@
             </tr>
             <tr>
                 <td style="width:60%">Memory limit</td>
-                <td style="width:40%">64 MB</td>
+                <td style="width:40%">32 MB</td>
             </tr>
         </table>
-
-        <!-- <img class="img-fluid rounded padding" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!"> -->
 
         <br>
         <br>
 
         <h5>Deskripsi</h5>
-        <p class="justify">Caesar cipher adalah salah satu teknik enkripsi yang paling sederhana dan juga dikenal luas.</p>
-        <p class="justify">Cara kerja enkripsi ini adalah sebagai berikut. Anda diberikan sebuah konstanta K. 
-          Lalu, misalkan kita ingin mengenkripsi suatu string S, yang hanya berisi karakter alfabet 'a' - 'z'. 
-          Yang harus Anda lakukan adalah mengganti setiap karakter dari S dengan karakter pada pada 
-          posisi K di depannya dalam urutan alfabet. Contohnya, jika K = 3, maka 'a' akan diganti 
-          dengan 'd', 'b' dengan 'e', dan seterusnya. Untuk mudahnya, urutan alfabet dapat dianggap siklis, 
-          yakni karakter setelah 'z' adalah 'a'. Sebagai contoh, 'y' akan diganti dengan 'b'.</p>
-        <p class="justify">Anda diberikan string S oleh Pak Dengklek. Lakukanlah enkripsi Caesar cipher pada string tersebut!</p>
+        <p class="justify">Ramu, a young child, inspired by the "success" story of Uncle Scrooge (Paman Gober), decides to learn more about business. 
+        He learnt the basic rule of business related to trading, i.e. buy low sell high.</p>     
+        
+        <p class="justify">Ramu noticed there are many shops in his village selling his favorite candy. 
+        Moreover, he also noticed that the price of those candies varies between shops. 
+        If he buys a candy from one shop and sells it again in another shop, what would be the highest profit he can get? 
+        Of course this can't be happened in reality, no shop is willing to buy any candy from its customer; 
+        however, let's assume all shops in this village are willing to buy a candy from its customer 
+        at the shop's price (i.e. if the shop sell candy at price P, then it will also buy candy at price P).</p>
+
+        <p class="justify">Given the price of a candy in all shops, 
+        determine the highest profit Ramu can get by buying exactly one candy from 
+        one shop and selling it to another shop.</p>
+
+        <p class="justify">For example, let the prices of a candy in five shops are: 7, 3, 4, 9, and 5; 
+        the highest profit can be achieved by buying from the 2ndshop at price 3 and 
+        selling it at 4th shop at price 9, with profit 9 - 3 = 6.</p>         
 
         <h5>Format Masukan</h5>
         <div class="gray-block">
-          <p>Baris pertama berisi sebuah string S. Baris kedua berisi sebuah bilangan bulat K.</p>
+          <p class="justify">Input starts with a single integer T (1 ≤ T ≤ 100) in a line denoting the number of cases. 
+          Each case begins with an integer N (2 ≤ N ≤ 100) in a single line denoting the number of shops selling candy. 
+          The following line contains N integers Pi (1 ≤ Pi ≤ 100,000) denoting the price of a candy in ith shop.</p>
         </div>
 
-
         <h5>Format Keluaran</h5>
-        <p>Sebuah baris berisi sebuah string S yang telah dienkripsi.</p>
+        <p class="justify">For each case, output in a single line "<span class="block">Case #X: A</span>" (without quotes), 
+        where <span class="block">X</span> is the case number, starting from 1, and <span class="block">A</span> is the highest profit can be achieved for that case.</p>
 
         <h5>Contoh Masukan</h5>
-        <pre>caesar<br>2</pre>
+        <pre>4<br>5<br>7 3 4 9 5<br>3<br>10 10 10<br>6<br>20 80 30 10 70 100<br>4<br>8000 2000 4000 1000</pre>
 
         <h5>Contoh Keluaran</h5>
-        <pre>ecguct</pre>
-
-        <h5>Batasan</h5>
-        <ul class="a">
-          <li>String S terdiri atas karakter-karakter <span class="block">a</span> - <span class="block">z</span>.</li>
-          <li>String S terdiri atas 1 sampai dengan 100 karakter, inklusif.</li>
-          <li>1 ≤ K ≤ 25</li>
-        </ul>
-
-        <!-- <blockquote class="blockquote">
-          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-          <footer class="blockquote-footer">Someone famous in
-            <cite title="Source Title">Source Title</cite>
-          </footer>
-        </blockquote> -->
-
-        <!-- <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p> -->
+        <pre>Case #1: 6<br>Case #2: 0<br>Case #3: 90<br>Case #4: 7000</pre>
 
         <hr>
 
-        <button class="accordion_2">Solution with C</button>
+        <button class="accordion_2">Solution</button>
         <div class="panel_2 code-font">
-          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-         -->
           <p><br></p>
           <p>#include &lt;stdio.h&gt;</p>
-          <p>#include &lt;string.h&gt;</p>
           <p><br></p>
-          <p>int main()</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; char kata[100];</p>
-          <p>&nbsp; &nbsp; int n,i,panjang,temp;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; scanf(&quot;%s&quot;,kata);</p>
-          <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;n);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; panjang = strlen(kata);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; for (i = 0; i &lt; panjang; i++)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; temp = kata[i];</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; temp += n;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; if (temp &gt; &apos;z&apos;)</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; temp = temp - 26;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%c&quot;,temp);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; }</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; printf(&quot;\n&quot;);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; return 0;</p>
-          <p>}</p>
-          <p><br></p>
-        </div>
-
-        <button class="accordion_2">Solution with C++</button>
-        <div class="panel_2 code-font">
-          <p><br></p>
-          <p>#include &lt;string&gt;</p>
-          <p>#include &lt;iostream&gt;</p>
-          <p><br></p>
-          <p>using namespace std;</p>
-          <p><br></p>
-          <p>string encrypt(string text, int shift)</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; string result = &quot;&quot;;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; // traverse text</p>
-          <p>&nbsp; &nbsp; for (int i=0;i&lt;text.length();i++)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; // memodifikasi per-karakter</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; // Encrypt Huruf Kecil</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; result += char(int(text[i]-&apos;a&apos;+shift)%26 + &apos;a&apos;);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; }</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; // Return hasil berupa string</p>
-          <p>&nbsp; &nbsp; return result;</p>
-          <p>}</p>
+          <p>int selection(int maba, int data[100]);</p>
           <p><br></p>
           <p>int main ()</p>
           <p>{</p>
-          <p>&nbsp; &nbsp; string s;</p>
-          <p>&nbsp; &nbsp; int shift;</p>
-          <p>&nbsp; &nbsp;&nbsp;</p>
-          <p>&nbsp; &nbsp; cin &gt;&gt; s;</p>
-          <p>&nbsp; &nbsp; cin &gt;&gt; shift;</p>
-          <p>&nbsp; &nbsp;&nbsp;</p>
-          <p>&nbsp; &nbsp; cout &lt;&lt; encrypt(s,shift) &lt;&lt; endl;</p>
+          <p><br></p>
+          <p>&nbsp; &nbsp; int t,testcase,i,j;</p>
+          <p>&nbsp; &nbsp; int n,toko,permen;</p>
+          <p>&nbsp; &nbsp; int list_harga[100] = {0};</p>
+          <p>&nbsp; &nbsp; int highest_profit;</p>
+          <p><br></p>
+          <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;testcase);</p>
+          <p><br></p>
+          <p>&nbsp; &nbsp; for (t = 1; t &lt;= testcase; t++)</p>
+          <p>&nbsp; &nbsp; {</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;toko);</p>
+          <p><br></p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; highest_profit = 0;</p>
+          <p><br></p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; for (i = 0; i &lt; toko; i++)</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;permen);</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; list_harga[i] = permen;</p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+          <p><br></p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; selection(toko,list_harga);</p>
+          <p><br></p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; highest_profit = list_harga[toko-1] - list_harga[0];</p>
+          <p><br></p>
+          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;Case #%d: %d\n&quot;,t,highest_profit);</p>
+          <p>&nbsp; &nbsp; }</p>
+          <p><br></p>
           <p>&nbsp; &nbsp; return 0;</p>
+          <p>}</p>
+          <p><br></p>
+          <p>int selection(int maba, int data[100]) {</p>
+          <p><br></p>
+          <p>int x, y, kecil, temp;</p>
+          <p>&nbsp;for (x=0; x&lt;maba; x++)</p>
+          <p>&nbsp;{</p>
+          <p>&nbsp;kecil=x;</p>
+          <p>&nbsp;for (y=x; y&lt;maba; y++)</p>
+          <p>&nbsp;{</p>
+          <p>&nbsp;if (data[kecil]&gt;data[y])</p>
+          <p>&nbsp;{kecil = y;}</p>
+          <p>&nbsp;}</p>
+          <p>&nbsp;temp = data[x];</p>
+          <p>&nbsp;data[x] = data[kecil];</p>
+          <p>&nbsp;data[kecil] = temp;</p>
+          <p><br></p>
+          <p>&nbsp;//swap(data[i],data[kecil]);</p>
+          <p><br></p>
+          <p>&nbsp;}</p>
+          <p><br></p>
           <p>}</p>
         </div>
 
@@ -304,7 +266,7 @@
                 else
                 {
                   $.ajax({
-                    url: "comments/tlx-2-add.php",
+                    url: "comments/tlx-8-add.php",
                     data: str,
                     type: 'post',
                     success: function (response)
@@ -346,7 +308,7 @@
 
 
             function listComment() {
-                $.post("comments/tlx-2-list.php",
+                $.post("comments/tlx-8-list.php",
                         function (data) {
                             var data = JSON.parse(data);
 

@@ -49,43 +49,43 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Hello World!">
+          <img class="card-img-top img-shadow" src="https://gamedevtraum.com/wp-content/uploads/2019/11/factorial-de-un-numero-min.png" alt="Hello World!" height="300" width="750">
           <div class="card-body">
-            <h2 class="card-title">Hello World</h2>
-            <p class="card-text">Program Pertama: Menuliskan Hello World!</p>
-            <a href="tlx-hello-world.php" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title">Faktorial Ganjil Genap</h2>
+            <p class="card-text">Membuat program untuk mencari faktor ganjil genap dari sebuah angka</p>
+            <a href="tlx-faktorial-gg.php" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
+            Posted on January 3, 2021 by
+            <a href="#">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Caesar Chipper">
+          <img class="card-img-top img-shadow" src="https://www.wikihow.com/images_en/thumb/8/8f/Convert-from-Binary-to-Decimal-Step-1-Version-5.jpg/v4-460px-Convert-from-Binary-to-Decimal-Step-1-Version-5.jpg.webp" alt="Caesar Chipper" height="300" width="750">
           <div class="card-body">
-            <h2 class="card-title">Caesar Chipper</h2>
-            <p class="card-text">Membuat program Caesar Chipper</p>
-            <a href="tlx-caesar-chipper.php" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title">Konversi Biner</h2>
+            <p class="card-text">Membuat program untuk mengkonversi suatu angka decimal menjadi biner</p>
+            <a href="tlx-konveri-biner.php" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
+            Posted on January 3, 2021 by
+            <a href="#">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top img-shadow" src="https://cdn.britannica.com/67/19367-050-885866B4/Valley-Taurus-Mountains-Turkey.jpg" alt="Card image cap" height="300" width="750">
           <div class="card-body">
-            <h2 class="card-title">Post Title</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title">Menggambar Pegunungan</h2>
+            <p class="card-text">Membuat program untuk menggambar pegunungan dengan pola tertentu</p>
+            <a href="tlx-menggambar-pegunungan.php" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 1, 2020 by
-            <a href="#">Start Bootstrap</a>
+            Posted on January 3, 2021 by
+            <a href="#">Admin</a>
           </div>
         </div>
 
