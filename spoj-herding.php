@@ -9,7 +9,7 @@
     $i = 0;
     mysqli_close($conn);
 
-    $pageTitle = 'Konversi Biner';
+    $pageTitle = 'Herding';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -27,27 +27,27 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">Konversi Biner</h1>
+        <h1 class="mt-4">Herding</h1>
 
         <!-- Author -->
         <p class="lead">
           from
-          <a href="https://tlx.toki.id/courses/basic/chapters/12/problems/E"><i>here</i></a>
+          <a href="https://www.spoj.com/problems/HERDING/" target="_blank"><i>here</i></a>
         </p>
 
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on January 3, 2021 at 6:00 PM</p>
+        <p>Posted on January 5, 2021 at 10:30 AM</p>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="tlx-homepage-1.php">TLX TOKI</a>
+                <a href="spoj-homepage.php">SPOJ</a>
             </li>
-            <li class="breadcrumb-item active">Konversi Biner</li>
+            <li class="breadcrumb-item active">Herding</li>
         </ol>
 
         <hr>
@@ -55,92 +55,126 @@
         <hr>
 
         <!-- Post Content -->
-        <h2 class="justify">Konversi Biner</h2>
-        <table style="width:30%">
-            <tr>
-                <td style="width:60%">Time limit</td>
-                <td style="width:40%">1 s</td>
-            </tr>
-            <tr>
-                <td style="width:60%">Memory limit</td>
-                <td style="width:40%">64 MB</td>
-            </tr>
-        </table>
-
+        <h2 class="justify">Herding</h2>
         <br>
         <br>
 
-        <h5>Deskripsi</h5>
-        <p class="justify">Pak Dengklek baru saja menemukan metode hampir sakti untuk 
-          mengkonversi bilangan desimal ke dalam representasi binernya. Metodenya adalah sebagai berikut:</p>
+        <h5>Deskripsi</h5> 
+        <p class="justify">Oh no! A number of stray cats have been let loose in the city, 
+          and as the City Cat Catcher, you have been assigned the vital task of retrieving all of the cats. 
+          This is an ideal opportunity to test your latest invention, 
+          a cat trap which is guaranteed to retrieve every cat which walks into 
+          a square-shaped subsection of the city.</p>
 
-        <ul class="a">
-          <li>Jika suatu bilangan N adalah bilangan ganjil, maka bit (binary digit) terakhir pada representasi binernya adalah 1. 
-            Sebaliknya, jika N genap maka bit terakhir pada representasi binernya adalah 0.</li>
-          <li>Bit-bit di depan bit terakhir sama dengan representasi biner dari (N/2 dibulatkan ke bawah).</li>
-        </ul>        
-        
-        <p class="justify">Mengapa hampir sakti? Ternyata ketika 
-          Pak Dengklek mencoba mengimplementasikan metode tersebut, programnya terjebak dalam infinite recursion!</p>
+        <p class="justify">Fortunately, you have the assistance of one of the world's foremost cat psychologists, 
+          who has the amazing ability of predicting, given a square subsection of the city, 
+          exactly which of the four cardinal directions (north, east, south or west) the cat will head. 
+          While this information is handy, you still don't know where all the cats currently are.</p>    
 
-        <p class="justify">Sebagai pemrogram handal, Anda langsung menyadari bahwa metode rekursif Pak Dengklek kekurangan satu hal yang sangat penting: 
-          base case. Bantulah Pak Dengklek memperbaiki metodenya dengan menambahkan base case dan membuat program konversi desimal ke biner yang benar!</p>
+        <p class="justify">In order to prove the cost-effectiveness of your method to the City it would, 
+          of course, be important to minimize the number of traps used.</p>
 
         <h5>Format Masukan</h5>
         <div class="gray-block">
-          <p class="justify">Sebuah baris berisi berisi sebuah bilangan bulat N.</p>
+          <p class="justify">The input will begin with a line consisting of two numbers n and m, 
+            separated by a space (1 ≤ n, m ≤ 1000). The city will be an n x m grid of square subsections. 
+            The next n lines will each consist of a string of length m, 
+            consisting of the letters 'N', 'E', 'S', or 'W', representing north, east, south and west, respectively. 
+            (The first character of the first line will be the northwesternmost point.) 
+            The direction in the square is the direction which cats will head if they are in that square. 
+            The cat psychologist assures you that cats have no interest in leaving the city.</p>
         </div>
 
         <h5>Format Keluaran</h5>
-        <p class="justify">Sebuah baris berisi representasi biner dari N tanpa leading zero.</p>
+        <p class="justify">Output the minimum number of traps needed.</p>
 
         <h5>Contoh Masukan</h5>
-        <pre>73</pre>
+        <pre>3 4<br>SWWW<br>SEWN<br>EEEN</pre>
 
         <h5>Contoh Keluaran</h5>
-        <pre>1001001</pre>
-
-        <h5>Batasan</h5>
-        <ul class="a">
-          <li>1 ≤ N ≤ 1.000.000.000</li>
-        </ul>
+        <pre>2</pre>
 
         <hr>
 
         <button class="accordion_2">Solution</button>
         <div class="panel_2 code-font">
-          <br>
-          <p>#include &lt;stdio.h&gt;</p>
-          <p><br></p>
-          <p>void konvert(int x)</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; int hasil,sisa;</p>
-          <p>&nbsp; &nbsp; if (x == 1)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,x);</p>
-          <p>&nbsp; &nbsp; } else</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; sisa = x % 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; x = x / 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; konvert(x);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,sisa);</p>
-          <p>&nbsp; &nbsp; }</p>
-          <p>}</p>
-          <p><br></p>
-          <p>int main()</p>
-          <p>{</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; int a;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;a);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; konvert(a);</p>
-          <p>&nbsp; &nbsp; printf(&quot;\n&quot;);</p>
-          <p><br></p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; return 0;</p>
-          <p>}</p>
+            <p><br></p>
+            <p>#include&lt;stdio.h&gt;</p>
+            <p><br></p>
+            <p>char gerak[1000][1000];</p>
+            <p>int kota[1000][1000];</p>
+            <p><br></p>
+            <p>int tanda=1;</p>
+            <p>int banyak_jebakan=0;</p>
+            <p><br></p>
+            <p>void gaeruh(int x,int y)</p>
+            <p>{</p>
+            <p>&nbsp;if(kota[x][y]==0)</p>
+            <p>&nbsp;{</p>
+            <p>&nbsp; &nbsp; kota[x][y]=tanda;</p>
+            <p>&nbsp;}</p>
+            <p><br></p>
+            <p>&nbsp;else</p>
+            <p>&nbsp;{</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>if(kota[x][y]==tanda)</p>
+            <p>&nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; return;</p>
+            <p>&nbsp; &nbsp; }</p>
+            <p><br></p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>else</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>{</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>banyak_jebakan--;</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>return;</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>}</p>
+            <p><br></p>
+            <p>&nbsp;}</p>
+            <p><br></p>
+            <p>switch (gerak[x][y])</p>
+            <p>&nbsp;{</p>
+            <p>&nbsp; &nbsp; case &apos;N&apos; : gaeruh(x-1,y);</p>
+            <p>&nbsp; &nbsp; break;</p>
+            <p>&nbsp; &nbsp; case &apos;E&apos; : gaeruh(x,y+1);</p>
+            <p>&nbsp; &nbsp; break;</p>
+            <p>&nbsp; &nbsp; case &apos;W&apos; : gaeruh(x,y-1);</p>
+            <p>&nbsp; &nbsp; break;</p>
+            <p>&nbsp; &nbsp; case &apos;S&apos; : gaeruh(x+1,y);</p>
+            <p>&nbsp; &nbsp; break;</p>
+            <p><br></p>
+            <p>&nbsp;}</p>
+            <p><br></p>
+            <p>}</p>
+            <p><br></p>
+            <p><br></p>
+            <p>int main()</p>
+            <p>{</p>
+            <p>&nbsp;int n,m;</p>
+            <p>&nbsp;scanf(&quot;%d %d&quot;,&amp;n,&amp;m);</p>
+            <p>&nbsp;//memset(visited, 0, sizeof(visited));</p>
+            <p><br></p>
+            <p>&nbsp;for(int i=0;i&lt;n;i++)</p>
+            <p>&nbsp; &nbsp; {</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>scanf(&quot;%s&quot;,gerak[i]);</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>}</p>
+            <p><br></p>
+            <p>&nbsp;for(int i=0;i&lt;n;i++)</p>
+            <p>&nbsp;{</p>
+            <p><br></p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>for(int j=0;j&lt;m;j++)</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>{</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>if(kota[i][j]!=0)</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>continue;</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>else</p>
+            <p><span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>{</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>gaeruh(i,j);</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>banyak_jebakan++;</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>tanda++;</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>}</p>
+            <p>&nbsp;<span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>}</p>
+            <p>&nbsp;}</p>
+            <p>&nbsp;printf(&quot;%d\n&quot;,banyak_jebakan);</p>
+            <p><br></p>
+            <p>}</p>
+            <p><br></p>   
         </div>
 
         <script>
@@ -240,7 +274,7 @@
                 else
                 {
                   $.ajax({
-                    url: "comments/tlx-5-add.php",
+                    url: "comments/spoj-2-add.php",
                     data: str,
                     type: 'post',
                     success: function (response)
@@ -282,7 +316,7 @@
 
 
             function listComment() {
-                $.post("comments/tlx-5-list.php",
+                $.post("comments/spoj-2-list.php",
                         function (data) {
                             var data = JSON.parse(data);
 

@@ -9,7 +9,7 @@
     $i = 0;
     mysqli_close($conn);
 
-    $pageTitle = 'Konversi Biner';
+    $pageTitle = 'Drawing Polygrams';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -27,27 +27,27 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">Konversi Biner</h1>
+        <h1 class="mt-4">Drawing Polygrams</h1>
 
         <!-- Author -->
         <p class="lead">
           from
-          <a href="https://tlx.toki.id/courses/basic/chapters/12/problems/E"><i>here</i></a>
+          <a href="https://www.spoj.com/problems/VZLA2019D/" target="_blank"><i>here</i></a>
         </p>
 
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on January 3, 2021 at 6:00 PM</p>
+        <p>Posted on January 5, 2021 at 10:00 AM</p>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="tlx-homepage-1.php">TLX TOKI</a>
+                <a href="spoj-homepage.php">SPOJ</a>
             </li>
-            <li class="breadcrumb-item active">Konversi Biner</li>
+            <li class="breadcrumb-item active">Drawing Polygrams</li>
         </ol>
 
         <hr>
@@ -55,92 +55,94 @@
         <hr>
 
         <!-- Post Content -->
-        <h2 class="justify">Konversi Biner</h2>
-        <table style="width:30%">
-            <tr>
-                <td style="width:60%">Time limit</td>
-                <td style="width:40%">1 s</td>
-            </tr>
-            <tr>
-                <td style="width:60%">Memory limit</td>
-                <td style="width:40%">64 MB</td>
-            </tr>
-        </table>
-
+        <h2 class="justify">Drawing Polygrams</h2>
         <br>
         <br>
 
         <h5>Deskripsi</h5>
-        <p class="justify">Pak Dengklek baru saja menemukan metode hampir sakti untuk 
-          mengkonversi bilangan desimal ke dalam representasi binernya. Metodenya adalah sebagai berikut:</p>
+        <p class="justify">Drawing stars on the last page of a notebook is a very entertaining hobby. 
+        Did you know these cute "stars" are actually called polygrams?</p>
 
-        <ul class="a">
-          <li>Jika suatu bilangan N adalah bilangan ganjil, maka bit (binary digit) terakhir pada representasi binernya adalah 1. 
-            Sebaliknya, jika N genap maka bit terakhir pada representasi binernya adalah 0.</li>
-          <li>Bit-bit di depan bit terakhir sama dengan representasi biner dari (N/2 dibulatkan ke bawah).</li>
-        </ul>        
-        
-        <p class="justify">Mengapa hampir sakti? Ternyata ketika 
-          Pak Dengklek mencoba mengimplementasikan metode tersebut, programnya terjebak dalam infinite recursion!</p>
+        <p class="justify">Given a regular polygon with <b>p</b> vertices, we define a polygram <b>p/q</b>, 
+        as the resultant polygon obtained after connecting every i-th vertex with the (i+q)-th vertex.</p>    
 
-        <p class="justify">Sebagai pemrogram handal, Anda langsung menyadari bahwa metode rekursif Pak Dengklek kekurangan satu hal yang sangat penting: 
-          base case. Bantulah Pak Dengklek memperbaiki metodenya dengan menambahkan base case dan membuat program konversi desimal ke biner yang benar!</p>
+        <p class="justify">You may know the polygram 5/2 as pentagram</p>
+
+        <p class="justify">Another example is the hexagram 6/2. 
+        Given that 6 and 2 are not coprime, this polygram is composed by two 3/1 polygrams</p>    
+
+        <div class="img-div">
+        <img class="card-img-top img-shadow" width="550" height="300" src="http://2.bp.blogspot.com/-wmnQtkUQ0wY/ThcBSULVrJI/AAAAAAAABvI/Q0CzlOYi62s/s1600/1.png" alt="Counting Rooms">
+        </div>
+
+        <p class="justify">Given a regular polygon with p vertices, 
+          its radius R (the distance from its center to any vertex) and a number q, 
+          can you calculate the area of the polygram p/q?</p>
+
+        <p class="justify">It is guaranteed that the resultant polygon will not be degenerated, i.e q ≠ p/2 and q ≠ p</p>
 
         <h5>Format Masukan</h5>
         <div class="gray-block">
-          <p class="justify">Sebuah baris berisi berisi sebuah bilangan bulat N.</p>
+          <p class="justify">The first and only line of the input contains three integers <b>p</b>, <b>q</b> and <b>r</b></p>
         </div>
 
         <h5>Format Keluaran</h5>
-        <p class="justify">Sebuah baris berisi representasi biner dari N tanpa leading zero.</p>
+        <p class="justify">Print in a single line the area of the resultant polygram p/q with radius r. 
+          Print the answer with exactly five decimal places</p>
 
-        <h5>Contoh Masukan</h5>
-        <pre>73</pre>
+        <h5>Contoh Masukan 1</h5>
+        <pre>5 4 2</pre>
 
-        <h5>Contoh Keluaran</h5>
-        <pre>1001001</pre>
+        <h5>Contoh Keluaran 1</h5>
+        <pre>9.51057</pre>
+
+        <h5>Contoh Masukan 2</h5>
+        <pre>10 4 5</pre>
+
+        <h5>Contoh Keluaran 2</h5>
+        <pre>40.61496</pre>
 
         <h5>Batasan</h5>
         <ul class="a">
-          <li>1 ≤ N ≤ 1.000.000.000</li>
+          <li>3 &lt;= p &lt;= 10<sup>3</sup></li>
+          <li>1 ≤ q < p</li>
+          <li>1 ≤ r ≤ 100</li>
+          <li>q ≠ p/2 and q ≠ p</li>
         </ul>
 
         <hr>
 
         <button class="accordion_2">Solution</button>
         <div class="panel_2 code-font">
-          <br>
-          <p>#include &lt;stdio.h&gt;</p>
-          <p><br></p>
-          <p>void konvert(int x)</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; int hasil,sisa;</p>
-          <p>&nbsp; &nbsp; if (x == 1)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,x);</p>
-          <p>&nbsp; &nbsp; } else</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; sisa = x % 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; x = x / 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; konvert(x);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,sisa);</p>
-          <p>&nbsp; &nbsp; }</p>
-          <p>}</p>
-          <p><br></p>
-          <p>int main()</p>
-          <p>{</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; int a;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;a);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; konvert(a);</p>
-          <p>&nbsp; &nbsp; printf(&quot;\n&quot;);</p>
-          <p><br></p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; return 0;</p>
-          <p>}</p>
+            <p><br></p>
+            <p>#include &lt;stdio.h&gt;</p>
+            <p>#include &lt;math.h&gt;</p>
+            <p><br></p>
+            <p>#define PI 3.14159265358979323846</p>
+            <p><br></p>
+            <p>double x[2];</p>
+            <p>double y[2];</p>
+            <p><br></p>
+            <p>int main() {</p>
+            <p>&nbsp; &nbsp; int p, q, r;</p>
+            <p>&nbsp; &nbsp; scanf(&quot;%d %d %d&quot;, &amp;p, &amp;q, &amp;r);</p>
+            <p>&nbsp; &nbsp;&nbsp;</p>
+            <p>&nbsp; &nbsp; if (q &gt; p / 2) q = p - q;</p>
+            <p>&nbsp; &nbsp; x[0] = r;</p>
+            <p>&nbsp; &nbsp; y[0] = 0;</p>
+            <p>&nbsp; &nbsp; x[1] = r*cos(2*PI/p);</p>
+            <p>&nbsp; &nbsp; y[1] = r*sin(2*PI/p);</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; double selx = x[0] - x[1];</p>
+            <p>&nbsp; &nbsp; double sely = y[0] - y[1];</p>
+            <p>&nbsp; &nbsp; double a = pow(selx, 2) + pow(sely, 2);</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; double area = p*a/4*(1.0/tan(PI/p) - tan((q-1)*PI/p));</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; printf(&quot;%.5lf\n&quot;, area);</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; return 0;</p>
+            <p>}</p>   
         </div>
 
         <script>
@@ -240,7 +242,7 @@
                 else
                 {
                   $.ajax({
-                    url: "comments/tlx-5-add.php",
+                    url: "comments/spoj-1-add.php",
                     data: str,
                     type: 'post',
                     success: function (response)
@@ -282,7 +284,7 @@
 
 
             function listComment() {
-                $.post("comments/tlx-5-list.php",
+                $.post("comments/spoj-1-list.php",
                         function (data) {
                             var data = JSON.parse(data);
 

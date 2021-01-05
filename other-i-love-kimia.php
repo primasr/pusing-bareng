@@ -9,7 +9,7 @@
     $i = 0;
     mysqli_close($conn);
 
-    $pageTitle = 'Konversi Biner';
+    $pageTitle = 'I Love Kimia';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -27,27 +27,27 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">Konversi Biner</h1>
+        <h1 class="mt-4">I Love Kimia</h1>
 
         <!-- Author -->
         <p class="lead">
           from
-          <a href="https://tlx.toki.id/courses/basic/chapters/12/problems/E"><i>here</i></a>
+          <a href="https://www.hackerrank.com/contests/praktikum-final-struktur-data/challenges/i-love-kimia-1" target="_blank"><i>here</i></a>
         </p>
 
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on January 3, 2021 at 6:00 PM</p>
+        <p>Posted on January 4, 2021 at 11:30 PM</p>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="tlx-homepage-1.php">TLX TOKI</a>
+                <a href="other-homepage.php">Other</a>
             </li>
-            <li class="breadcrumb-item active">Konversi Biner</li>
+            <li class="breadcrumb-item active">I Love Kimia</li>
         </ol>
 
         <hr>
@@ -55,92 +55,96 @@
         <hr>
 
         <!-- Post Content -->
-        <h2 class="justify">Konversi Biner</h2>
-        <table style="width:30%">
-            <tr>
-                <td style="width:60%">Time limit</td>
-                <td style="width:40%">1 s</td>
-            </tr>
-            <tr>
-                <td style="width:60%">Memory limit</td>
-                <td style="width:40%">64 MB</td>
-            </tr>
-        </table>
-
+        <h2 class="justify">I Love Kimia</h2>
         <br>
         <br>
 
         <h5>Deskripsi</h5>
-        <p class="justify">Pak Dengklek baru saja menemukan metode hampir sakti untuk 
-          mengkonversi bilangan desimal ke dalam representasi binernya. Metodenya adalah sebagai berikut:</p>
+        <p class="justify">Hainnes adalah salah satu mahasiswi yang tinggal di planet Nepisi. 
+          Ia berkuliah di salah satu institut terkenal yakni Institut Teknologi Saja di jurusan Informatika. 
+          Saat awal diterima, Hainnes mengira bahwa ia tidak akan bertemu dengan pelajaran yang paling ia benci 
+          semasa SMA yaitu kimia.Tetapi, dugaannya ternyata salah. Di tahun ajaran baru ini, 
+          rektor Institut Teknologi Saja membuat suatu kebijakan baru yaitu semua mahasiswa tahun ajaran baru akan
+          endapatkan mata kuliah kimia di semester pertamanya. 
+          Tentu saja ini membuat Hainnes sangat kesal karena ia harus kembali bertemu dengan musuh lamanya yaitu 
+          kimia.</p>
+          
+        <p class="justify">Hari ini, dosen kimia Hainnes, pak Masfu mengajarkan tentang konfigurasi elektron. 
+          Konfigurasi elektron di planet Nepisi hampir sama dengan di bumi. 
+          Elektron-elektron akan mengisi kulit yang paling dalam sampai penuh, 
+          lalu berlanjut kulit yang lebih luar dan seterusnya sampai semua elektron sudah menempati kulit di atom
+           tersebut. Sama seperti di bumi, kapasitas kulit atom terdalam ke-i adalah 2*i2. 
+           Yang membedakan konfigurasi elektron di bumi dan Nepisi adalah jika di bumi terdapat 
+           batasan untuk jumlah atom yang berada pada kulit terluar yakni 8, 
+           di planet Nepisi tidak ada batasan untuk jumlah elektron yang berada di kulit terluar dari sebuah atom. 
+           Sebagai contoh,untuk atom yang memiliki 20 elektron,maka konfigurasi elektronnya 
+           adalah 2 8 10(berturut-turut dari kulit terdalam ke-1,ke-2 lalu ke-3).</p>
 
-        <ul class="a">
-          <li>Jika suatu bilangan N adalah bilangan ganjil, maka bit (binary digit) terakhir pada representasi binernya adalah 1. 
-            Sebaliknya, jika N genap maka bit terakhir pada representasi binernya adalah 0.</li>
-          <li>Bit-bit di depan bit terakhir sama dengan representasi biner dari (N/2 dibulatkan ke bawah).</li>
-        </ul>        
-        
-        <p class="justify">Mengapa hampir sakti? Ternyata ketika 
-          Pak Dengklek mencoba mengimplementasikan metode tersebut, programnya terjebak dalam infinite recursion!</p>
-
-        <p class="justify">Sebagai pemrogram handal, Anda langsung menyadari bahwa metode rekursif Pak Dengklek kekurangan satu hal yang sangat penting: 
-          base case. Bantulah Pak Dengklek memperbaiki metodenya dengan menambahkan base case dan membuat program konversi desimal ke biner yang benar!</p>
+        <p class="justify">Di akhir perkuliahan, pak Masfu memberikan latihan soal pada muridmuridnya untuk
+           menentukan berapa jumlah kulit pada atom dengan jumlah elektron K. 
+           Karena soal-soalnya sangat banyak, Hainnes pun ingin membuat program agar ia dapat menjawab
+            soal-soal tersebut dengan cepat. Karena itu ia pun memintamu untuk membantunya agar
+             ia tidak harus berurusan dengan kimia lama-lama.</p>
 
         <h5>Format Masukan</h5>
         <div class="gray-block">
-          <p class="justify">Sebuah baris berisi berisi sebuah bilangan bulat N.</p>
+          <p class="justify">aris pertama berisi sebuah bilangan T yang menyatakan banyaknya soal yang diberikan oleh pak Masfu.</p>
+          <p class="justify">T baris selanjutnya berisi sebuah bilangan Ki yang merupakan jumlah elektron atom ke-i.</p>
         </div>
 
         <h5>Format Keluaran</h5>
-        <p class="justify">Sebuah baris berisi representasi biner dari N tanpa leading zero.</p>
+        <p class="justify">T buah baris berisi sebuah bilangan Ai dimana Ai adalah jumlah kulit dari atom ke-i.</p>
 
         <h5>Contoh Masukan</h5>
-        <pre>73</pre>
+        <pre>3<br>20<br>10<br>11</pre>
 
         <h5>Contoh Keluaran</h5>
-        <pre>1001001</pre>
+        <pre>3<br>2<br>3</pre>
 
         <h5>Batasan</h5>
         <ul class="a">
-          <li>1 ≤ N ≤ 1.000.000.000</li>
+          <li>1 ≤ T ≤ 10<sup>5</sup></li>
+          <li>1 ≤ Ki ≤ 10<sup>18</sup></li>
         </ul>
 
         <hr>
 
         <button class="accordion_2">Solution</button>
         <div class="panel_2 code-font">
-          <br>
-          <p>#include &lt;stdio.h&gt;</p>
-          <p><br></p>
-          <p>void konvert(int x)</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; int hasil,sisa;</p>
-          <p>&nbsp; &nbsp; if (x == 1)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,x);</p>
-          <p>&nbsp; &nbsp; } else</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; sisa = x % 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; x = x / 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; konvert(x);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,sisa);</p>
-          <p>&nbsp; &nbsp; }</p>
-          <p>}</p>
-          <p><br></p>
-          <p>int main()</p>
-          <p>{</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; int a;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;a);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; konvert(a);</p>
-          <p>&nbsp; &nbsp; printf(&quot;\n&quot;);</p>
-          <p><br></p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; return 0;</p>
-          <p>}</p>
+            <p><br></p>
+            <p>#include &lt;bits/stdc++.h&gt;</p>
+            <p><br></p>
+            <p>using namespace std;</p>
+            <p>#define ll long long</p>
+            <p>const ll MAX_NUM = 1e18;</p>
+            <p>// 2* i ^ 2</p>
+            <p><br></p>
+            <p>int main ()</p>
+            <p>{</p>
+            <p>&nbsp; &nbsp; vector &lt;ll&gt; kulit;</p>
+            <p>&nbsp; &nbsp; kulit.push_back(2);</p>
+            <p>&nbsp; &nbsp; while (kulit.back() &lt;= MAX_NUM)</p>
+            <p>&nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; ll result = (ll)kulit.size() + 1;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; ll temp = 2*(pow(result,2));</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; kulit.push_back(temp + kulit.back());</p>
+            <p>&nbsp; &nbsp; }</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; ll testcase;</p>
+            <p>&nbsp; &nbsp; cin &gt;&gt; testcase;</p>
+            <p>&nbsp; &nbsp; while (testcase--)</p>
+            <p>&nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; ll elektron;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; cin &gt;&gt; elektron;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; ll posisi_kulit = lower_bound(kulit.begin(),kulit.end(),elektron) - kulit.begin() + 1;</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; cout &lt;&lt; posisi_kulit &lt;&lt; endl;</p>
+            <p>&nbsp; &nbsp; }</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; return 0;</p>
+            <p>}</p>
+            <p><br></p>
+            <p><br></p>
         </div>
 
         <script>
@@ -240,7 +244,7 @@
                 else
                 {
                   $.ajax({
-                    url: "comments/tlx-5-add.php",
+                    url: "comments/other-3-add.php",
                     data: str,
                     type: 'post',
                     success: function (response)
@@ -282,7 +286,7 @@
 
 
             function listComment() {
-                $.post("comments/tlx-5-list.php",
+                $.post("comments/other-3-list.php",
                         function (data) {
                             var data = JSON.parse(data);
 

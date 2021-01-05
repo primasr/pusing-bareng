@@ -9,7 +9,7 @@
     $i = 0;
     mysqli_close($conn);
 
-    $pageTitle = 'Konversi Biner';
+    $pageTitle = 'Grasshopper';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -27,27 +27,27 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">Konversi Biner</h1>
+        <h1 class="mt-4">Grasshopper</h1>
 
         <!-- Author -->
         <p class="lead">
           from
-          <a href="https://tlx.toki.id/courses/basic/chapters/12/problems/E"><i>here</i></a>
+          <a href="https://www.e-olymp.com/en/problems/4051" target="_blank"><i>here</i></a>
         </p>
 
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on January 3, 2021 at 6:00 PM</p>
+        <p>Posted on January 4, 2021 at 11:30 PM</p>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="tlx-homepage-1.php">TLX TOKI</a>
+                <a href="olymp-homepage.php">e-Olymp</a>
             </li>
-            <li class="breadcrumb-item active">Konversi Biner</li>
+            <li class="breadcrumb-item active">Grasshopper</li>
         </ol>
 
         <hr>
@@ -55,7 +55,7 @@
         <hr>
 
         <!-- Post Content -->
-        <h2 class="justify">Konversi Biner</h2>
+        <h2 class="justify">Grasshopper</h2>
         <table style="width:30%">
             <tr>
                 <td style="width:60%">Time limit</td>
@@ -63,84 +63,107 @@
             </tr>
             <tr>
                 <td style="width:60%">Memory limit</td>
-                <td style="width:40%">64 MB</td>
+                <td style="width:40%">128 MB</td>
             </tr>
         </table>
-
         <br>
         <br>
 
         <h5>Deskripsi</h5>
-        <p class="justify">Pak Dengklek baru saja menemukan metode hampir sakti untuk 
-          mengkonversi bilangan desimal ke dalam representasi binernya. Metodenya adalah sebagai berikut:</p>
+        <p class="justify">Grasshopper lives in the teacher's room. It likes to jump on one dimensional checkerboard. 
+          The length of the board is n cells. To its regret, it can jump only on 1, 2, ..., k cells forward.</p>
 
-        <ul class="a">
-          <li>Jika suatu bilangan N adalah bilangan ganjil, maka bit (binary digit) terakhir pada representasi binernya adalah 1. 
-            Sebaliknya, jika N genap maka bit terakhir pada representasi binernya adalah 0.</li>
-          <li>Bit-bit di depan bit terakhir sama dengan representasi biner dari (N/2 dibulatkan ke bawah).</li>
-        </ul>        
-        
-        <p class="justify">Mengapa hampir sakti? Ternyata ketika 
-          Pak Dengklek mencoba mengimplementasikan metode tersebut, programnya terjebak dalam infinite recursion!</p>
-
-        <p class="justify">Sebagai pemrogram handal, Anda langsung menyadari bahwa metode rekursif Pak Dengklek kekurangan satu hal yang sangat penting: 
-          base case. Bantulah Pak Dengklek memperbaiki metodenya dengan menambahkan base case dan membuat program konversi desimal ke biner yang benar!</p>
+        <p class="justify">Once teachers wondered in how many ways a grasshopper 
+          can reach the last cell from the first one. Help them to answer this question.</p>        
 
         <h5>Format Masukan</h5>
         <div class="gray-block">
-          <p class="justify">Sebuah baris berisi berisi sebuah bilangan bulat N.</p>
+          <p class="justify">Two integers n and k (1 ≤ n ≤ 30, 1 ≤ k ≤ 10).</p>
         </div>
 
         <h5>Format Keluaran</h5>
-        <p class="justify">Sebuah baris berisi representasi biner dari N tanpa leading zero.</p>
+        <p class="justify">Print the number of ways for grasshopper to leap from the first cell to the last.</p>
 
-        <h5>Contoh Masukan</h5>
-        <pre>73</pre>
+        <h5>Contoh Masukan 1</h5>
+        <pre>8 2</pre>
+        <h5>Contoh Keluaran 1</h5>
+        <pre>21</pre>
 
-        <h5>Contoh Keluaran</h5>
-        <pre>1001001</pre>
+        <h5>Contoh Masukan 2</h5>
+        <pre>1 10</pre>
+        <h5>Contoh Keluaran 2</h5>
+        <pre>1</pre>
 
-        <h5>Batasan</h5>
-        <ul class="a">
-          <li>1 ≤ N ≤ 1.000.000.000</li>
-        </ul>
+        <h5>Contoh Masukan 3</h5>
+        <pre>1 1</pre>
+        <h5>Contoh Keluaran 3</h5>
+        <pre>1</pre>
 
         <hr>
 
         <button class="accordion_2">Solution</button>
         <div class="panel_2 code-font">
-          <br>
-          <p>#include &lt;stdio.h&gt;</p>
-          <p><br></p>
-          <p>void konvert(int x)</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; int hasil,sisa;</p>
-          <p>&nbsp; &nbsp; if (x == 1)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,x);</p>
-          <p>&nbsp; &nbsp; } else</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; sisa = x % 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; x = x / 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; konvert(x);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,sisa);</p>
-          <p>&nbsp; &nbsp; }</p>
-          <p>}</p>
-          <p><br></p>
-          <p>int main()</p>
-          <p>{</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; int a;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;a);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; konvert(a);</p>
-          <p>&nbsp; &nbsp; printf(&quot;\n&quot;);</p>
-          <p><br></p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; return 0;</p>
-          <p>}</p>
+            <p><br></p>
+            <p>#include &lt;stdio.h&gt;</p>
+            <p>#include &lt;string.h&gt;</p>
+            <p><br></p>
+            <p>int dua_pangkat(int x)</p>
+            <p>{</p>
+            <p>&nbsp; &nbsp; int i,temp = 2;</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; x = x-2;</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; if (x == 0)</p>
+            <p>&nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; return 1;</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; } else</p>
+            <p>&nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; for (i = 1; i &lt; x; i++)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; temp *= 2;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; return temp;</p>
+            <p>&nbsp; &nbsp; }</p>
+            <p><br></p>
+            <p>}</p>
+            <p><br></p>
+            <p>int main ()</p>
+            <p>{</p>
+            <p>&nbsp; &nbsp; int n,k;</p>
+            <p>&nbsp; &nbsp; int i,j;</p>
+            <p>&nbsp; &nbsp; int board[31];</p>
+            <p>&nbsp; &nbsp; memset(board, 0, sizeof(board));</p>
+            <p>&nbsp; &nbsp; board[1] = 1;</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; scanf(&quot;%d %d&quot;,&amp;n,&amp;k);</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; if (n == 1)</p>
+            <p>&nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;1\n&quot;);</p>
+            <p>&nbsp; &nbsp; } else</p>
+            <p>&nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; //printf(&quot;%d\n&quot;,dua_pangkat(n));</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; for (i = 2; i &lt;= k; i++)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; board[i] = dua_pangkat(i);</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; for (i=k+1; i &lt;= n; i++)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; for (j = 1; j &lt;= k; j++)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; board[i]+=board[i-j];</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d\n&quot;,board[n]);</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; }</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; return 0;</p>
+            <p>}</p>
         </div>
 
         <script>
@@ -240,7 +263,7 @@
                 else
                 {
                   $.ajax({
-                    url: "comments/tlx-5-add.php",
+                    url: "comments/olymp-2-add.php",
                     data: str,
                     type: 'post',
                     success: function (response)
@@ -282,7 +305,7 @@
 
 
             function listComment() {
-                $.post("comments/tlx-5-list.php",
+                $.post("comments/olymp-2-list.php",
                         function (data) {
                             var data = JSON.parse(data);
 

@@ -49,43 +49,43 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top img-shadow" height="300" width="750" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ySjneyKrLW1fI3F3ECtSCtXmlxpR5R61CA&usqp=CAU" alt="Hello World!">
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ySjneyKrLW1fI3F3ECtSCtXmlxpR5R61CA&usqp=CAU" alt="Hello World!">
           <div class="card-body">
             <h2 class="card-title">Ukuran Kejauhan</h2>
             <p class="card-text">Soal IDEAFUSE 2014 - Final CP — Problem G</p>
-            <a href="tlx-ukuran-kejauhan.php" class="btn btn-primary">Read More &rarr;</a>
+            <a href="tlx-ukuran-kejauhan.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on January 4, 2021 by
-            <a href="#">Admin</a>
+            <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top img-shadow" height="300" width="750" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ySjneyKrLW1fI3F3ECtSCtXmlxpR5R61CA&usqp=CAU" alt="Caesar Chipper">
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ySjneyKrLW1fI3F3ECtSCtXmlxpR5R61CA&usqp=CAU" alt="Caesar Chipper">
           <div class="card-body">
             <h2 class="card-title">Candy Businessman</h2>
             <p class="card-text">Soal IDEAFUSE 2014 - Final ICPC Sumatra Provincial — Problem A</p>
-            <a href="tlx-candy-businessman.php" class="btn btn-primary">Read More &rarr;</a>
+            <a href="tlx-candy-businessman.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on January 4, 2021 by
-            <a href="#">Admin</a>
+            <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top img-shadow" height="300" width="750" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ySjneyKrLW1fI3F3ECtSCtXmlxpR5R61CA&usqp=CAU" alt="Card image cap">
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ySjneyKrLW1fI3F3ECtSCtXmlxpR5R61CA&usqp=CAU" alt="Card image cap">
           <div class="card-body">
             <h2 class="card-title">Hard Word</h2>
             <p class="card-text">Soal IDEAFUSE 2014 - Final ICPC Sumatra Provincial — Problem D</p>
-            <a href="tlx-hard-word.php" class="btn btn-primary">Read More &rarr;</a>
+            <a href="tlx-hard-word.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on January 4, 2021 by
-            <a href="#">Admin</a>
+            <a href="about.php">Admin</a>
           </div>
         </div>
 

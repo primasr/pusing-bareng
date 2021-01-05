@@ -31,8 +31,8 @@
 
         <!-- Author -->
         <p class="lead">
-          by
-          <a href="#">Admin</a>
+          from
+          <a href="https://tlx.toki.id/courses/basic/chapters/13/problems/B"><i>here</i></a>
         </p>
 
         <hr>

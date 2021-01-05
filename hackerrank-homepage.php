@@ -47,7 +47,7 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top img-shadow" height="300" width="750" src="https://s3.amazonaws.com/hr-assets/0/1603195175-368d7f2732-1.gif" alt="Outdoor Study">
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://s3.amazonaws.com/hr-assets/0/1603195175-368d7f2732-1.gif" alt="Outdoor Study">
           <div class="card-body">
             <h2 class="card-title">Outdoor Study</h2>
             <p class="card-text">Setiap tahun, guru memutuskan memesan bis untuk transportasi Outdoor Study. Pada waktu mereka akan pergi, ....</p>
@@ -55,13 +55,13 @@
           </div>
           <div class="card-footer text-muted">
             Posted on January 4, 2021 by
-            <a href="#">Admin</a>
+            <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top img-shadow" height="300" width="750" src="https://s3.amazonaws.com/hr-assets/0/1603430849-51fcf16587-2058Converted.png" alt="MudMud">
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://s3.amazonaws.com/hr-assets/0/1603430849-51fcf16587-2058Converted.png" alt="MudMud">
           <div class="card-body">
             <h2 class="card-title">MudMud dan Kakaknya</h2>
             <p class="card-text">MudMud sangat menyayangi kakaknya. Suatu ketika MudMud ulang tahun dan diberi hadiah ...</p>
@@ -69,13 +69,13 @@
           </div>
           <div class="card-footer text-muted">
             Posted on January 4, 2021 by
-            <a href="#">Admin</a>
+            <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top img-shadow" height="300" width="750" src="https://media.suara.com/pictures/970x544/2018/01/30/82737-tempat-parkir.jpg" alt="Parkiran Aya">
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://media.suara.com/pictures/970x544/2018/01/30/82737-tempat-parkir.jpg" alt="Parkiran Aya">
           <div class="card-body">
             <h2 class="card-title">Parkiran Aya</h2>
             <p class="card-text">Terdapat sebuah sistem parkiran yang dapat memberi tahu pengunjung apakah mereka dapat memarkirkan ...</p>
@@ -83,7 +83,7 @@
           </div>
           <div class="card-footer text-muted">
             Posted on January 4, 2021 by
-            <a href="#">Admin</a>
+            <a href="about.php">Admin</a>
           </div>
         </div>
 

@@ -9,7 +9,7 @@
     $i = 0;
     mysqli_close($conn);
 
-    $pageTitle = 'Konversi Biner';
+    $pageTitle = 'Divisibility';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -27,27 +27,27 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">Konversi Biner</h1>
+        <h1 class="mt-4">Divisibility</h1>
 
         <!-- Author -->
         <p class="lead">
           from
-          <a href="https://tlx.toki.id/courses/basic/chapters/12/problems/E"><i>here</i></a>
+          <a href="https://www.spoj.com/problems/SMPDIV/" target="_blank"><i>here</i></a>
         </p>
 
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on January 3, 2021 at 6:00 PM</p>
+        <p>Posted on January 5, 2021 at 10:30 AM</p>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="tlx-homepage-1.php">TLX TOKI</a>
+                <a href="spoj-homepage.php">SPOJ</a>
             </li>
-            <li class="breadcrumb-item active">Konversi Biner</li>
+            <li class="breadcrumb-item active">Divisibility</li>
         </ol>
 
         <hr>
@@ -55,92 +55,69 @@
         <hr>
 
         <!-- Post Content -->
-        <h2 class="justify">Konversi Biner</h2>
-        <table style="width:30%">
-            <tr>
-                <td style="width:60%">Time limit</td>
-                <td style="width:40%">1 s</td>
-            </tr>
-            <tr>
-                <td style="width:60%">Memory limit</td>
-                <td style="width:40%">64 MB</td>
-            </tr>
-        </table>
-
+        <h2 class="justify">Divisibility</h2>
         <br>
         <br>
 
         <h5>Deskripsi</h5>
-        <p class="justify">Pak Dengklek baru saja menemukan metode hampir sakti untuk 
-          mengkonversi bilangan desimal ke dalam representasi binernya. Metodenya adalah sebagai berikut:</p>
-
-        <ul class="a">
-          <li>Jika suatu bilangan N adalah bilangan ganjil, maka bit (binary digit) terakhir pada representasi binernya adalah 1. 
-            Sebaliknya, jika N genap maka bit terakhir pada representasi binernya adalah 0.</li>
-          <li>Bit-bit di depan bit terakhir sama dengan representasi biner dari (N/2 dibulatkan ke bawah).</li>
-        </ul>        
-        
-        <p class="justify">Mengapa hampir sakti? Ternyata ketika 
-          Pak Dengklek mencoba mengimplementasikan metode tersebut, programnya terjebak dalam infinite recursion!</p>
-
-        <p class="justify">Sebagai pemrogram handal, Anda langsung menyadari bahwa metode rekursif Pak Dengklek kekurangan satu hal yang sangat penting: 
-          base case. Bantulah Pak Dengklek memperbaiki metodenya dengan menambahkan base case dan membuat program konversi desimal ke biner yang benar!</p>
+        <p class="justify">Print all integers a<sub>i</sub> such that a<sub>i</sub> 
+        is divisible by x and not divisible by y, where 1 &lt; a<sub>i</sub> &lt; n &lt; 100000.</p>
 
         <h5>Format Masukan</h5>
         <div class="gray-block">
-          <p class="justify">Sebuah baris berisi berisi sebuah bilangan bulat N.</p>
+          <p class="justify">First, you are given t ( t < 100 ) - the number of test cases. In each of the following t lines, 3 integers: n x y.</p>
+          <p class="justify">You might assume also that x < n and x is not divisible by y.</p>
         </div>
 
         <h5>Format Keluaran</h5>
-        <p class="justify">Sebuah baris berisi representasi biner dari N tanpa leading zero.</p>
+        <p class="justify">In each of the following t lines, 
+          numbers requested in the problem description in the separated by a single space in ascending order.</p>
 
         <h5>Contoh Masukan</h5>
-        <pre>73</pre>
+        <pre>2<br>7 2 4<br>35 5 12</pre>
 
         <h5>Contoh Keluaran</h5>
-        <pre>1001001</pre>
-
-        <h5>Batasan</h5>
-        <ul class="a">
-          <li>1 ≤ N ≤ 1.000.000.000</li>
-        </ul>
+        <pre>2 6<br>5 10 15 20 25 30</pre>
 
         <hr>
 
         <button class="accordion_2">Solution</button>
         <div class="panel_2 code-font">
-          <br>
-          <p>#include &lt;stdio.h&gt;</p>
-          <p><br></p>
-          <p>void konvert(int x)</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; int hasil,sisa;</p>
-          <p>&nbsp; &nbsp; if (x == 1)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,x);</p>
-          <p>&nbsp; &nbsp; } else</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; sisa = x % 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; x = x / 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; konvert(x);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,sisa);</p>
-          <p>&nbsp; &nbsp; }</p>
-          <p>}</p>
-          <p><br></p>
-          <p>int main()</p>
-          <p>{</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; int a;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;a);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; konvert(a);</p>
-          <p>&nbsp; &nbsp; printf(&quot;\n&quot;);</p>
-          <p><br></p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; return 0;</p>
-          <p>}</p>
+            <p><br></p>
+            <p>#include&lt;stdio.h&gt;</p>
+            <p><br></p>
+            <p>int main() {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp;</p>
+            <p>&nbsp; &nbsp; int n,x,y,i,j,t;</p>
+            <p>&nbsp; &nbsp;&nbsp;</p>
+            <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;t);</p>
+            <p>&nbsp; &nbsp;&nbsp;</p>
+            <p>&nbsp; &nbsp; for (j = 0 ; j &lt; t ; j++)</p>
+            <p>&nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; scanf(&quot;%d %d %d&quot;,&amp;n,&amp;x,&amp;y);</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; for (i = 1; i &lt;= n; i++)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (i != n)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if ((i % x == 0) &amp;&amp;( i % y != 0) )</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d &quot;,i);</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if ((i % x == 0) &amp;&amp;( i % y != 0) )</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,i);</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;\n&quot;);</p>
+            <p>&nbsp; &nbsp; }</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp;&nbsp;</p>
+            <p>&nbsp; &nbsp; return 0;</p>
+            <p>}</p>  
         </div>
 
         <script>
@@ -240,7 +217,7 @@
                 else
                 {
                   $.ajax({
-                    url: "comments/tlx-5-add.php",
+                    url: "comments/spoj-3-add.php",
                     data: str,
                     type: 'post',
                     success: function (response)
@@ -282,7 +259,7 @@
 
 
             function listComment() {
-                $.post("comments/tlx-5-list.php",
+                $.post("comments/spoj-3-list.php",
                         function (data) {
                             var data = JSON.parse(data);
 

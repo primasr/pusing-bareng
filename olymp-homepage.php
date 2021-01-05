@@ -1,8 +1,8 @@
 <?php
     session_start();
     include 'conn.php';
-
-    
+ 
+   
     $sql = "SELECT * FROM users";
 
     $rows = mysqli_query($conn, $sql);
@@ -19,7 +19,7 @@
     mysqli_close($conn);
     */
 
-    $pageTitle = 'TLX Page 1';
+    $pageTitle = 'e-Olymp Page 1';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -34,7 +34,7 @@
       <!-- Blog Entries Column -->
       <div class="col-md-8">
 
-        <h1 class="my-4">TLX TOKI
+        <h1 class="my-4">e-Olymp
           <small><small><small><i>Page 1</i></small></small></small>
         </h1>
 
@@ -42,48 +42,49 @@
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
-            <li class="breadcrumb-item active">TLX TOKI</li>
+            <li class="breadcrumb-item active">e-Olymp</li>
         </ol>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top img-shadow" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!">
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://miro.medium.com/max/1440/1*4BQDN46Qwq8f4zznnhbhtw.gif" alt="Repeated Josephus">
           <div class="card-body">
-            <h2 class="card-title">Hello World</h2>
-            <p class="card-text">Program Pertama: Menuliskan Hello World!</p>
-            <a href="tlx-hello-world.php" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title">Repeated Josephus</h2>
+            <p class="card-text">At first, there are n people numbered 1 to n around a circle and 
+          every second remaining person will ....</p>
+            <a href="olymp-repeated-josephus.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on December 26, 2020 by
-            <a href="#">Admin</a>
+            Posted on January 5, 2021 by
+            <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top img-shadow" src="https://2.bp.blogspot.com/-hE4VsLS1KIY/WwFbWe1t44I/AAAAAAAAB_U/XEdBkQ8UYYsS-i14LrFnqAkIrcpOnEEEACLcBGAs/s400/for1.PNG" alt="Caesar Chipper">
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://static.e-olymp.com/content/3d/3d3e6fc2a9a01e86a4b7cc5758c9318f0d9890a1.gif" alt="Grasshopper">        
           <div class="card-body">
-            <h2 class="card-title">Caesar Chipper</h2>
-            <p class="card-text">Membuat program Caesar Chipper</p>
-            <a href="tlx-caesar-chipper.php" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title">Grasshopper</h2>
+            <p class="card-text">Grasshopper lives in the teacher's room. It likes to jump on ...</p>
+            <a href="olymp-grasshopper.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 3, 2021 by
-            <a href="#">Admin</a>
+            Posted on January 5, 2021 by
+            <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top img-shadow" src="https://theoryofprogramming.azurewebsites.net/wp-content/uploads/2017/12/rotate-1.jpg" alt="Card image cap" height="300" width="750">
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://www.channelfutures.com/files/2015/01/simple-2.jpg" alt="Simple Problem">          
           <div class="card-body">
-            <h2 class="card-title">Rotasi Matriks</h2>
-            <p class="card-text">Membuat program me-rotasi sebuah matriks</p>
-            <a href="tlx-rotasi-matriks.php" class="btn btn-primary">Read More &rarr;</a>
+            <h2 class="card-title">Simple Problem</h2>
+            <p class="card-text">Program reads two-digit number and prints every digit, separated by a space.</p>
+            <a href="olymp-simple-problem.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
-            Posted on January 3, 2021 by
-            <a href="#">Admin</a>
+            Posted on January 5, 2021 by
+            <a href="about.php">Admin</a>
           </div>
         </div>
 
@@ -95,14 +96,8 @@
           <li class="page-item disabled">
             <a class="page-link" href="#">1</a>
           </li>
-          <li class="page-item">
-            <a class="page-link" href="tlx-homepage-2.php">2</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="tlx-homepage-3.php">3</a>
-          </li>
-          <li class="page-item">
-            <a class="page-link" href="tlx-homepage-3.php">Last &rarr;</a>
+          <li class="page-item disabled">
+            <a class="page-link" href="#">Last &rarr;</a>
           </li>
         </ul>
 

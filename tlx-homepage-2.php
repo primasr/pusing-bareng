@@ -49,43 +49,43 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top img-shadow" src="https://gamedevtraum.com/wp-content/uploads/2019/11/factorial-de-un-numero-min.png" alt="Hello World!" height="300" width="750">
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://gamedevtraum.com/wp-content/uploads/2019/11/factorial-de-un-numero-min.png" alt="Hello World!">
           <div class="card-body">
             <h2 class="card-title">Faktorial Ganjil Genap</h2>
             <p class="card-text">Membuat program untuk mencari faktor ganjil genap dari sebuah angka</p>
-            <a href="tlx-faktorial-gg.php" class="btn btn-primary">Read More &rarr;</a>
+            <a href="tlx-faktorial-gg.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on January 3, 2021 by
-            <a href="#">Admin</a>
+            <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top img-shadow" src="https://www.wikihow.com/images_en/thumb/8/8f/Convert-from-Binary-to-Decimal-Step-1-Version-5.jpg/v4-460px-Convert-from-Binary-to-Decimal-Step-1-Version-5.jpg.webp" alt="Caesar Chipper" height="300" width="750">
+          <img class="card-img-top img-shadow"  width="750" height="300"src="https://www.wikihow.com/images_en/thumb/8/8f/Convert-from-Binary-to-Decimal-Step-1-Version-5.jpg/v4-460px-Convert-from-Binary-to-Decimal-Step-1-Version-5.jpg.webp" alt="Caesar Chipper">
           <div class="card-body">
             <h2 class="card-title">Konversi Biner</h2>
             <p class="card-text">Membuat program untuk mengkonversi suatu angka decimal menjadi biner</p>
-            <a href="tlx-konveri-biner.php" class="btn btn-primary">Read More &rarr;</a>
+            <a href="tlx-konveri-biner.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on January 3, 2021 by
-            <a href="#">Admin</a>
+            <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top img-shadow" src="https://cdn.britannica.com/67/19367-050-885866B4/Valley-Taurus-Mountains-Turkey.jpg" alt="Card image cap" height="300" width="750">
+          <img class="card-img-top img-shadow"  width="750" height="300" src="https://cdn.britannica.com/67/19367-050-885866B4/Valley-Taurus-Mountains-Turkey.jpg" alt="Card image cap">
           <div class="card-body">
             <h2 class="card-title">Menggambar Pegunungan</h2>
             <p class="card-text">Membuat program untuk menggambar pegunungan dengan pola tertentu</p>
-            <a href="tlx-menggambar-pegunungan.php" class="btn btn-primary">Read More &rarr;</a>
+            <a href="tlx-menggambar-pegunungan.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on January 3, 2021 by
-            <a href="#">Admin</a>
+            <a href="about.php">Admin</a>
           </div>
         </div>
 

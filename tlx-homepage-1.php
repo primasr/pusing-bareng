@@ -47,43 +47,43 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top img-shadow" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!">
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://simplesnippets.tech/wp-content/uploads/2018/03/hello-world-program-in-c.jpg" alt="Hello World!">
           <div class="card-body">
             <h2 class="card-title">Hello World</h2>
             <p class="card-text">Program Pertama: Menuliskan Hello World!</p>
-            <a href="tlx-hello-world.php" class="btn btn-primary">Read More &rarr;</a>
+            <a href="tlx-hello-world.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on December 26, 2020 by
-            <a href="#">Admin</a>
+            <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top img-shadow" src="https://2.bp.blogspot.com/-hE4VsLS1KIY/WwFbWe1t44I/AAAAAAAAB_U/XEdBkQ8UYYsS-i14LrFnqAkIrcpOnEEEACLcBGAs/s400/for1.PNG" alt="Caesar Chipper">
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://2.bp.blogspot.com/-hE4VsLS1KIY/WwFbWe1t44I/AAAAAAAAB_U/XEdBkQ8UYYsS-i14LrFnqAkIrcpOnEEEACLcBGAs/s400/for1.PNG" alt="Caesar Chipper">
           <div class="card-body">
             <h2 class="card-title">Caesar Chipper</h2>
             <p class="card-text">Membuat program Caesar Chipper</p>
-            <a href="tlx-caesar-chipper.php" class="btn btn-primary">Read More &rarr;</a>
+            <a href="tlx-caesar-chipper.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on January 3, 2021 by
-            <a href="#">Admin</a>
+            <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <img class="card-img-top img-shadow" src="https://theoryofprogramming.azurewebsites.net/wp-content/uploads/2017/12/rotate-1.jpg" alt="Card image cap" height="300" width="750">
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://theoryofprogramming.azurewebsites.net/wp-content/uploads/2017/12/rotate-1.jpg" alt="Card image cap">
           <div class="card-body">
             <h2 class="card-title">Rotasi Matriks</h2>
             <p class="card-text">Membuat program me-rotasi sebuah matriks</p>
-            <a href="tlx-rotasi-matriks.php" class="btn btn-primary">Read More &rarr;</a>
+            <a href="tlx-rotasi-matriks.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
           <div class="card-footer text-muted">
             Posted on January 3, 2021 by
-            <a href="#">Admin</a>
+            <a href="about.php">Admin</a>
           </div>
         </div>
 

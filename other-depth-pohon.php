@@ -9,7 +9,7 @@
     $i = 0;
     mysqli_close($conn);
 
-    $pageTitle = 'Konversi Biner';
+    $pageTitle = 'Depth Pohon';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -27,27 +27,27 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">Konversi Biner</h1>
+        <h1 class="mt-4">Depth Pohon</h1>
 
         <!-- Author -->
         <p class="lead">
           from
-          <a href="https://tlx.toki.id/courses/basic/chapters/12/problems/E"><i>here</i></a>
+          <a href="https://www.hackerrank.com/contests/praktikum-final-struktur-data/challenges/depth-pohon" target="_blank"><i>here</i></a>
         </p>
 
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on January 3, 2021 at 6:00 PM</p>
+        <p>Posted on January 4, 2021 at 11:30 PM</p>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="tlx-homepage-1.php">TLX TOKI</a>
+                <a href="other-homepage.php">Other</a>
             </li>
-            <li class="breadcrumb-item active">Konversi Biner</li>
+            <li class="breadcrumb-item active">Depth Pohon</li>
         </ol>
 
         <hr>
@@ -55,92 +55,100 @@
         <hr>
 
         <!-- Post Content -->
-        <h2 class="justify">Konversi Biner</h2>
-        <table style="width:30%">
-            <tr>
-                <td style="width:60%">Time limit</td>
-                <td style="width:40%">1 s</td>
-            </tr>
-            <tr>
-                <td style="width:60%">Memory limit</td>
-                <td style="width:40%">64 MB</td>
-            </tr>
-        </table>
-
+        <h2 class="justify">Depth Pohon</h2>
         <br>
         <br>
 
         <h5>Deskripsi</h5>
-        <p class="justify">Pak Dengklek baru saja menemukan metode hampir sakti untuk 
-          mengkonversi bilangan desimal ke dalam representasi binernya. Metodenya adalah sebagai berikut:</p>
-
-        <ul class="a">
-          <li>Jika suatu bilangan N adalah bilangan ganjil, maka bit (binary digit) terakhir pada representasi binernya adalah 1. 
-            Sebaliknya, jika N genap maka bit terakhir pada representasi binernya adalah 0.</li>
-          <li>Bit-bit di depan bit terakhir sama dengan representasi biner dari (N/2 dibulatkan ke bawah).</li>
-        </ul>        
-        
-        <p class="justify">Mengapa hampir sakti? Ternyata ketika 
-          Pak Dengklek mencoba mengimplementasikan metode tersebut, programnya terjebak dalam infinite recursion!</p>
-
-        <p class="justify">Sebagai pemrogram handal, Anda langsung menyadari bahwa metode rekursif Pak Dengklek kekurangan satu hal yang sangat penting: 
-          base case. Bantulah Pak Dengklek memperbaiki metodenya dengan menambahkan base case dan membuat program konversi desimal ke biner yang benar!</p>
+        <p class="justify">Diberikan sebuah Binary Search Tree, tentukan jumlah dari 2 node dengan kedalaman terbesar pada tree tersebut tersebut setiap kali sebuah data dimasukkan. 
+          Kedalaman sebuah node adalah jarak node tersebut dari root.</p>
 
         <h5>Format Masukan</h5>
         <div class="gray-block">
-          <p class="justify">Sebuah baris berisi berisi sebuah bilangan bulat N.</p>
+          <p class="justify">Baris pertama berisi sebuah bilangan Q yang merupakan banyaknya data yang akan dimasukkan</p>
+          <p class="justify">Q baris selanjutnya berisi data-data yang akan dimasukkan sesuai dengan urutannya</p>
         </div>
 
         <h5>Format Keluaran</h5>
-        <p class="justify">Sebuah baris berisi representasi biner dari N tanpa leading zero.</p>
+        <p class="justify">Keluarkan Q baris bilangan dimana baris ke-i merupakan diameter tree setelah data ke-i dimasukkan. 
+          Jika hanya terdapat 1 node, keluarkan 0.</p>
 
         <h5>Contoh Masukan</h5>
-        <pre>73</pre>
+        <pre>5<br>3<br>1<br>2<br>4<br>5</pre>
 
         <h5>Contoh Keluaran</h5>
-        <pre>1001001</pre>
-
-        <h5>Batasan</h5>
-        <ul class="a">
-          <li>1 ≤ N ≤ 1.000.000.000</li>
-        </ul>
+        <pre>0<br>1<br>2<br>3<br>4</pre>
 
         <hr>
 
         <button class="accordion_2">Solution</button>
         <div class="panel_2 code-font">
-          <br>
-          <p>#include &lt;stdio.h&gt;</p>
-          <p><br></p>
-          <p>void konvert(int x)</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; int hasil,sisa;</p>
-          <p>&nbsp; &nbsp; if (x == 1)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,x);</p>
-          <p>&nbsp; &nbsp; } else</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; sisa = x % 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; x = x / 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; konvert(x);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,sisa);</p>
-          <p>&nbsp; &nbsp; }</p>
-          <p>}</p>
-          <p><br></p>
-          <p>int main()</p>
-          <p>{</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; int a;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;a);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; konvert(a);</p>
-          <p>&nbsp; &nbsp; printf(&quot;\n&quot;);</p>
-          <p><br></p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; return 0;</p>
-          <p>}</p>
+            <p><br></p>
+            <p>#include &lt;bits/stdc++.h&gt;</p>
+            <p>using namespace std;</p>
+            <p><br></p>
+            <p>#define ll long long</p>
+            <p><br></p>
+            <p>class Node {</p>
+            <p>&nbsp; &nbsp; public:</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; ll data;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; Node *l;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; Node *r;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; Node(ll d) {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; data = d;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; l = NULL;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; r = NULL;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p>};</p>
+            <p><br></p>
+            <p>map&lt;ll,ll&gt; myMap;</p>
+            <p><br></p>
+            <p>int insert(Node **root, ll data) {</p>
+            <p>&nbsp; &nbsp; if(!(*root)) {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; (*root) = new Node(data);</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; return 0;</p>
+            <p>&nbsp; &nbsp; }</p>
+            <p>&nbsp; &nbsp; myMap[(*root)-&gt;data] = 0;</p>
+            <p>&nbsp; &nbsp; if(data &lt; (*root)-&gt;data) {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; return 1+insert(&amp;(*root)-&gt;l, data);</p>
+            <p>&nbsp; &nbsp; } else {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; return 1+insert(&amp;(*root)-&gt;r, data);</p>
+            <p>&nbsp; &nbsp; }</p>
+            <p>}</p>
+            <p><br></p>
+            <p>int main()</p>
+            <p>{</p>
+            <p>&nbsp; &nbsp; ll n;</p>
+            <p>&nbsp; &nbsp; scanf(&quot;%lld&quot;,&amp;n);</p>
+            <p>&nbsp; &nbsp; Node* mboh = NULL;</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; while (n--)</p>
+            <p>&nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; ll nilai,kiri = 0,kanan = 0;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; scanf(&quot;%lld&quot;,&amp;nilai);</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; myMap[nilai] = insert(&amp;mboh,nilai);</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; for (auto &amp;x : myMap)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (x.second &gt; kiri)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; kanan = kiri;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; kiri = x.second;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (x.second &gt; kanan)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; kanan = x.second;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%lld\n&quot;,kiri+kanan);</p>
+            <p>&nbsp; &nbsp; }</p>
+            <p><br></p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; return 0;</p>
+            <p>}</p>
+            <p><br></p>
+            <p><br></p>
         </div>
 
         <script>
@@ -240,7 +248,7 @@
                 else
                 {
                   $.ajax({
-                    url: "comments/tlx-5-add.php",
+                    url: "comments/other-2-add.php",
                     data: str,
                     type: 'post',
                     success: function (response)
@@ -282,7 +290,7 @@
 
 
             function listComment() {
-                $.post("comments/tlx-5-list.php",
+                $.post("comments/other-2-list.php",
                         function (data) {
                             var data = JSON.parse(data);
 

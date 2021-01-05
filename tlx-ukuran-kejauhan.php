@@ -31,8 +31,8 @@
 
         <!-- Author -->
         <p class="lead">
-          by
-          <a href="#">Admin</a>
+          from
+          <a href="https://tlx.toki.id/problems/ideafuse-2014-cp-final/G"><i>here</i></a>
         </p>
 
         <hr>

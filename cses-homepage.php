@@ -47,9 +47,7 @@
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <center>
-          <img class="card-img-top img-shadow img-size" src="https://i.ytimg.com/vi/QrZAee1PZBE/mqdefault.jpg" alt="Counting Rooms">
-          </center>
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://i.ytimg.com/vi/QrZAee1PZBE/mqdefault.jpg" alt="Counting Rooms">
           <div class="card-body">
             <h2 class="card-title">Counting Rooms</h2>
             <p class="card-text">You are given a map of a building, and your task is to count the number of its rooms ....</p>
@@ -57,15 +55,13 @@
           </div>
           <div class="card-footer text-muted">
             Posted on January 4, 2021 by
-            <a href="#">Admin</a>
+            <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <center>
-          <img class="card-img-top img-shadow img-size" src="https://i1.wp.com/twominfun.com/wp/wp-content/uploads/2018/05/Number-Puzzle-33-ans-15.png?resize=600%2C373" alt="Missing Number">
-          </center>        
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://i1.wp.com/twominfun.com/wp/wp-content/uploads/2018/05/Number-Puzzle-33-ans-15.png?resize=600%2C373" alt="Missing Number">        
           <div class="card-body">
             <h2 class="card-title">Missing Number</h2>
             <p class="card-text">You are given all numbers between 1,2,..,n except one ...</p>
@@ -73,15 +69,13 @@
           </div>
           <div class="card-footer text-muted">
             Posted on January 4, 2021 by
-            <a href="#">Admin</a>
+            <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
         <div class="card mb-4">
-          <center>
-          <img class="card-img-top img-shadow img-size" src="https://assets.leetcode.com/uploads/2019/10/20/hint_valid_mountain_array.png" alt="Increasing Array">
-          </center>          
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://assets.leetcode.com/uploads/2019/10/20/hint_valid_mountain_array.png" alt="Increasing Array">          
           <div class="card-body">
             <h2 class="card-title">Increasing Array</h2>
             <p class="card-text">You are given an array of n integers. You want to modify the array ...</p>
@@ -89,7 +83,7 @@
           </div>
           <div class="card-footer text-muted">
             Posted on January 4, 2021 by
-            <a href="#">Admin</a>
+            <a href="about.php">Admin</a>
           </div>
         </div>
 

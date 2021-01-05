@@ -9,7 +9,7 @@
     $i = 0;
     mysqli_close($conn);
 
-    $pageTitle = 'Konversi Biner';
+    $pageTitle = 'Bantuan Nasional';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -27,27 +27,27 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">Konversi Biner</h1>
+        <h1 class="mt-4">Bantuan Nasional</h1>
 
         <!-- Author -->
         <p class="lead">
           from
-          <a href="https://tlx.toki.id/courses/basic/chapters/12/problems/E"><i>here</i></a>
+          <a href="https://www.hackerrank.com/contests/praktikum-final-struktur-data/challenges/bantuan-nasional-1/problem" target="_blank"><i>here</i></a>
         </p>
 
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on January 3, 2021 at 6:00 PM</p>
+        <p>Posted on January 4, 2021 at 11:30 PM</p>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="tlx-homepage-1.php">TLX TOKI</a>
+                <a href="other-homepage.php">Other</a>
             </li>
-            <li class="breadcrumb-item active">Konversi Biner</li>
+            <li class="breadcrumb-item active">Bantuan Nasional</li>
         </ol>
 
         <hr>
@@ -55,92 +55,154 @@
         <hr>
 
         <!-- Post Content -->
-        <h2 class="justify">Konversi Biner</h2>
-        <table style="width:30%">
-            <tr>
-                <td style="width:60%">Time limit</td>
-                <td style="width:40%">1 s</td>
-            </tr>
-            <tr>
-                <td style="width:60%">Memory limit</td>
-                <td style="width:40%">64 MB</td>
-            </tr>
-        </table>
-
+        <h2 class="justify">Bantuan Nasional</h2>
         <br>
         <br>
 
         <h5>Deskripsi</h5>
-        <p class="justify">Pak Dengklek baru saja menemukan metode hampir sakti untuk 
-          mengkonversi bilangan desimal ke dalam representasi binernya. Metodenya adalah sebagai berikut:</p>
-
-        <ul class="a">
-          <li>Jika suatu bilangan N adalah bilangan ganjil, maka bit (binary digit) terakhir pada representasi binernya adalah 1. 
-            Sebaliknya, jika N genap maka bit terakhir pada representasi binernya adalah 0.</li>
-          <li>Bit-bit di depan bit terakhir sama dengan representasi biner dari (N/2 dibulatkan ke bawah).</li>
-        </ul>        
-        
-        <p class="justify">Mengapa hampir sakti? Ternyata ketika 
-          Pak Dengklek mencoba mengimplementasikan metode tersebut, programnya terjebak dalam infinite recursion!</p>
-
-        <p class="justify">Sebagai pemrogram handal, Anda langsung menyadari bahwa metode rekursif Pak Dengklek kekurangan satu hal yang sangat penting: 
-          base case. Bantulah Pak Dengklek memperbaiki metodenya dengan menambahkan base case dan membuat program konversi desimal ke biner yang benar!</p>
+        <p class="justify">Berhubungan dengan pandemik yang sedang terjadi, 
+          pemerintah Negara nepisi ingin menyalurkan bantuan kepada provinsi-provinsi yang terkena bencana.
+          Dalam penyaluran bantuan, kota-kota yang berada di provinsi yang sama akan mendapat jumlah bantuan yang sama, 
+          sedangkan kota yang berada di provinsi berbeda akan mendapatkan jumlah bantuan yang berbeda juga.</p>
+          
+        <p class="justify">Tetapi, karena perekonomian yang semakin memburuk, 
+          pemerintah juga harus menghemat pengeluaran dari kas Negara. Tentukanlah berapa total bantuan minimal yang harus dikeluarkan oleh pemerintah.
+          Dua kota berada didalam provinsi yang sama jika kita dapat melewati satu atau 
+          lebih jalan untuk sampai dari satu kota ke kota lainnya.</p>
 
         <h5>Format Masukan</h5>
         <div class="gray-block">
-          <p class="justify">Sebuah baris berisi berisi sebuah bilangan bulat N.</p>
+          <p class="justify">Baris pertama berisi sebuah bilangan T yang merupakan banyaknya kasus uji..</p>
+          <p class="justify">Untuk setiap kasus uji, baris pertama berisi 2 buah bilangan N dan M yang menyatakan banyaknya kota serta jalan pada Negara nepisi..</p>
+          <p class="justify">M baris selanjutnya berisi dua bilangan U dan V yang berarti terdapat jalan yang menghubungkan kota U dan kota V.</p>
         </div>
 
         <h5>Format Keluaran</h5>
-        <p class="justify">Sebuah baris berisi representasi biner dari N tanpa leading zero.</p>
+        <p class="justify">Untuk setiap kasus uji, keluarkan satu buah baris yang berisi “Kasus #K: X” dimana K merupakan nomor kasus uji, 
+          dan X merupakan biaya minimal yang dikeluarkan pemerintah</p>
+
+        <p class="justify">Berikut adalah gambaran untuk kasus uji pertama</p>
+
+        <div class="img-div">
+        <img class="card-img-top img-shadow" width="200" height="300" src="https://s3.amazonaws.com/hr-assets/0/1608515508-d9e09c0fd1-Explanation.PNG" alt="Counting Rooms">
+        </div>
+
+        <p class="justify">Salah satu cara yang optimal adalah</p>
+        <ul class="a">
+          <li>memberikan bantuan sejumlah 1 pada kota 1,2 dan 3</li>
+          <li>memberikan bantuan sejumlah 2 pada kota 4</li>
+          <li>memberikan bantuan sejumlah 3 pada kota 5</li>
+        </ul>
+        <p class="justify">Sehingga total bantuan yang diberikan sebanyak 8</p>
 
         <h5>Contoh Masukan</h5>
-        <pre>73</pre>
+        <pre>2<br>5 3<br>1 2<br>2 3<br>3 1<br>7 6<br>1 2<br>1 3<br>1 4<br>1 5<br>1 6<br>1 7</pre>
 
         <h5>Contoh Keluaran</h5>
-        <pre>1001001</pre>
-
-        <h5>Batasan</h5>
-        <ul class="a">
-          <li>1 ≤ N ≤ 1.000.000.000</li>
-        </ul>
+        <pre>Kasus #1: 8<br>Kasus #2: 7</pre>
 
         <hr>
 
         <button class="accordion_2">Solution</button>
         <div class="panel_2 code-font">
-          <br>
-          <p>#include &lt;stdio.h&gt;</p>
-          <p><br></p>
-          <p>void konvert(int x)</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; int hasil,sisa;</p>
-          <p>&nbsp; &nbsp; if (x == 1)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,x);</p>
-          <p>&nbsp; &nbsp; } else</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; sisa = x % 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; x = x / 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; konvert(x);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,sisa);</p>
-          <p>&nbsp; &nbsp; }</p>
-          <p>}</p>
-          <p><br></p>
-          <p>int main()</p>
-          <p>{</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; int a;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;a);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; konvert(a);</p>
-          <p>&nbsp; &nbsp; printf(&quot;\n&quot;);</p>
-          <p><br></p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; return 0;</p>
-          <p>}</p>
+            <p><br></p>
+            <p>#include &lt;bits/stdc++.h&gt;</p>
+            <p>using namespace std;</p>
+            <p><br></p>
+            <p>vector &lt;int&gt; myVector;</p>
+            <p>int tambah;</p>
+            <p><br></p>
+            <p>class Graph</p>
+            <p>{</p>
+            <p>&nbsp; &nbsp; int V;</p>
+            <p>&nbsp; &nbsp; list&lt;int&gt;* adj;</p>
+            <p>&nbsp; &nbsp; void DFSUtil(int v, bool visited[]);</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; public : Graph(int V);</p>
+            <p>&nbsp; &nbsp; ~Graph();</p>
+            <p>&nbsp; &nbsp; void addEdge(int v, int w);</p>
+            <p>&nbsp; &nbsp; void MencariYangTerhubung();</p>
+            <p>};</p>
+            <p><br></p>
+            <p>void Graph::MencariYangTerhubung()</p>
+            <p>{</p>
+            <p>&nbsp; &nbsp; bool* visited = new bool[V];</p>
+            <p>&nbsp; &nbsp; for (int v = 0; v &lt; V; v++)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; visited[v] = false;</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; for (int v = 0; v &lt; V; v++) {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; if (visited[v] == false) {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DFSUtil(v, visited);</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; myVector.push_back(tambah);</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tambah = 0;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p>&nbsp; &nbsp; }</p>
+            <p>&nbsp; &nbsp; delete[] visited;</p>
+            <p>}</p>
+            <p><br></p>
+            <p>void Graph::DFSUtil(int v, bool visited[])</p>
+            <p>{</p>
+            <p>&nbsp; &nbsp; visited[v] = true;</p>
+            <p>&nbsp; &nbsp; tambah++;</p>
+            <p>&nbsp; &nbsp; list&lt;int&gt;::iterator i;</p>
+            <p>&nbsp; &nbsp; for (i = adj[v].begin(); i != adj[v].end(); ++i)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; if (!visited[*i])</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; DFSUtil(*i, visited);</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p>}</p>
+            <p><br></p>
+            <p>Graph::Graph(int V)</p>
+            <p>{</p>
+            <p>&nbsp; &nbsp; this -&gt; V = V;</p>
+            <p>&nbsp; &nbsp; adj = new list&lt;int&gt;[ V ];</p>
+            <p>}</p>
+            <p><br></p>
+            <p>Graph::~Graph() { delete[] adj; }</p>
+            <p><br></p>
+            <p>void Graph::addEdge(int v, int w)</p>
+            <p>{</p>
+            <p>&nbsp; &nbsp; adj[v].push_back(w);</p>
+            <p>&nbsp; &nbsp; adj[w].push_back(v);</p>
+            <p>}</p>
+            <p><br></p>
+            <p>int main()</p>
+            <p>{</p>
+            <p>&nbsp; &nbsp; int testcase;</p>
+            <p>&nbsp; &nbsp; cin &gt;&gt; testcase;</p>
+            <p>&nbsp; &nbsp; for (int mboh = 1; mboh &lt;= testcase; mboh++)</p>
+            <p>&nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; tambah = 0;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; int n,m;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; cin &gt;&gt; n &gt;&gt; m;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; Graph g(n);</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; while(m--)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; int a,b;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cin &gt;&gt; a &gt;&gt; b;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; g.addEdge(a-1, b-1);</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; g.MencariYangTerhubung();</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; sort(myVector.begin(), myVector.end(), greater&lt;int&gt;());</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; int hasil = 0;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; int kali = 1;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; for (auto i = myVector.begin(); i != myVector.end(); i++)</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; hasil+= (*i) * kali;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; kali++;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;Kasus #%d: %d\n&quot;,mboh, hasil);</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; myVector.clear();</p>
+            <p>&nbsp; &nbsp; }</p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; return 0;</p>
+            <p>}</p>
+            <p><br></p>
         </div>
 
         <script>
@@ -240,7 +302,7 @@
                 else
                 {
                   $.ajax({
-                    url: "comments/tlx-5-add.php",
+                    url: "comments/other-1-add.php",
                     data: str,
                     type: 'post',
                     success: function (response)
@@ -282,7 +344,7 @@
 
 
             function listComment() {
-                $.post("comments/tlx-5-list.php",
+                $.post("comments/other-1-list.php",
                         function (data) {
                             var data = JSON.parse(data);
 

@@ -74,6 +74,42 @@
                   <td><a href="hackerrank-parkiran-aya.php">Parkiran Aya</a></td>
                   <td>Hackerrank</td>
               </tr>
+              <tr>
+                  <td><a href="spoj-drawing-polygrams.php">Drawing Polygrams</a></td>
+                  <td>SPOJ</td>
+              </tr>
+              <tr>
+                  <td><a href="spoj-herding.php">Herding</a></td>
+                  <td>SPOJ</td>
+              </tr>
+              <tr>
+                  <td><a href="spoj-divisibility.php">Divisibility</a></td>
+                  <td>SPOJ</td>
+              </tr>
+              <tr>
+                  <td><a href="olymp-repeated-josephus.php">Repeated Josephus</a></td>
+                  <td>e-Olymp</td>
+              </tr>
+              <tr>
+                  <td><a href="olymp-grasshopper.php">Grasshopper</a></td>
+                  <td>e-Olymp</td>
+              </tr>
+              <tr>
+                  <td><a href="olymp-simple-problem.php">Simple Problem</a></td>
+                  <td>e-Olymp</td>
+              </tr>
+              <tr>
+                  <td><a href="other-bantuan-nasional.php">Bantuan Nasional</a></td>
+                  <td>Other</td>
+              </tr>
+              <tr>
+                  <td><a href="other-depth-pohon.php">Depth Pohon</a></td>
+                  <td>Other</td>
+              </tr>
+              <tr>
+                  <td><a href="other-i-love-kimia.php">I Love Kimia</a></td>
+                  <td>Other</td>
+              </tr>
           </table>
           <br>
 

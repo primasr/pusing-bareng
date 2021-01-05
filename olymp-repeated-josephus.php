@@ -9,7 +9,7 @@
     $i = 0;
     mysqli_close($conn);
 
-    $pageTitle = 'Konversi Biner';
+    $pageTitle = 'Repeated Josephus';
     echo ("<title> $pageTitle </title>");
 
     include 'header.php';
@@ -27,27 +27,27 @@
       <div class="col-lg-8">
 
         <!-- Title -->
-        <h1 class="mt-4">Konversi Biner</h1>
+        <h1 class="mt-4">Repeated Josephus</h1>
 
         <!-- Author -->
         <p class="lead">
           from
-          <a href="https://tlx.toki.id/courses/basic/chapters/12/problems/E"><i>here</i></a>
+          <a href="https://www.e-olymp.com/en/problems/1515" target="_blank"><i>here</i></a>
         </p>
 
         <hr>
 
         <!-- Date/Time -->
-        <p>Posted on January 3, 2021 at 6:00 PM</p>
+        <p>Posted on January 4, 2021 at 11:30 PM</p>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="tlx-homepage-1.php">TLX TOKI</a>
+                <a href="olymp-homepage.php">e-Olymp</a>
             </li>
-            <li class="breadcrumb-item active">Konversi Biner</li>
+            <li class="breadcrumb-item active">Repeated Josephus</li>
         </ol>
 
         <hr>
@@ -55,7 +55,7 @@
         <hr>
 
         <!-- Post Content -->
-        <h2 class="justify">Konversi Biner</h2>
+        <h2 class="justify">Repeated Josephus</h2>
         <table style="width:30%">
             <tr>
                 <td style="width:60%">Time limit</td>
@@ -63,84 +63,94 @@
             </tr>
             <tr>
                 <td style="width:60%">Memory limit</td>
-                <td style="width:40%">64 MB</td>
+                <td style="width:40%">128 MB</td>
             </tr>
         </table>
-
         <br>
         <br>
 
         <h5>Deskripsi</h5>
-        <p class="justify">Pak Dengklek baru saja menemukan metode hampir sakti untuk 
-          mengkonversi bilangan desimal ke dalam representasi binernya. Metodenya adalah sebagai berikut:</p>
+        <p class="justify">At first, there are n people numbered 1 to n around a circle and 
+          every second remaining person will be eliminated until only one survives. 
+          Let the number of the survivor be x. 
+          The process is then repeated with x number of people and let the survivor number is y. 
+          The process then starts with y number of people and so on. 
+          The repetition ends when the survivor is in the last position in the circle.</p>
 
-        <ul class="a">
-          <li>Jika suatu bilangan N adalah bilangan ganjil, maka bit (binary digit) terakhir pada representasi binernya adalah 1. 
-            Sebaliknya, jika N genap maka bit terakhir pada representasi binernya adalah 0.</li>
-          <li>Bit-bit di depan bit terakhir sama dengan representasi biner dari (N/2 dibulatkan ke bawah).</li>
-        </ul>        
-        
-        <p class="justify">Mengapa hampir sakti? Ternyata ketika 
-          Pak Dengklek mencoba mengimplementasikan metode tersebut, programnya terjebak dalam infinite recursion!</p>
-
-        <p class="justify">Sebagai pemrogram handal, Anda langsung menyadari bahwa metode rekursif Pak Dengklek kekurangan satu hal yang sangat penting: 
-          base case. Bantulah Pak Dengklek memperbaiki metodenya dengan menambahkan base case dan membuat program konversi desimal ke biner yang benar!</p>
+        <p class="justify">Example with n = 5: after the first elimination round, 
+          the survivor is person 3. Because this is is not the last person in the circle, 
+          a new elimination round with 3 people is started. Now person 3 survives, so we can stop.</p>        
 
         <h5>Format Masukan</h5>
         <div class="gray-block">
-          <p class="justify">Sebuah baris berisi berisi sebuah bilangan bulat N.</p>
+          <p class="justify">The first line is an integer representing the number of test cases. 
+            Each of the test cases follows below. Each test case consists of an integer representing n (0 < n ≤ 30000).</p>
         </div>
 
         <h5>Format Keluaran</h5>
-        <p class="justify">Sebuah baris berisi representasi biner dari N tanpa leading zero.</p>
+        <p class="justify">For each test case, print the serial number of the case, 
+            a colon, an space, total number of repetitions (the number of times the elimination process is done after 
+            the initial elimination round with n people), a space and the position of the survivor at last.</p>
 
         <h5>Contoh Masukan</h5>
-        <pre>73</pre>
+        <pre>2<br>13<br>23403</pre>
 
         <h5>Contoh Keluaran</h5>
-        <pre>1001001</pre>
-
-        <h5>Batasan</h5>
-        <ul class="a">
-          <li>1 ≤ N ≤ 1.000.000.000</li>
-        </ul>
+        <pre>Case 1: 2 7<br>Case 2: 8 1023</pre>
 
         <hr>
 
         <button class="accordion_2">Solution</button>
         <div class="panel_2 code-font">
-          <br>
-          <p>#include &lt;stdio.h&gt;</p>
-          <p><br></p>
-          <p>void konvert(int x)</p>
-          <p>{</p>
-          <p>&nbsp; &nbsp; int hasil,sisa;</p>
-          <p>&nbsp; &nbsp; if (x == 1)</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,x);</p>
-          <p>&nbsp; &nbsp; } else</p>
-          <p>&nbsp; &nbsp; {</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; sisa = x % 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; x = x / 2;</p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; konvert(x);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; &nbsp; &nbsp; printf(&quot;%d&quot;,sisa);</p>
-          <p>&nbsp; &nbsp; }</p>
-          <p>}</p>
-          <p><br></p>
-          <p>int main()</p>
-          <p>{</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; int a;</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;a);</p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; konvert(a);</p>
-          <p>&nbsp; &nbsp; printf(&quot;\n&quot;);</p>
-          <p><br></p>
-          <p><br></p>
-          <p>&nbsp; &nbsp; return 0;</p>
-          <p>}</p>
+            <p><br></p>
+            <p>#include &lt;stdio.h&gt;</p>
+            <p><br></p>
+            <p>int repeated_josephus(int n)</p>
+            <p>{</p>
+            <p>&nbsp; int p = 1;</p>
+            <p>&nbsp; while (p &lt;= n)</p>
+            <p>&nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; p*=2;</p>
+            <p>&nbsp; }</p>
+            <p><br></p>
+            <p>&nbsp; return (2 * n) - p + 1;</p>
+            <p>}</p>
+            <p><br></p>
+            <p>int main()</p>
+            <p>{</p>
+            <p>&nbsp; &nbsp; int t,testcase;</p>
+            <p>&nbsp; &nbsp; int n;</p>
+            <p>&nbsp; &nbsp; int benar,ulang;</p>
+            <p>&nbsp; &nbsp; int hasil_josephus;</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; scanf(&quot;%d&quot;,&amp;testcase);</p>
+            <p><br></p>
+            <p>for (t = 1; t &lt;= testcase; t++)</p>
+            <p>{</p>
+            <p>&nbsp; scanf(&quot;%d&quot;,&amp;n);</p>
+            <p><br></p>
+            <p>&nbsp; benar = 0;</p>
+            <p>&nbsp; ulang = 0;</p>
+            <p><br></p>
+            <p>&nbsp; while (benar == 0)</p>
+            <p>&nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; hasil_josephus = repeated_josephus(n);</p>
+            <p><br></p>
+            <p>&nbsp; &nbsp; &nbsp; if (hasil_josephus == n)</p>
+            <p>&nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; benar = 1;</p>
+            <p>&nbsp; &nbsp; &nbsp; } else</p>
+            <p>&nbsp; &nbsp; &nbsp; {</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; n = hasil_josephus;</p>
+            <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ulang++;</p>
+            <p>&nbsp; &nbsp; &nbsp; }</p>
+            <p>&nbsp; }</p>
+            <p><br></p>
+            <p>&nbsp; printf(&quot;Case %d: %d %d\n&quot;,t,ulang,hasil_josephus);</p>
+            <p>}</p>
+            <p><br></p>
+            <p>&nbsp; return 0;</p>
+            <p>}</p>
         </div>
 
         <script>
@@ -240,7 +250,7 @@
                 else
                 {
                   $.ajax({
-                    url: "comments/tlx-5-add.php",
+                    url: "comments/olymp-1-add.php",
                     data: str,
                     type: 'post',
                     success: function (response)
@@ -282,7 +292,7 @@
 
 
             function listComment() {
-                $.post("comments/tlx-5-list.php",
+                $.post("comments/olymp-1-list.php",
                         function (data) {
                             var data = JSON.parse(data);
 
