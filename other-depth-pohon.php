@@ -24,7 +24,7 @@
     <div class="row">
 
       <!-- Post Content Column -->
-      <div class="col-lg-8">
+      <div class="col-lg-8 bg-content">
 
         <!-- Title -->
         <h1 class="mt-4">Depth Pohon</h1>
@@ -40,14 +40,14 @@
         <!-- Date/Time -->
         <p>Posted on January 4, 2021 at 11:30 PM</p>
 
-        <ol class="breadcrumb">
+        <ol class="breadcrumb-other">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
                 <a href="other-homepage.php">Other</a>
             </li>
-            <li class="breadcrumb-item active">Depth Pohon</li>
+            <li class="breadcrumb-item">Depth Pohon</li>
         </ol>
 
         <hr>
@@ -81,8 +81,8 @@
 
         <hr>
 
-        <button class="accordion_2">Solution</button>
-        <div class="panel_2 code-font">
+        <button class="accordion_2 accordion-other">Solution</button>
+        <div class="panel-other code-font">
             <p><br></p>
             <p>#include &lt;bits/stdc++.h&gt;</p>
             <p>using namespace std;</p>
@@ -171,7 +171,7 @@
         <hr>
     
         <div class="col-lg-12">
-          <h2>Please Comment Below</h2>
+          <h3>Please Comment Below</h3>
 
           <div class="comment-form-container" >
             <form id="frm-comment" name="form1" onsubmit="required()">

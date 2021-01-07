@@ -46,44 +46,44 @@
         </ol>
 
         <!-- Blog Post -->
-        <div class="card mb-4">
-          <img class="card-img-top img-shadow" width="750" height="300" src="http://2.bp.blogspot.com/-wmnQtkUQ0wY/ThcBSULVrJI/AAAAAAAABvI/Q0CzlOYi62s/s1600/1.png" alt="Drawing Polygrams">
-          <div class="card-body">
+        <div class="card mb-4 whole-card-shadow">
+          <img class="card-img-top img-shadow" width="750" height="300" src="https://i.ytimg.com/vi/jTZs8bRoWxE/maxresdefault.jpg" alt="Drawing Polygrams">
+          <div class="card-body-spoj">
             <h2 class="card-title">Drawing Polygrams</h2>
             <p class="card-text">Drawing stars on the last page of a notebook is a very entertaining hobby ....</p>
             <a href="spoj-drawing-polygrams.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted card-footer-spoj">
             Posted on January 5, 2021 by
             <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
-        <div class="card mb-4">
+        <div class="card mb-4 whole-card-shadow">
           <img class="card-img-top img-shadow" width="750" height="300" src="https://jkstalent.com/wp-content/uploads/2015/12/herding-cats-2.jpg" alt="Herding">        
-          <div class="card-body">
+          <div class="card-body-spoj">
             <h2 class="card-title">Herding</h2>
             <p class="card-text">Oh no! A number of stray cats have been let loose in the city, 
           and as the City Cat Catcher ...</p>
             <a href="spoj-herding.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted card-footer-spoj">
             Posted on January 5, 2021 by
             <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
-        <div class="card mb-4">
+        <div class="card mb-4 whole-card-shadow">
           <img class="card-img-top img-shadow" width="750" height="300" src="https://images.twinkl.co.uk/tw1n/image/private/t_630/image_repo/6e/09/cfe2-m-101-divisibility-rules-powerpoint_ver_3.jpg" alt="Divisibility">          
-          <div class="card-body">
+          <div class="card-body-spoj">
             <h2 class="card-title">Divisibility</h2>
             <p class="card-text">Print all integers a<sub>i</sub> such that a<sub>i</sub> 
         is divisible by x ...</p>
             <a href="spoj-divisibility.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted card-footer-spoj">
             Posted on January 5, 2021 by
             <a href="about.php">Admin</a>
           </div>

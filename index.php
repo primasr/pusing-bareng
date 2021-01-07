@@ -53,19 +53,19 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active" style="background-image: url('https://www.itl.cat/pngfile/big/5-52330_keyboard-wallpapers-msi-keyboard.jpg')">
+        <div class="carousel-item active" style="background-image: url('images/dawn blur.png')">
           <div class="carousel-caption d-none d-md-block">
             <!-- <h3 class="bg-text-2">First Slide</h3> -->
             <p class="bg-text-2">Pusing Bareng</p>
           </div>
         </div>
-        <div class="carousel-item" style="background-image: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80')">
+        <div class="carousel-item" style="background-image: url('images/retro blur.png')">
           <div class="carousel-caption d-none d-md-block">
             <!-- <h3 class="bg-text-2">Second Slide</h3> -->
             <p class="bg-text-2">Pusing Bareng</p>
           </div>
         </div>
-        <div class="carousel-item" style="background-image: url('https://i.pinimg.com/originals/71/57/9f/71579f1b83279b7a074a21b7ec7308fa.jpg')">
+        <div class="carousel-item" style="background-image: url('images/gaming blur.png')">
           <div class="carousel-caption d-none d-md-block">
             <!-- <h3 class="bg-text-2">Third Slide</h3> -->
             <p class="bg-text-2">Pusing Bareng</p>
@@ -87,8 +87,9 @@
   <div class="container">
     <h1 class="my-4">Selamat datang di Pusing Bareng</h1>
 
-    <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-    <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
+    <p>Pusing Bareng merupakan singkatan dari Pusing Ngoding Bareng. Dimana Pusing Bareng ini merupakan website yang menyediakan berbagai penyelesaian soal pemrograman dari beberapa platform online judge yang ada di internet,</p>
+    <p>seperti TLX TOKI, HackerRank, CSES, maupun yang lainnya.</p>
+
 
     <!-- Portfolio Section -->
     <h2>Platform Online Judge</h2>

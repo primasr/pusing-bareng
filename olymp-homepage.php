@@ -46,43 +46,43 @@
         </ol>
 
         <!-- Blog Post -->
-        <div class="card mb-4">
+        <div class="card mb-4 whole-card-shadow">
           <img class="card-img-top img-shadow" width="750" height="300" src="https://miro.medium.com/max/1440/1*4BQDN46Qwq8f4zznnhbhtw.gif" alt="Repeated Josephus">
-          <div class="card-body">
+          <div class="card-body-olymp">
             <h2 class="card-title">Repeated Josephus</h2>
             <p class="card-text">At first, there are n people numbered 1 to n around a circle and 
           every second remaining person will ....</p>
             <a href="olymp-repeated-josephus.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted card-footer-olymp">
             Posted on January 5, 2021 by
             <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
-        <div class="card mb-4">
+        <div class="card mb-4 whole-card-shadow">
           <img class="card-img-top img-shadow" width="750" height="300" src="https://static.e-olymp.com/content/3d/3d3e6fc2a9a01e86a4b7cc5758c9318f0d9890a1.gif" alt="Grasshopper">        
-          <div class="card-body">
+          <div class="card-body-olymp">
             <h2 class="card-title">Grasshopper</h2>
             <p class="card-text">Grasshopper lives in the teacher's room. It likes to jump on ...</p>
             <a href="olymp-grasshopper.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted card-footer-olymp">
             Posted on January 5, 2021 by
             <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
-        <div class="card mb-4">
+        <div class="card mb-4 whole-card-shadow">
           <img class="card-img-top img-shadow" width="750" height="300" src="https://www.channelfutures.com/files/2015/01/simple-2.jpg" alt="Simple Problem">          
-          <div class="card-body">
+          <div class="card-body-olymp">
             <h2 class="card-title">Simple Problem</h2>
             <p class="card-text">Program reads two-digit number and prints every digit, separated by a space.</p>
             <a href="olymp-simple-problem.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted card-footer-olymp">
             Posted on January 5, 2021 by
             <a href="about.php">Admin</a>
           </div>

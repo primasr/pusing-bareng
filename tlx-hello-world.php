@@ -34,7 +34,7 @@
     <div class="row">
 
       <!-- Post Content Column -->
-      <div class="col-lg-8">
+      <div class="col-lg-8 bg-content">
 
         <!-- Title -->
         <h1 class="mt-4">Hello World!</h1>
@@ -50,14 +50,14 @@
         <!-- Date/Time -->
         <p>Posted on December 26, 2020 at 8:00 PM</p>
 
-        <ol class="breadcrumb">
+        <ol class="breadcrumb-tlx">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
                 <a href="tlx-homepage-1.php">TLX TOKI</a>
             </li>
-            <li class="breadcrumb-item active">Hello World!</li>
+            <li class="breadcrumb-item">Hello World!</li>
         </ol>
 
         <hr>
@@ -113,7 +113,7 @@
 
         <hr>
 
-        <button class="accordion_2">Solution 1</button>
+        <button class="accordion_2 accordion-tlx">Solution</button>
         <div class="panel_2 code-font">
           <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
          -->
@@ -148,7 +148,7 @@
         <hr>
     
         <div class="col-lg-12">
-          <h2>Please Comment Below</h2>
+          <h3>Please Comment Below</h3>
 
           <div class="comment-form-container" >
             <form id="frm-comment" name="form1" onsubmit="required()">

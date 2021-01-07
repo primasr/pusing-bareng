@@ -24,7 +24,7 @@
     <div class="row">
 
       <!-- Post Content Column -->
-      <div class="col-lg-8">
+      <div class="col-lg-8 bg-content">
 
         <!-- Title -->
         <h1 class="mt-4">Konversi Biner</h1>
@@ -40,14 +40,14 @@
         <!-- Date/Time -->
         <p>Posted on January 3, 2021 at 6:00 PM</p>
 
-        <ol class="breadcrumb">
+        <ol class="breadcrumb-tlx">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
                 <a href="tlx-homepage-1.php">TLX TOKI</a>
             </li>
-            <li class="breadcrumb-item active">Konversi Biner</li>
+            <li class="breadcrumb-item">Konversi Biner</li>
         </ol>
 
         <hr>
@@ -107,7 +107,7 @@
 
         <hr>
 
-        <button class="accordion_2">Solution</button>
+        <button class="accordion_2 accordion-tlx">Solution</button>
         <div class="panel_2 code-font">
           <br>
           <p>#include &lt;stdio.h&gt;</p>
@@ -163,7 +163,7 @@
         <hr>
     
         <div class="col-lg-12">
-          <h2>Please Comment Below</h2>
+          <h3>Please Comment Below</h3>
 
           <div class="comment-form-container" >
             <form id="frm-comment" name="form1" onsubmit="required()">

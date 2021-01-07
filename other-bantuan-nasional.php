@@ -24,7 +24,7 @@
     <div class="row">
 
       <!-- Post Content Column -->
-      <div class="col-lg-8">
+      <div class="col-lg-8 bg-content">
 
         <!-- Title -->
         <h1 class="mt-4">Bantuan Nasional</h1>
@@ -40,14 +40,14 @@
         <!-- Date/Time -->
         <p>Posted on January 4, 2021 at 11:30 PM</p>
 
-        <ol class="breadcrumb">
+        <ol class="breadcrumb-other">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
                 <a href="other-homepage.php">Other</a>
             </li>
-            <li class="breadcrumb-item active">Bantuan Nasional</li>
+            <li class="breadcrumb-item">Bantuan Nasional</li>
         </ol>
 
         <hr>
@@ -84,7 +84,7 @@
         <p class="justify">Berikut adalah gambaran untuk kasus uji pertama</p>
 
         <div class="img-div">
-        <img class="card-img-top img-shadow" width="200" height="300" src="https://s3.amazonaws.com/hr-assets/0/1608515508-d9e09c0fd1-Explanation.PNG" alt="Counting Rooms">
+        <img class="card-img-top img-shadow" width="200" height="300" src="https://s3.amazonaws.com/hr-assets/0/1608515508-d9e09c0fd1-Explanation.PNG" alt="Bantuan Nasional">
         </div>
 
         <p class="justify">Salah satu cara yang optimal adalah</p>
@@ -103,8 +103,8 @@
 
         <hr>
 
-        <button class="accordion_2">Solution</button>
-        <div class="panel_2 code-font">
+        <button class="accordion_2 accordion-other">Solution</button>
+        <div class="panel-other code-font">
             <p><br></p>
             <p>#include &lt;bits/stdc++.h&gt;</p>
             <p>using namespace std;</p>
@@ -225,7 +225,7 @@
         <hr>
     
         <div class="col-lg-12">
-          <h2>Please Comment Below</h2>
+          <h3>Please Comment Below</h3>
 
           <div class="comment-form-container" >
             <form id="frm-comment" name="form1" onsubmit="required()">

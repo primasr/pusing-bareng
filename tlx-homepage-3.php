@@ -44,46 +44,46 @@
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
-            <li class="breadcrumb-item active">TLX TOKI</li>
+            <li class="breadcrumb-item">TLX TOKI</li>
         </ol>
 
         <!-- Blog Post -->
-        <div class="card mb-4">
+        <div class="card mb-4 whole-card-shadow">
           <img class="card-img-top img-shadow" width="750" height="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ySjneyKrLW1fI3F3ECtSCtXmlxpR5R61CA&usqp=CAU" alt="Hello World!">
-          <div class="card-body">
+          <div class="card-body-tlx">
             <h2 class="card-title">Ukuran Kejauhan</h2>
             <p class="card-text">Soal IDEAFUSE 2014 - Final CP — Problem G</p>
             <a href="tlx-ukuran-kejauhan.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted card-footer-tlx">
             Posted on January 4, 2021 by
             <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
-        <div class="card mb-4">
+        <div class="card mb-4 whole-card-shadow">
           <img class="card-img-top img-shadow" width="750" height="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ySjneyKrLW1fI3F3ECtSCtXmlxpR5R61CA&usqp=CAU" alt="Caesar Chipper">
-          <div class="card-body">
+          <div class="card-body-tlx">
             <h2 class="card-title">Candy Businessman</h2>
             <p class="card-text">Soal IDEAFUSE 2014 - Final ICPC Sumatra Provincial — Problem A</p>
             <a href="tlx-candy-businessman.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted card-footer-tlx">
             Posted on January 4, 2021 by
             <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
-        <div class="card mb-4">
+        <div class="card mb-4 whole-card-shadow">
           <img class="card-img-top img-shadow" width="750" height="300" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7ySjneyKrLW1fI3F3ECtSCtXmlxpR5R61CA&usqp=CAU" alt="Card image cap">
-          <div class="card-body">
+          <div class="card-body-tlx">
             <h2 class="card-title">Hard Word</h2>
             <p class="card-text">Soal IDEAFUSE 2014 - Final ICPC Sumatra Provincial — Problem D</p>
             <a href="tlx-hard-word.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted card-footer-tlx">
             Posted on January 4, 2021 by
             <a href="about.php">Admin</a>
           </div>

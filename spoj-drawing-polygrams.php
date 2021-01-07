@@ -24,7 +24,7 @@
     <div class="row">
 
       <!-- Post Content Column -->
-      <div class="col-lg-8">
+      <div class="col-lg-8 bg-content">
 
         <!-- Title -->
         <h1 class="mt-4">Drawing Polygrams</h1>
@@ -40,14 +40,14 @@
         <!-- Date/Time -->
         <p>Posted on January 5, 2021 at 10:00 AM</p>
 
-        <ol class="breadcrumb">
+        <ol class="breadcrumb-spoj">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
                 <a href="spoj-homepage.php">SPOJ</a>
             </li>
-            <li class="breadcrumb-item active">Drawing Polygrams</li>
+            <li class="breadcrumb-item">Drawing Polygrams</li>
         </ol>
 
         <hr>
@@ -112,8 +112,8 @@
 
         <hr>
 
-        <button class="accordion_2">Solution</button>
-        <div class="panel_2 code-font">
+        <button class="accordion_2 accordion-spoj">Solution</button>
+        <div class="panel-spoj code-font">
             <p><br></p>
             <p>#include &lt;stdio.h&gt;</p>
             <p>#include &lt;math.h&gt;</p>
@@ -165,7 +165,7 @@
         <hr>
     
         <div class="col-lg-12">
-          <h2>Please Comment Below</h2>
+          <h3>Please Comment Below</h3>
 
           <div class="comment-form-container" >
             <form id="frm-comment" name="form1" onsubmit="required()">

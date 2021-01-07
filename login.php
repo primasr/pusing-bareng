@@ -17,6 +17,10 @@
             $hash = password_hash($_POST['password'], PASSWORD_BCRYPT);
             $password = password_verify($_POST['password'], $hash);
 
+            // function myAlert($pesan) {
+            //     echo "<script type='text/javascript'>swal('$pesan');</script>";
+            // }
+
             function myAlert($pesan) {
                 echo "<script type='text/javascript'>alert('$pesan');</script>";
             }
@@ -59,7 +63,7 @@
     <div class="container">
         <!-- Page Heading/Breadcrumbs -->
         <h1 class="mt-4 mb-3">Login
-        <small>Subheading</small>
+        <!-- <small>Subheading</small> -->
         </h1>
 
         <ol class="breadcrumb">
@@ -72,20 +76,24 @@
         <!-- Contact Form -->
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
         <div class="row justify-content-center">
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-6 mb-4 bg-content-form">
                 <form action="login.php<?php if(isset($_GET['redirectProfile'])){echo "?redirectProfile=".$_GET['redirectProfile'];}?>" method="POST">
                 
                 <div class="form-group">
-                    <label>Username</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username bang jago" required data-validation-required-message="Please enter your username.">
+                    <label><b>Username</b></label>
+                    <input type="text" class="form-control  my-form" id="username" name="username" required data-validation-required-message="Please enter your username.">
                 </div>
                 
                 <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control" id="password" name="password" required data-validation-required-message="Please enter your password.">
+                    <label><b>Password</b></label>
+                    <input type="password" class="form-control my-form" id="password" name="password" required data-validation-required-message="Please enter your password.">
                 </div>
                 
-                <button type="submit" name="submit" id="submit" class="btn btn-primary">Submit</button>
+                <br>
+                <button type="submit" name="submit" id="submit" class="btn btn-success btn-block">Login</button>
+                <br>
+                <p style="text-align: center">or</p>
+                <p style="text-align: center">Don't have an account? <a href="register.php">Register here</a></p>
                 </form>
             </div>
 

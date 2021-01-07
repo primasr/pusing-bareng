@@ -24,7 +24,7 @@
     <div class="row">
 
       <!-- Post Content Column -->
-      <div class="col-lg-8">
+      <div class="col-lg-8 bg-content">
 
         <!-- Title -->
         <h1 class="mt-4">MudMud dan Kakaknya</h1>
@@ -40,14 +40,14 @@
         <!-- Date/Time -->
         <p>Posted on January 4, 2021 at 10:30 PM</p>
 
-        <ol class="breadcrumb">
+        <ol class="breadcrumb-hr">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
                 <a href="hackerrank-homepage.php">HackerRank</a>
             </li>
-            <li class="breadcrumb-item active">MudMud dan Kakaknya</li>
+            <li class="breadcrumb-item">MudMud dan Kakaknya</li>
         </ol>
 
         <hr>
@@ -99,8 +99,8 @@
 
         <hr>
 
-        <button class="accordion_2">Solution</button>
-        <div class="panel_2 code-font">
+        <button class="accordion_2 accordion-hr">Solution</button>
+        <div class="panel-hr code-font">
           <p><br></p>
           <p>#include &lt;stdlib.h&gt;</p>
           <p>#include &lt;stdbool.h&gt;</p>
@@ -328,7 +328,7 @@
         <hr>
     
         <div class="col-lg-12">
-          <h2>Please Comment Below</h2>
+          <h3>Please Comment Below</h3>
 
           <div class="comment-form-container" >
             <form id="frm-comment" name="form1" onsubmit="required()">

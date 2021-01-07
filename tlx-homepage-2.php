@@ -44,46 +44,46 @@
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
-            <li class="breadcrumb-item active">TLX TOKI</li>
+            <li class="breadcrumb-item">TLX TOKI</li>
         </ol>
 
         <!-- Blog Post -->
-        <div class="card mb-4">
+        <div class="card mb-4 whole-card-shadow">
           <img class="card-img-top img-shadow" width="750" height="300" src="https://gamedevtraum.com/wp-content/uploads/2019/11/factorial-de-un-numero-min.png" alt="Hello World!">
-          <div class="card-body">
+          <div class="card-body-tlx">
             <h2 class="card-title">Faktorial Ganjil Genap</h2>
             <p class="card-text">Membuat program untuk mencari faktor ganjil genap dari sebuah angka</p>
             <a href="tlx-faktorial-gg.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted card-footer-tlx">
             Posted on January 3, 2021 by
             <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
-        <div class="card mb-4">
+        <div class="card mb-4 whole-card-shadow">
           <img class="card-img-top img-shadow"  width="750" height="300"src="https://www.wikihow.com/images_en/thumb/8/8f/Convert-from-Binary-to-Decimal-Step-1-Version-5.jpg/v4-460px-Convert-from-Binary-to-Decimal-Step-1-Version-5.jpg.webp" alt="Caesar Chipper">
-          <div class="card-body">
+          <div class="card-body-tlx">
             <h2 class="card-title">Konversi Biner</h2>
             <p class="card-text">Membuat program untuk mengkonversi suatu angka decimal menjadi biner</p>
             <a href="tlx-konveri-biner.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted card-footer-tlx">
             Posted on January 3, 2021 by
             <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
-        <div class="card mb-4">
+        <div class="card mb-4 whole-card-shadow">
           <img class="card-img-top img-shadow"  width="750" height="300" src="https://cdn.britannica.com/67/19367-050-885866B4/Valley-Taurus-Mountains-Turkey.jpg" alt="Card image cap">
-          <div class="card-body">
+          <div class="card-body-tlx">
             <h2 class="card-title">Menggambar Pegunungan</h2>
             <p class="card-text">Membuat program untuk menggambar pegunungan dengan pola tertentu</p>
             <a href="tlx-menggambar-pegunungan.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted card-footer-tlx">
             Posted on January 3, 2021 by
             <a href="about.php">Admin</a>
           </div>

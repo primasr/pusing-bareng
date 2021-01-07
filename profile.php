@@ -26,9 +26,9 @@
 <style>
 .container_2{
   position: relative;
-  width: 50%;
+  width: 25%;
   margin-left: auto;
-  margin-right: auto;  
+  margin-right: auto;
 }
 
 .image_2 {
@@ -42,7 +42,7 @@
   bottom: 100%;
   left: 0;
   right: 0;
-  background-color: #008CBA;
+  background-color: #d9eaff;
   overflow: hidden;
   width: 100%;
   height:0;
@@ -55,7 +55,7 @@
 }
 
 .text_2 {
-  color: white;
+  color: black;
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -71,21 +71,22 @@
     <div class="container">
         <!-- Page Heading/Breadcrumbs -->
         <h1 class="mt-4 mb-3">Profile
-        <small><small><small>Profile</small></small></small>
+        <!-- <small><small><small>Profile</small></small></small> -->
         </h1>
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
-            <li class="breadcrumb-item active">Profile</li>
+            <li class="breadcrumb-item">Profile</li>
         </ol>
 
-        <h3 style="text-align: center">Slide in Picture to see your Profile</h3>
+        <br>
+        <h4 style="text-align: center">Hover the picture to see your Profile</h4>
         <br>
 
         <div class="container_2">
-            <img src="uploads/<?php echo $data['gambar'] ?>" alt="Profil" class="image_2">
+            <img class="image_2" src="uploads/<?php echo $data['gambar'] ?>" alt="Profil">
             <div class="overlay_2">
                 <div class="text_2">
                     <h4 class="card-title"><?php echo $data['username'] ?></h4>

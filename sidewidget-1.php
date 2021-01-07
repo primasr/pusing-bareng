@@ -31,7 +31,59 @@
   border-bottom: 1px solid #ddd;
 }
 
-#myTable tr.header, #myTable tr:hover {
-  background-color: #f1f1f1;
+/* #myTable tr.header, #myTable tr:hover {
+  background-color: #d9eaff;
+} */
+
+#myTable tr.header {
+  background-color: #CFCFD0;
+}
+
+#myTable tr.tlx {
+  background-color: white;
+  /* color: black; */
+}
+#myTable tr.hr {
+  background-color: white;
+  /* color: black; */
+}
+#myTable tr.cses {
+  background-color: white;
+  /* color: black; */
+}
+#myTable tr.spoj {
+  background-color: white;
+  /* color: black; */
+}
+#myTable tr.olymp {
+  background-color: white;
+  /* color: black; */
+}
+#myTable tr.other {
+  background-color: white;
+  /* color: black; */
+}
+
+#myTable tr.tlx:hover{
+  background-color: #d9eaff;
+}
+#myTable tr.hr:hover{
+  background-color: #c0ecca;
+}
+#myTable tr.cses:hover{
+  background-color: #f3deae;
+}
+#myTable tr.spoj:hover{
+  background-color: #b9dbf8;
+}
+#myTable tr.olymp:hover{
+  background-color: #98f3f7;
+}
+#myTable tr.other:hover{
+  background-color: #fdd3fb;
+}
+
+.hitam {
+  color: black;
 }
 </style>

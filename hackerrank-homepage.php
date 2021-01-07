@@ -42,46 +42,46 @@
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>
             </li>
-            <li class="breadcrumb-item active">Hackerank</li>
+            <li class="breadcrumb-item">Hackerank</li>
         </ol>
 
         <!-- Blog Post -->
-        <div class="card mb-4">
+        <div class="card mb-4 whole-card-shadow">
           <img class="card-img-top img-shadow" width="750" height="300" src="https://s3.amazonaws.com/hr-assets/0/1603195175-368d7f2732-1.gif" alt="Outdoor Study">
-          <div class="card-body">
+          <div class="card-body-hr">
             <h2 class="card-title">Outdoor Study</h2>
             <p class="card-text">Setiap tahun, guru memutuskan memesan bis untuk transportasi Outdoor Study. Pada waktu mereka akan pergi, ....</p>
             <a href="hackerrank-outdoor-study.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted card-footer-hr">
             Posted on January 4, 2021 by
             <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
-        <div class="card mb-4">
+        <div class="card mb-4 whole-card-shadow">
           <img class="card-img-top img-shadow" width="750" height="300" src="https://s3.amazonaws.com/hr-assets/0/1603430849-51fcf16587-2058Converted.png" alt="MudMud">
-          <div class="card-body">
+          <div class="card-body-hr">
             <h2 class="card-title">MudMud dan Kakaknya</h2>
             <p class="card-text">MudMud sangat menyayangi kakaknya. Suatu ketika MudMud ulang tahun dan diberi hadiah ...</p>
             <a href="hackerrank-mudmud.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted card-footer-hr">
             Posted on January 4, 2021 by
             <a href="about.php">Admin</a>
           </div>
         </div>
 
         <!-- Blog Post -->
-        <div class="card mb-4">
+        <div class="card mb-4 whole-card-shadow">
           <img class="card-img-top img-shadow" width="750" height="300" src="https://media.suara.com/pictures/970x544/2018/01/30/82737-tempat-parkir.jpg" alt="Parkiran Aya">
-          <div class="card-body">
+          <div class="card-body-hr">
             <h2 class="card-title">Parkiran Aya</h2>
             <p class="card-text">Terdapat sebuah sistem parkiran yang dapat memberi tahu pengunjung apakah mereka dapat memarkirkan ...</p>
             <a href="hackerrank-parkiran-aya.php" target="_blank" class="btn btn-primary">Read More &rarr;</a>
           </div>
-          <div class="card-footer text-muted">
+          <div class="card-footer text-muted card-footer-hr">
             Posted on January 4, 2021 by
             <a href="about.php">Admin</a>
           </div>

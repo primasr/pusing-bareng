@@ -2,7 +2,7 @@
 <div class="col-md-4">
 
     <!-- Search Widget -->
-    <div class="card my-4">
+    <div class="card my-4 whole-card-shadow">
           <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for topics.." title="Type in a name">
 
         <button class="accordion_3">Show Topics</button>
@@ -14,100 +14,100 @@
                   <th style="width:70%;">Topics</th>
                   <th style="width:30%;">Platform</th>
               </tr>
-              <tr>
-                  <td><a href="tlx-hello-world.php">Hello World!</a></td>
+              <tr class="tlx clickable-row my-pointer" data-href='tlx-hello-world.php'>
+                  <td>Hello World!</td>
                   <td>TLX TOKI</td>
               </tr>
-              <tr>
-                  <td><a href="tlx-caesar-chipper.php">Caesar Chipper</a></td>
+              <tr class="tlx clickable-row my-pointer" data-href='tlx-caesar-chipper.php'>
+                  <td>Caesar Chipper</td>
                   <td>TLX TOKI</td>
               </tr>
-              <tr>
-                  <td><a href="tlx-rotasi-matriks.php">Rotasi Matriks</a></td>
+              <tr class="tlx clickable-row my-pointer" data-href='tlx-rotasi-matriks.php'>
+                  <td>Rotasi Matriks</td>
                   <td>TLX TOKI</td>
               </tr>
-              <tr>
-                  <td><a href="tlx-faktorial-gg.php">Faktorial Ganjil-Genap</a></td>
+              <tr class="tlx clickable-row my-pointer" data-href='tlx-faktorial-gg.php'>
+                  <td>Faktorial Ganjil-Genap</td>
                   <td>TLX TOKI</td>
               </tr>
-              <tr>
-                  <td><a href="tlx-konversi-biner.php">Konversi Biner</a></td>
+              <tr class="tlx clickable-row my-pointer" data-href='tlx-konversi-biner.php'>
+                  <td>Konversi Biner</td>
                   <td>TLX TOKI</td>
               </tr>
-              <tr>
-                  <td><a href="tlx-menggambar-pegunungan.php">Menggambar Pegunungan</a></td>
+              <tr class="tlx clickable-row my-pointer" data-href='tlx-menggambar-pegunungan.php'>
+                  <td>Menggambar Pegunungan</td>
                   <td>TLX TOKI</td>
               </tr>
-              <tr>
-                  <td><a href="tlx-ukuran-kejauhan.php">Ukuran Kejauhan</a></td>
+              <tr class="tlx clickable-row my-pointer" data-href='tlx-ukuran-kejauhan.php'>
+                  <td>Ukuran Kejauhan</td>
                   <td>TLX TOKI</td>
               </tr>
-              <tr>
-                  <td><a href="tlx-candy-businessman.php">Candy Businessman</a></td>
+              <tr class="tlx clickable-row my-pointer" data-href='tlx-candy-businessman.php"'>
+                  <td>Candy Businessman</td>
                   <td>TLX TOKI</td>
               </tr>
-              <tr>
-                  <td><a href="tlx-hard-word.php">Hard Word</a></td>
+              <tr class="tlx clickable-row my-pointer" data-href='tlx-hard-word.php'>
+                  <td>Hard Word</td>
                   <td>TLX TOKI</td>
               </tr>              
-              <tr>
-                  <td><a href="cses-counting-rooms.php">Counting Rooms</a></td>
+              <tr class="cses clickable-row my-pointer" data-href='cses-counting-rooms.php"'>
+                  <td>Counting Rooms</td>
                   <td>CSES</td>
               </tr>
-              <tr>
-                  <td><a href="cses-missing-number.php">Missing Number</a></td>
+              <tr class="cses clickable-row my-pointer" data-href='cses-missing-number.php'>
+                  <td>Missing Number</td>
                   <td>CSES</td>
               </tr>
-              <tr>
-                  <td><a href="cses-increasing-array.php">Increasing Array</a></td>
+              <tr class="cses clickable-row my-pointer" data-href='cses-increasing-array.php'>
+                  <td>Increasing Array</td>
                   <td>CSES</td>
               </tr>
-              <tr>
-                  <td><a href="hackerrank-outdoor-study.php">Outdoor Study</a></td>
+              <tr class="hr clickable-row my-pointer" data-href='hackerrank-outdoor-study.php'>
+                  <td>Outdoor Study</td>
                   <td>Hackerrank</td>
               </tr>
-              <tr>
-                  <td><a href="hackerrank-mudmud.php">MudMud dan Kakaknya</a></td>
+              <tr class="hr clickable-row my-pointer" daa-href='hackerrank-mudmud.php'>
+                  <td>MudMud dan Kakaknya</td>
                   <td>Hackerrank</td>
               </tr>
-              <tr>
-                  <td><a href="hackerrank-parkiran-aya.php">Parkiran Aya</a></td>
+              <tr class="hr clickable-row my-pointer" data-href='hackerrank-parkiran-aya.php'>
+                  <td>Parkiran Aya</td>
                   <td>Hackerrank</td>
               </tr>
-              <tr>
-                  <td><a href="spoj-drawing-polygrams.php">Drawing Polygrams</a></td>
+              <tr class="spoj clickable-row my-pointer" data-href='spoj-drawing-polygrams.php'>
+                  <td>Drawing Polygrams</td>
                   <td>SPOJ</td>
               </tr>
-              <tr>
-                  <td><a href="spoj-herding.php">Herding</a></td>
+              <tr class="spoj clickable-row my-pointer" data-href='spoj-herding.php'>
+                  <td>Herding</td>
                   <td>SPOJ</td>
               </tr>
-              <tr>
-                  <td><a href="spoj-divisibility.php">Divisibility</a></td>
+              <tr class="spoj clickable-row my-pointer" data-href='spoj-divisibility.php'>
+                  <td>Divisibility</td>
                   <td>SPOJ</td>
               </tr>
-              <tr>
-                  <td><a href="olymp-repeated-josephus.php">Repeated Josephus</a></td>
+              <tr class="olymp clickable-row my-pointer" data-href='olymp-repeated-josephus.php'>
+                  <td>Repeated Josephus</td>
                   <td>e-Olymp</td>
               </tr>
-              <tr>
-                  <td><a href="olymp-grasshopper.php">Grasshopper</a></td>
+              <tr class="olymp clickable-row my-pointer" data-href='olymp-grasshopper.php'>
+                  <td>Grasshopper</td>
                   <td>e-Olymp</td>
               </tr>
-              <tr>
-                  <td><a href="olymp-simple-problem.php">Simple Problem</a></td>
+              <tr class="olymp clickable-row my-pointer" data-href='olymp-simple-problem.php'>
+                  <td>Simple Problem</td>
                   <td>e-Olymp</td>
               </tr>
-              <tr>
-                  <td><a href="other-bantuan-nasional.php">Bantuan Nasional</a></td>
+              <tr class="other clickable-row my-pointer" data-href='other-bantuan-nasional.php'>
+                  <td>Bantuan Nasional</td>
                   <td>Other</td>
               </tr>
-              <tr>
-                  <td><a href="other-depth-pohon.php">Depth Pohon</a></td>
+              <tr class="other clickable-row my-pointer" data-href='other-depth-pohon.php'>
+                  <td>Depth Pohon</td>
                   <td>Other</td>
               </tr>
-              <tr>
-                  <td><a href="other-i-love-kimia.php">I Love Kimia</a></td>
+              <tr class="other clickable-row my-pointer" data-href='other-i-love-kimia.php'>
+                  <td>I Love Kimia</td>
                   <td>Other</td>
               </tr>
           </table>
@@ -149,6 +149,12 @@
               } 
             });
           }
+
+            jQuery(document).ready(function($) {
+                $(".clickable-row").click(function() {
+                    window.location = $(this).data("href");
+                });
+            });
           </script>
 
     </div>

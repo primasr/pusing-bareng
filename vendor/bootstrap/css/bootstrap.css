@@ -6780,6 +6780,16 @@ button.bg-light:focus {
   background-color: #dae0e5 !important;
 }
 
+.bg-navbar {
+  background-color: #9AB3EB !important;
+}
+
+a.bg-navbar:hover, a.bg-navbar:focus,
+button.bg-navbar:hover,
+button.bg-navbar:focus {
+  background-color: #849dd1 !important;
+}
+
 .bg-dark {
   background-color: #343a40 !important;
 }

@@ -85,7 +85,7 @@
     <div class="container">
         <!-- Page Heading/Breadcrumbs -->
         <h1 class="mt-4 mb-3">Register
-        <small>Subheading</small>
+        <!-- <small>Subheading</small> -->
         </h1>
 
         <ol class="breadcrumb">
@@ -98,35 +98,39 @@
         <!-- Contact Form -->
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
         <div class="row justify-content-center">
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-6 mb-4 bg-content-form">
                 <form action="register.php" method="POST" enctype="multipart/form-data" name="form1" onsubmit="required()" >
                 <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email" required data-validation-required-message="Please enter your email.">
-                    <small class="form-text text-muted">Lets gooo!!</small>
+                    <label for="email"><b>Email address</b></label>
+                    <input type="email" class="form-control my-form" id="email" name="email" required data-validation-required-message="Please enter your email.">
+                    <!-- <small class="form-text text-muted">Lets gooo!!</small> -->
                 </div>
                 <div class="form-group">
-                    <label>Username</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username" required data-validation-required-message="Please enter your username.">
+                    <label><b>Username</b></label>
+                    <input type="text" class="form-control my-form" id="username" name="username" required data-validation-required-message="Please enter your username.">
                 </div>
                 <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control" id="password" name="password" onkeyup='check();' required data-validation-required-message="Please enter your password.">
+                    <label><b>Password</b></label>
+                    <input type="password" class="form-control my-form" id="password" name="password" onkeyup='check();' required data-validation-required-message="Please enter your password.">
                 </div>
                 <div class="form-group">
-                    <label>Confirm Password</label>
-                    <input type="password" class="form-control" id="confirm_password" name="confirm_password" onkeyup=' check();' required data-validation-required-message="Please enter your password.">
+                    <label><b>Confirm Password</b></label>
+                    <input type="password" class="form-control my-form" id="confirm_password" name="confirm_password" onkeyup=' check();' required data-validation-required-message="Please enter your password.">
                     <span id="message"></span>
                 </div>
                 <div class="form-group">
-                    <label>Bio</label>
-                    <input type="text" class="form-control" id="bio" name="bio" placeholder="Max. 30 Karakter" required data-validation-required-message="Please enter your message.">
+                    <label><b>Bio</b></label>
+                    <input type="text" class="form-control my-form" id="bio" name="bio" placeholder="Max. 30 Character" required data-validation-required-message="Please enter your message.">
                 </div>
                 <div class="form-group">
-                    <label for="exampleFormControlFile1">Upload foto syantik</label>
+                    <label for="exampleFormControlFile1"><b>Upload Foto Profile</b></label>
                     <input type="file" class="form-control-file" name="image" id="image" required data-validation-required-message="Please insert your Profile Pictures.">
                 </div>
-                <button type="submit" name="submit" id="submit" class="btn btn-primary">Submit</button>
+                <br>
+                <button type="submit" name="submit" id="submit" class="btn btn-info btn-block">Register</button>
+                <br>
+                <p style="text-align: center">or</p>
+                <p style="text-align: center">Have an account with us? <a href="login.php">Login here</a></p>
                 </form>
             </div>
 
