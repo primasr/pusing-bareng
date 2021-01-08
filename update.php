@@ -69,7 +69,52 @@
     $pageTitle = 'Update Profile';
     echo ("<title> $pageTitle </title>");
     include 'header.php';
+    
 ?>
+
+<style>
+.container_2{
+  position: relative;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image_2 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay_2 {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #d9eaff;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+
+.container_2:hover .overlay_2 {
+  bottom: 0;
+  height: 100%;
+}
+
+.text_2 {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>
 
     <!-- Page Content -->
     <div class="container">
@@ -85,18 +130,22 @@
             <li class="breadcrumb-item">Update</li>
         </ol>
 
+        <?php
+        include 'profile2.php';
+        ?>
+        
         <!-- Contact Form -->
         <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
         <div class="row justify-content-center">
             <div class="col-lg-4 mb-4 bg-content-form">
                 <form action="update.php" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Bio</label>
+                        <label for="exampleInputEmail1"><b>Bio</b></label>
                         <input type="text" class="form-control my-form" name="bio" value="<?= $row['bio'] ?>">
                         <!-- <small id="emailHelp" class="form-text text-muted">Jangan lebay bang</small> -->
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlFile1">Re-Upload Foto Profil</label>
+                        <label for="exampleFormControlFile1"><b>Re-Upload Foto Profil</b></label>
                         <input type="file" class="form-control-file" name="image">
                     </div>
                     <!--

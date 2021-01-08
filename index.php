@@ -95,9 +95,9 @@
     <h2>Platform Online Judge</h2>
 
     <div class="row">
-      <div class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="col-lg-4 col-sm-6 portfolio-item whole-card-shadow">
         <div class="card h-100">
-          <a href="tlx-homepage-1.php"><img class="card-img-top" src="images/tlx.png" alt="TLX TOKI"></a>
+          <a href="tlx-homepage-1.php"><img class="card-img-top" src="images/tlx-home.png" alt="TLX TOKI"></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="tlx-homepage-1.php">TLX TOKI</a>
@@ -108,7 +108,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="col-lg-4 col-sm-6 portfolio-item whole-card-shadow">
         <div class="card h-100">
           <a href="hackerrank-homepage.php"><img class="card-img-top" src="https://www.yosuccess.com/wp-content/uploads/2015/01/HackerRank2.png" alt=""></a>
           <div class="card-body">
@@ -120,7 +120,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="col-lg-4 col-sm-6 portfolio-item whole-card-shadow">
         <div class="card h-100">
           <a href="cses-homepage.php"><img class="card-img-top" src="images/cses.png" alt=""></a>
           <div class="card-body">
@@ -132,9 +132,9 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="col-lg-4 col-sm-6 portfolio-item whole-card-shadow">
         <div class="card h-100">
-          <a href="spoj-homepage.php"><img class="card-img-top" src="images/spoj.png" alt=""></a>
+          <a href="spoj-homepage.php"><img class="card-img-top img-shadow" src="images/spoj-home.png" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="spoj-homepage.php">SPOJ</a>
@@ -144,9 +144,9 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="col-lg-4 col-sm-6 portfolio-item whole-card-shadow">
         <div class="card h-100">
-          <a href="olymp-homepage.php"><img class="card-img-top" src="images/e-olymp.png" alt=""></a>
+          <a href="olymp-homepage.php"><img class="card-img-top" src="images/olymp-home.png" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="olymp-homepage.php">e-Olymp</a>
@@ -156,9 +156,9 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="col-lg-4 col-sm-6 portfolio-item whole-card-shadow">
         <div class="card h-100">
-          <a href="other-homepage.php"><img class="card-img-top" src="images/other.png" alt=""></a>
+          <a href="other-homepage.php"><img class="card-img-top" src="images/other-home.png" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
               <a href="other-homepage.php">Other</a>
